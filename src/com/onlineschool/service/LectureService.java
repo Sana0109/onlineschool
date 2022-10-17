@@ -1,6 +1,6 @@
 package com.onlineschool.service;
 
-import com.onlineschool.Lecture;
+import models.Lecture;
 
 public class LectureService {
     public Lecture lectureCreation() {

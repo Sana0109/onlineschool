@@ -1,4 +1,4 @@
-package com.onlineschool;
+package models;
 
 public class Homeworks {
 

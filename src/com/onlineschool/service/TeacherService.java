@@ -1,6 +1,6 @@
 package com.onlineschool.service;
 
-import com.onlineschool.Teacher;
+import models.Teacher;
 
 public class TeacherService {
     public Teacher teacherCreation() {

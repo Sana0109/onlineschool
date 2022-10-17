@@ -1,6 +1,6 @@
 package com.onlineschool.service;
 
-import com.onlineschool.AdditionalTasks;
+import models.AdditionalTasks;
 
 public class AdditionalTasksService {
 

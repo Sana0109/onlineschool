@@ -1,6 +1,6 @@
 package com.onlineschool.service;
 
-import com.onlineschool.Homeworks;
+import models.Homeworks;
 
 public class HomeworksService {
     public Homeworks homeworksCreation() {

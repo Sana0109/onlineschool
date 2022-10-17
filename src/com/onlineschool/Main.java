@@ -8,7 +8,7 @@ public class Main {
         LectureService LectureSecond = new LectureService();
         LectureService LectureThird = new LectureService();
 
-        // System.out.println(LectureThird.idTest);
+
         System.out.println(LectureService.id);
 
 
