@@ -1,6 +1,4 @@
-package models;
-
-import models.Lecture;
+package com.onlineschool.models;
 
 public class Teacher {
 
