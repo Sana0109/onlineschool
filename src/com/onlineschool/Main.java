@@ -7,7 +7,7 @@ public class Main {
         LectureService Lecture = new LectureService();
         LectureService LectureSecond = new LectureService();
         LectureService LectureThird = new LectureService();
-
+        LectureService LectureFourth = new LectureService();
 
         System.out.println(LectureService.id);
 
