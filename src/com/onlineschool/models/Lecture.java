@@ -6,6 +6,7 @@ public class Lecture {
     private Teacher teacher;
     private String date;
 
+
 }
 
 
