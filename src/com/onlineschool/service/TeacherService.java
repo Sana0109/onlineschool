@@ -6,6 +6,7 @@ public class TeacherService {
     public Teacher teacherCreation() {
         return new Teacher();
     }
+
     public static int id = 0;
     public int idTest = 0;
 
@@ -13,5 +14,4 @@ public class TeacherService {
         id++;
         idTest++;
     }
-
 }
