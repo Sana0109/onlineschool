@@ -6,4 +6,7 @@ public class Teacher {
     private String secondNameTeacher;
     private Lecture nameLecture;
 
+    public Teacher(String secondNameTeacher) {
+        this.secondNameTeacher = secondNameTeacher;
+    }
 }

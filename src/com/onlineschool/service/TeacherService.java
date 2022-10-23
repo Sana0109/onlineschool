@@ -3,8 +3,9 @@ package com.onlineschool.service;
 import com.onlineschool.models.Teacher;
 
 public class TeacherService {
-    public Teacher teacherCreation() {
-        return new Teacher();
+    public Teacher teacherCreation(String secondNameTeacher) {
+
+        return new Teacher(secondNameTeacher);
     }
 
     public static int id = 0;
