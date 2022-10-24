@@ -7,8 +7,6 @@ public class Teacher {
     private Lecture nameLecture;
 
 
-
-
     public Teacher(String secondNameTeacher) {
         this.secondNameTeacher = secondNameTeacher;
     }

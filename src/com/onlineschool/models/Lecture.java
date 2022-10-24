@@ -8,9 +8,10 @@ public class Lecture {
     private String date;
     public Course course;
 
-    public  static int id = 0;
+    public static int id = 0;
     public int idTest = 0;
-    public Lecture(String nameLecture,Course course,Teacher teacher,String date) {
+
+    public Lecture(String nameLecture, Course course, Teacher teacher, String date) {
         this.nameLecture = nameLecture;
         this.course = course;
         this.teacher = teacher;
@@ -18,8 +19,6 @@ public class Lecture {
         id++;
         idTest++;
     }
-
-
 
 
 }

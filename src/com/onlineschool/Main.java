@@ -5,7 +5,6 @@ import com.onlineschool.models.Lecture;
 import com.onlineschool.models.Teacher;
 
 
-
 public class Main {
     public static void main(String[] args) {
         Teacher teacher = new Teacher("SecondNameTeacher");
@@ -26,7 +25,6 @@ public class Main {
         System.out.println("Course ID - " + lectureSixth.course.ID);
 
         System.out.println("Total number of lectures - " + lecture.id);
-
 
 
     }

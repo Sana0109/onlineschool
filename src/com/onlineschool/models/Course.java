@@ -9,7 +9,7 @@ public class Course {
     private Students students;
     public Long ID;
 
-    public Course(Long ID,String nameCourse,Teacher teacher) {
+    public Course(Long ID, String nameCourse, Teacher teacher) {
         this.ID = ID;
         this.nameCourse = nameCourse;
         this.teacher = teacher;
