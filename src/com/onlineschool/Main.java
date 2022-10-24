@@ -22,12 +22,11 @@ public class Main {
         Lecture lectureFours = new Lecture("Name",course4,teacher,"Date");
         Lecture lectureFifth = new Lecture("Name",course5,teacher,"Date");
         Lecture lectureSixth = new Lecture("Name",course6,teacher,"Date");
-        Scanner scanner = new Scanner(System.in);
-        String line = scanner.next();
 
-        System.out.println(+course6.ID);
 
-        System.out.println(lecture.id);
+        System.out.println("Course ID - " +lectureSixth.course.ID);
+
+        System.out.println("Total number of lectures - "+lecture.id);
 
 
     }
