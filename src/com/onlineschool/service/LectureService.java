@@ -6,9 +6,8 @@ import com.onlineschool.models.Teacher;
 
 public class LectureService {
 
-    public Lecture lectureCreation() {
-        return new Lecture();
-    }
+
+
 
 
     public static int id = 0;
@@ -18,5 +17,10 @@ public class LectureService {
         id++;
         idTest++;
     }
+
+    public Lecture lectureCreation(String nameLecture, Course course, Teacher teacher, String date) {
+        return new Lecture(nameLecture,course,teacher,date);
+    }
+
 
 }
