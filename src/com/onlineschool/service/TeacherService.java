@@ -11,7 +11,6 @@ public class TeacherService {
     public int idTest = 0;
 
     public TeacherService() {
-
         id++;
         idTest++;
     }

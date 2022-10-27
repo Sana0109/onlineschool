@@ -2,19 +2,33 @@ package com.onlineschool.models;
 
 public class Course {
 
-    private String nameCourse;
-    private String number;
-    private Teacher teacher;
+    public String nameCourse;
+    public String number;
+    public String teacherSecondName;
     private Lecture nameLecture;
-    private Students students;
+    public String groupNumber;
     public Long ID;
 
-    public Course(Long ID, String nameCourse, Teacher teacher) {
+
+
+
+    public Course(Long ID,String nameCourse, String teacherSecondName,String groupNumber) {
         this.ID = ID;
         this.nameCourse = nameCourse;
-        this.teacher = teacher;
-
+        this.teacherSecondName = teacherSecondName;
+        this.groupNumber = groupNumber;
     }
+
+    @Override
+    public String toString() {
+        return "Course\n"+
+                  nameCourse  + teacherSecondName
+                +groupNumber;
+    }
+//public static Course courseCreation(Long ID, String nameCourse, String teacherSecondName,Students groupNumber) {
+      //  return new Course(ID,nameCourse,teacherSecondName);
+    //}
+
    /* public  static void switchCourse() {
 
         switch (a){

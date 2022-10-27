@@ -3,8 +3,17 @@ package com.onlineschool.models;
 public class Students {
 
     private String name;
-    private String secondName;
+    public String secondName;
     private Course course;
-    private  String groupNumber;
+    public String groupNumber;
+
+
+
+    public Students(String groupNumber,String secondName) {
+        this.groupNumber= groupNumber;
+        this.secondName = secondName;
+
+    }
+
 }
 
