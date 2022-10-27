@@ -31,9 +31,6 @@ public class Lecture {
     }
 }
 
-/*return "Lecture{" +
-        "nameLecture='" + nameLecture + '\'' +
-        '}';
-*/
+
 
 

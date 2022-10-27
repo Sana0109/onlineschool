@@ -25,31 +25,9 @@ public class Course {
                   nameCourse  + teacherSecondName
                 +groupNumber;
     }
-//public static Course courseCreation(Long ID, String nameCourse, String teacherSecondName,Students groupNumber) {
-      //  return new Course(ID,nameCourse,teacherSecondName);
-    //}
 
-   /* public  static void switchCourse() {
-
-        switch (a){
-
-            case 1:
-
-                System.out.println("Students");
-                break;
-            case 2:
-                System.out.println("Lecture");
-                break;
-             case 3:
-                System.out.println("Teacher");
-                break;
-            default:
-                System.out.println("Error");
-        }
-
-
-    }*/
 }
+
 
 
 
@@ -60,6 +38,6 @@ public class Course {
 //public long Counter;
 
 // public  long Counter(long IDTest) {
-//    return ID = Counter;
+//    return ID = ++Counter;
 // }
 //public Course(Long ID,String nameCourse) {

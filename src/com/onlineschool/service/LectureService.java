@@ -75,10 +75,7 @@ public class LectureService {
                 System.out.println("Error");
         }
 
-        //if ( a > 7) {
-          //  int a;
-          //  System.out.println("Should we finish reading info");
-        //}else {
+
 
     }
 
