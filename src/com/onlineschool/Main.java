@@ -1,22 +1,16 @@
 package com.onlineschool;
 
-import com.onlineschool.models.Course;
+
 import com.onlineschool.models.Lecture;
-import com.onlineschool.models.Teacher;
 import com.onlineschool.service.CourseService;
 import com.onlineschool.service.LectureService;
-
-
 import java.util.Scanner;
 
 
 public class Main {
     public static void main(String[] args) {
-        Teacher teacher = new Teacher("second Name Teacher",
-                "Name teacher");
-        Course course = new Course(1L, "Name Course", "Second Name Teacher", "Group Number");
-        Lecture lecture = new Lecture("Name Course", "Name Course",
-                "Second Name Teacher", "Data", "Group Number");
+
+
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Choose Category: 1 - Course, 2 - Teacher, 3 - Students, 4 Lecture");
@@ -25,25 +19,48 @@ public class Main {
         ;
         System.out.println("-------------------");
 
-        System.out.println("Create New Lecture: ");
-        System.out.println(" Name Lecture");
-        String nameLecture = scanner.next();
-        System.out.println(" Name Course");
-        String nameCourse = scanner.next();
-        System.out.println(" Second Name Teacher");
-        String secondNameTeacher = scanner.next();
-        System.out.println(" Data");
-        String data = scanner.next();
-        System.out.println(" Group Number");
-        String groupNumber = scanner.next();
-        Lecture lecture1 = LectureService.lectureCreation(nameLecture, nameCourse, secondNameTeacher, data, groupNumber);
-        System.out.println(lecture1);
-
+        System.out.println("Create New Lecture: YES - 8 or NO - 10");
+        int choose = scanner.nextInt();
+        switch (choose) {
+            case 8 -> {
+                System.out.println(" Name Lecture");
+                String nameLecture = scanner.next();
+                System.out.println(" Name Course ");
+                String nameCourse = scanner.next();
+                System.out.println(" Second Name Teacher");
+                String secondNameTeacher = scanner.next();
+                System.out.println(" Data ");
+                String data = scanner.next();
+                System.out.println(" Group Number");
+                String groupNumber = scanner.next();
+                Lecture lecture1 = LectureService.lectureCreation(nameLecture, nameCourse, secondNameTeacher, data, groupNumber);
+                System.out.println(lecture1);
+                System.out.println("\nContinue Creating? YES - 9 or NO - 10");
+                int choose2 = scanner.nextInt();
+                switch (choose2) {
+                    case 9 -> {
+                        System.out.println(" Name Lecture ");
+                        String nameLecture1 = scanner.next();
+                        System.out.println(" Name Course  ");
+                        String nameCourse1 = scanner.next();
+                        System.out.println(" Second Name Teacher ");
+                        String secondNameTeacher1 = scanner.next();
+                        System.out.println(" Data  ");
+                        String data1 = scanner.next();
+                        System.out.println(" Group Number");
+                        String groupNumber1 = scanner.next();
+                        Lecture lecture2 = LectureService.lectureCreation(nameLecture1, nameCourse1, secondNameTeacher1, data1, groupNumber1);
+                        System.out.println(lecture2);
+                    }
+                    case 10 -> System.out.println("Stop choose");
+                }
+            }
+            case 10 -> System.out.println("Stop choose");
+            default -> System.out.println("Error");
+        }
         System.out.println("-------------------");
 
-        int number1 = scanner.nextInt();
-
-
+        System.out.println("Number Lecture - " + Lecture.id);
     }
 
 }

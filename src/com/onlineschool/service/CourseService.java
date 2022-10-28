@@ -1,6 +1,7 @@
 package com.onlineschool.service;
 
 import com.onlineschool.models.Course;
+import com.onlineschool.models.Lecture;
 import com.onlineschool.models.Students;
 import com.onlineschool.models.Teacher;
 
@@ -27,6 +28,10 @@ public class CourseService {
                 System.out.println(LectureService.lectureCreation("Name Lecture \n","Name Course","SecondNameTeacher"
                         ,"Data","Group Number"));
                 break;
+
+
+
+
             default:
                 System.out.println("Error");
         }

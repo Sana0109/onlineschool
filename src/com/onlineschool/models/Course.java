@@ -19,11 +19,15 @@ public class Course {
         this.groupNumber = groupNumber;
     }
 
+    public Course() {
+
+    }
+
     @Override
     public String toString() {
         return "Course\n"+
                   nameCourse  + teacherSecondName
-                +groupNumber;
+                +groupNumber +"\n ID Course "+ID;
     }
 
 }
