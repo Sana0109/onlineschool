@@ -3,26 +3,42 @@ package com.onlineschool.models;
 public class Lecture {
 
 
-    private String nameLecture;
-    private Teacher teacher;
+    public String nameLecture;
+    private String secondNameTeacher;
     private String date;
-    public Course course;
 
-    public static int id = 0;
+    public String nameCourse;
+    public String groupNumber;
+    public Long ID;
+    public  static int id = 0;
     public int idTest = 0;
+    public  Lecture(String nameLecture,String nameCourse,String secondNameTeacher,String date,String groupNumber,Long ID) {
 
-    public Lecture(String nameLecture, Course course, Teacher teacher, String date) {
         this.nameLecture = nameLecture;
-        this.course = course;
-        this.teacher = teacher;
+        this.nameCourse = nameCourse;
+        this.secondNameTeacher = secondNameTeacher;
         this.date = date;
+        this.groupNumber = groupNumber;
+        this.ID = ID;
         id++;
         idTest++;
     }
 
+    public Lecture() {
+
+
+
+    }
+
+    @Override
+    public String toString() {
+        return " Lecture - " +nameLecture +"\n Name Course - " +nameCourse +"\n Second Name Teacher - " +secondNameTeacher
+
+        +"\n Data  " +date + "\n Group Number  " +groupNumber + "\n ID Course  " +ID;
+    }
+
 
 }
-
 
 
 
