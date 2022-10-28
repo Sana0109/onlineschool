@@ -46,12 +46,12 @@ public class LectureService {
         Lecture lecture7 = new Lecture("NameLecture", course7.nameCourse, teacher7.secondNameTeacher, "Date", students7.groupNumber);
 
 
-       // switch (number1){
-            //case 8:
-               // System.out.println(LectureService.lectureCreation(" Name Lecture \n","Name Course",
-                     //   "Second Name Teacher","Data","Group Number"));
+       /*switch (){
+            case 8:
+               System.out.println(LectureService.lectureCreation(" Name Lecture \n","Name Course",
+                        "Second Name Teacher","Data","Group Number"));
                // break;
-           /* case 1:
+            case 1:
                 System.out.println(lecture1);
                 break;
             case 2:
@@ -74,9 +74,11 @@ public class LectureService {
                 break;
             default:
                 System.out.println("Error");
-        }*/
+        }
 
 
-}
+}*/
 
+
+    }
 }
