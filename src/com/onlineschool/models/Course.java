@@ -10,24 +10,19 @@ public class Course {
     public Long ID;
 
 
-
-
-    public Course(Long ID,String nameCourse, String teacherSecondName,String groupNumber) {
+    public Course(Long ID, String nameCourse, String teacherSecondName, String groupNumber) {
         this.ID = ID;
         this.nameCourse = nameCourse;
         this.teacherSecondName = teacherSecondName;
         this.groupNumber = groupNumber;
     }
 
-    public Course() {
-
-    }
 
     @Override
     public String toString() {
-        return "Course\n"+
-                  nameCourse  + teacherSecondName
-                +groupNumber +"\n ID Course "+ID;
+        return "Course\n" +
+                nameCourse + teacherSecondName
+                + groupNumber + "\n ID Course " + ID;
     }
 
 }
@@ -35,13 +30,3 @@ public class Course {
 
 
 
-
-
-
-//public static long ID = 0;
-//public long Counter;
-
-// public  long Counter(long IDTest) {
-//    return ID = ++Counter;
-// }
-//public Course(Long ID,String nameCourse) {
