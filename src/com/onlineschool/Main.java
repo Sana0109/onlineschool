@@ -12,8 +12,6 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
 
-
-
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Choose Category: 1 - Course, 2 - Teacher, 3 - Students, 4 - Lecture");
