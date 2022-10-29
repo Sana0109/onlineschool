@@ -14,4 +14,10 @@ public class Teacher {
         this.nameTeacher = nameTeacher;
     }
 
+    @Override
+    public String toString() {
+        return "Teacher{" +
+                "secondNameTeacher='" + secondNameTeacher + '\'' +
+                '}';
+    }
 }

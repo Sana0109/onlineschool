@@ -1,6 +1,7 @@
 package com.onlineschool.service;
 
 import com.onlineschool.models.Lecture;
+import com.onlineschool.models.Teacher;
 
 public class LectureService {
     public static int id = 0;

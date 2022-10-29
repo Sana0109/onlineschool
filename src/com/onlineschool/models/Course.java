@@ -4,18 +4,18 @@ public class Course {
 
     public String nameCourse;
     public String number;
-    public String teacherSecondName;
+    public String secondNameTeacher;
     private Lecture nameLecture;
     public String groupNumber;
     public Long ID;
 
 
 
-    public Course(Long ID, String nameCourse, String teacherSecondName, String groupNumber) {
+    public Course(Long ID, String nameCourse, String secondNameTeacher, String groupNumber) {
 
         this.ID = ID;
         this.nameCourse = nameCourse;
-        this.teacherSecondName = teacherSecondName;
+        this.secondNameTeacher = secondNameTeacher;
         this.groupNumber = groupNumber;
     }
 
@@ -23,7 +23,7 @@ public class Course {
     @Override
     public String toString() {
         return "Course\n" +
-                nameCourse + teacherSecondName
+                nameCourse + secondNameTeacher
                 + groupNumber + "\n ID Course " + ID;
     }
 
