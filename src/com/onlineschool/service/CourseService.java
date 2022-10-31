@@ -13,7 +13,7 @@ public class CourseService {
 
     }
 
-    public static void chooseCategory(int number) {
+   /* public static void chooseCategory(int number) {
         switch (number) {
             case 1:
                 System.out.println(courseCreation(1L,"Name Course","Group Number","Group Number"));
@@ -34,7 +34,7 @@ public class CourseService {
             default:
                 System.out.println("Error");
         }
-    }
+    }*/
 
 
 

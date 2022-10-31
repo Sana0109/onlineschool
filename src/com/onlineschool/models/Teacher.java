@@ -12,6 +12,7 @@ public class Teacher {
 
         this.secondNameTeacher = secondNameTeacher;
         this.nameTeacher = nameTeacher;
+
     }
 
     @Override
