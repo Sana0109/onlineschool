@@ -16,7 +16,7 @@ public class Main {
 
         createLecture();
 
-        createWhile();
+        //createWhile();
     }
 
     public static void category() {
@@ -86,15 +86,6 @@ public class Main {
 
         }
     }
-
-    public static void createWhile() {
-
-        while (true) {
-
-            break;
-        }
-    }
-
 
 }
 
