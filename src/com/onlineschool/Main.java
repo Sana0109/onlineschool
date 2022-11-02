@@ -5,14 +5,89 @@ import com.onlineschool.models.Course;
 import com.onlineschool.models.Lecture;
 import com.onlineschool.models.Teacher;
 import com.onlineschool.service.LectureService;
+import repository.CourseRepository;
+import repository.LectureRepository;
+import repository.TeacherRepository;
 
+import java.util.Arrays;
 import java.util.Scanner;
 
 
 public class Main {
     public static void main(String[] args) {
 
-        category();
+
+        CourseRepository courseRepository = new CourseRepository();
+        LectureRepository lectureRepository = new LectureRepository();
+        TeacherRepository teacherRepository = new TeacherRepository();
+
+        Course [] courses = new Course[12];
+        Lecture[] lecture = new Lecture[12];
+        //courseRepository.addCourse(new Course(0, "Name Course", "Group Number", "Group Number",new Lecture()));
+        courses[0] = new Course(0, "Name Course", "Group Number", "Group Number","Name Lecture");
+        courses[1] = new Course(1, "Name Course", "Group Number", "Group Number","Name Lecture");
+        courses[2] = new Course(2, "Name Course", "Group Number", "Group Number","Name Lecture");
+
+        //lectureRepository.addLecture(new Lecture("Name Lecture \n", "Name Course", "Second Name Teacher"
+        //     , "Data", "Group Number", 0));
+        lecture[0] = new Lecture("Name Lecture \n", "Name Course", "Second Name Teacher"
+                , "Data", "Group Number", 0);
+        lecture[1] = new Lecture("Name Lecture \n", "Name Course", "Second Name Teacher"
+                , "Data", "Group Number", 0);
+        lecture[2] = new Lecture("Name Lecture \n", "Name Course", "Second Name Teacher"
+                , "Data", "Group Number", 0);
+        //courseRepository.addCourse(new Course(0L, "Name Course", "Group Number",
+        //"Group Number","Name Lecture"));
+       // int i = 0;
+       // int addLecture = 3;
+
+
+        int chooseStop = 0;
+        int chooseStop2 = 2;
+        for (int i = 0; i < courses.length; i++) {
+
+            System.out.println(courses[0]);
+            {
+                if (i == chooseStop) {
+                    break;
+
+                }
+            }
+        }
+                for (int j = 0; j < lecture.length; j++) {
+                    System.out.println(lecture[0]);
+                    {
+                        if (j == chooseStop2) {
+                            break;
+
+                        }
+                    }
+                }
+
+
+
+            // System.arraycopy(lecture,0,courses,1,3);
+
+
+
+
+
+ /*
+            System.out.println(lecture[0]);
+            System.out.println(lecture[1]);
+            System.out.println(lecture[3]);
+
+*/
+// System.out.println(Arrays.toString(courseRepository.getCourses()));
+            //System.out.println("---------------");
+            // System.out.println(Arrays.toString(lectureRepository.getLecturesArray()));
+
+
+
+    }
+}
+
+   /*     category();
 
         createLecture();
 
@@ -87,7 +162,7 @@ public class Main {
         }
     }
 
-}
+}*/
 
 
 

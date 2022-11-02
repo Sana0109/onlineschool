@@ -5,18 +5,26 @@ public class Course {
     public String nameCourse;
     public String number;
     public String secondNameTeacher;
-    private Lecture nameLecture;
+    public String nameLecture;
     public String groupNumber;
-    public Long ID;
+   public long ID;
 
 
+    public long getID() {
+        return ID;
+    }
 
-    public Course(Long ID, String nameCourse, String secondNameTeacher, String groupNumber) {
+    public void setID(long ID) {
+        this.ID = ID;
+    }
 
+    public Course(long ID, String nameCourse, String secondNameTeacher, String groupNumber,String nameLecture) {
+        ID++;
         this.ID = ID;
         this.nameCourse = nameCourse;
         this.secondNameTeacher = secondNameTeacher;
         this.groupNumber = groupNumber;
+        this.nameLecture = nameLecture;
     }
 
 
@@ -24,7 +32,7 @@ public class Course {
     public String toString() {
         return "Course\n" +
                 nameCourse + secondNameTeacher
-                + groupNumber + "\n ID Course " + ID;
+                + groupNumber + "\n ID Course " + ID + "\n"+"Name Lecture" +nameLecture +"\n";
     }
 
 }

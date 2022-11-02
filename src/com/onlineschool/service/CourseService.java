@@ -1,14 +1,15 @@
 package com.onlineschool.service;
 
 import com.onlineschool.models.Course;
+import com.onlineschool.models.Lecture;
 
 
 public class CourseService {
 
 
 
-    public static Course courseCreation(Long ID, String nameCourse, String secondNameTeacher, String groupNumber) {
-        return new Course(ID, nameCourse, secondNameTeacher, groupNumber);
+    public static Course courseCreation(Long ID, String nameCourse, String secondNameTeacher, String groupNumber, String nameLecture) {
+        return new Course(ID, nameCourse, secondNameTeacher, groupNumber, nameLecture);
 
 
     }

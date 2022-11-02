@@ -4,24 +4,33 @@ public class Lecture {
 
 
     public String nameLecture;
-    private String secondNameTeacher;
-    private String date;
+    public String secondNameTeacher;
+    public String date;
 
     public String nameCourse;
     public String groupNumber;
-    public Long ID;
+    public long courseID;
     public  static int id = 0;
     public int idTest = 0;
-    public  Lecture(String nameLecture,String nameCourse,String secondNameTeacher,String date,String groupNumber,Long ID) {
+    public  Lecture(String nameLecture,String nameCourse,String secondNameTeacher,String date,String groupNumber,long courseID) {
 
         this.nameLecture = nameLecture;
         this.nameCourse = nameCourse;
         this.secondNameTeacher = secondNameTeacher;
         this.date = date;
         this.groupNumber = groupNumber;
-        this.ID = ID;
+        this.courseID = courseID;
+
         id++;
         idTest++;
+    }
+
+    public Long getCourseID() {
+        return courseID;
+    }
+
+    public void setCourseID(Long courseID) {
+        this.courseID = courseID;
     }
 
     public Lecture() {
@@ -34,7 +43,7 @@ public class Lecture {
     public String toString() {
         return " Lecture - " +nameLecture +"\n Name Course - " +nameCourse +"\n Second Name Teacher - " +secondNameTeacher
 
-        +"\n Data  " +date + "\n Group Number  " +groupNumber + "\n ID Course  " +ID;
+        +"\n Data  " +date + "\n Group Number  " +groupNumber + "\n ID Course  " +courseID;
     }
 
 
