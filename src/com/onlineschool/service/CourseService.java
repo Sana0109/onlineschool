@@ -7,8 +7,7 @@ import com.onlineschool.models.Lecture;
 public class CourseService {
 
 
-
-    public static Course courseCreation(Long ID, String nameCourse, String secondNameTeacher, String groupNumber, String nameLecture) {
+    public static Course courseCreation(int ID, String nameCourse, String secondNameTeacher, String groupNumber, String nameLecture) {
         return new Course(ID, nameCourse, secondNameTeacher, groupNumber, nameLecture);
 
 

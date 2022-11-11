@@ -1,4 +1,4 @@
-package repository;
+package com.onlineschool.repository;
 
 import com.onlineschool.models.Students;
 

@@ -1,54 +1,56 @@
 package com.onlineschool.models;
 
+import com.onlineschool.repository.LectureRepository;
+
 public class Lecture {
-
-
+    private int courseID;
+    private String nameCourse;
+    private String secondNameTeacher;
     public String nameLecture;
-    public String secondNameTeacher;
-    public String date;
 
-    public String nameCourse;
-    public String groupNumber;
-    public long courseID;
-    public  static int id = 0;
-    public int idTest = 0;
-    public  Lecture(String nameLecture,String nameCourse,String secondNameTeacher,String date,String groupNumber,long courseID) {
-
-        this.nameLecture = nameLecture;
-        this.nameCourse = nameCourse;
-        this.secondNameTeacher = secondNameTeacher;
-        this.date = date;
-        this.groupNumber = groupNumber;
+    public Lecture(int courseID) {
         this.courseID = courseID;
-
-        id++;
-        idTest++;
     }
 
-    public Long getCourseID() {
+    public Lecture(int courseID, String nameLecture, String nameCourse, String secondNameTeacher) {
+
+
+        this.secondNameTeacher = secondNameTeacher;
+        this.nameLecture = nameLecture;
+        this.nameCourse = nameCourse;
+        this.courseID = courseID;
+
+
+    }
+
+
+    public int getCourseID() {
         return courseID;
     }
 
-    public void setCourseID(Long courseID) {
+    public void setCourseID(int courseID) {
         this.courseID = courseID;
     }
 
-    public Lecture() {
+    public String getNameLecture() {
+        return nameLecture;
+    }
 
-
-
+    public void setNameLecture(String nameLecture) {
+        this.nameLecture = nameLecture;
     }
 
     @Override
     public String toString() {
-        return " Lecture - " +nameLecture +"\n Name Course - " +nameCourse +"\n Second Name Teacher - " +secondNameTeacher
+        return  " Course ID " + courseID;
 
-        +"\n Data  " +date + "\n Group Number  " +groupNumber + "\n ID Course  " +courseID;
     }
 
 
 }
 
 
+/*" Lecture - " +nameLecture +"\n Name Course - " +nameCourse +"\n Second Name Teacher - " +secondNameTeacher
 
-
+        +"\n Data  " +date + "\n Group Number  " +groupNumber + "\n ID Course  "+getCourseID();
+*/
