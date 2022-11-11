@@ -1,6 +1,7 @@
 package com.onlineschool.repository;
 
 import com.onlineschool.models.Course;
+import com.onlineschool.models.Lecture;
 
 import java.util.Arrays;
 
@@ -42,6 +43,51 @@ public class CourseRepository {
 
         courses = twoArrayCourse;
         }
+    public static void courseArrayEnter() {
+
+        Course[] courses = new Course[10];
+        Lecture[] lecture = new Lecture[10];
+
+        courses[0] = new Course(0, "Name Course", "Group Number", "Group Number", "Name Lecture");
+        courses[1] = new Course(1, "Name Course", "Group Number", "Group Number", "Name Lecture");
+        courses[2] = new Course(2, "Name Course", "Group Number", "Group Number", "Name Lecture");
+
+
+        lecture[0] = new Lecture(1, "Name Lecture", "Name Course", "Second Name Teacher");
+        lecture[1] = new Lecture(1, "Name Lecture", "Name Course", "Second Name Teacher");
+        lecture[2] = new Lecture(1, "Name Lecture", "Name Course", "Second Name Teacher");
+
+
+        int chooseStop = 0;
+        int chooseStop2 = 2;
+        for (int i = 0; i < courses.length; i++) {
+
+            System.out.println(courses[i]);
+
+            System.out.println("---------------");
+
+            if (i == chooseStop) {
+                break;
+
+            }
+
+        }
+        for (int j = 0; j < lecture.length; j++) {
+
+            System.out.println(lecture[j]);
+            System.out.println("---------------");
+            {
+                if (j == chooseStop2) {
+                    break;
+
+
+                }
+            }
+
+        }
+
+    }
 
 }
+
 
