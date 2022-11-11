@@ -49,8 +49,3 @@ public class Lecture {
 
 }
 
-
-/*" Lecture - " +nameLecture +"\n Name Course - " +nameCourse +"\n Second Name Teacher - " +secondNameTeacher
-
-        +"\n Data  " +date + "\n Group Number  " +groupNumber + "\n ID Course  "+getCourseID();
-*/

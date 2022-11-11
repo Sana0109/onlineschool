@@ -2,11 +2,11 @@ package com.onlineschool.models;
 
 public class Course {
 
-    public String nameCourse;
-    public String secondNameTeacher;
-    public String nameLecture;
-    public String groupNumber;
-   public  int ID;
+    private String nameCourse;
+    private String secondNameTeacher;
+    private String nameLecture;
+    private String groupNumber;
+    private   int ID;
 
 
 
