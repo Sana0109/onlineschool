@@ -1,9 +1,5 @@
 package com.onlineschool.models;
 
-import com.onlineschool.models.Course;
-import com.onlineschool.models.Lecture;
-import com.onlineschool.models.Students;
-
 public class Faculty {
     private Course nameCourse;
     private Lecture nameLecture;
@@ -24,6 +20,10 @@ public class Faculty {
 
     public Faculty(Course nameCourse) {
         this.nameCourse = nameCourse;
+    }
+
+    public int getCourseID() {
+        return courseID;
     }
 
 }

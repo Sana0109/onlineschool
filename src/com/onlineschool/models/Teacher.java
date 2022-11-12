@@ -8,6 +8,7 @@ public class Teacher extends Faculty {
     private Course course;
 
     public Teacher(String secondNameTeacher,String nameTeacher,Lecture nameLecture,Course course) {
+        super(1);
         this.course = course;
         this.secondNameTeacher = secondNameTeacher;
         this.nameTeacher = nameTeacher;

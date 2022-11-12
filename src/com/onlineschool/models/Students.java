@@ -10,6 +10,7 @@ public class Students extends Faculty {
 
 
     public Students(String groupNumber,String secondName,String name,Course course) {
+        super(1);
         this.groupNumber= groupNumber;
         this.course = course;
         this.name = name;

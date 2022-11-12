@@ -7,11 +7,11 @@ public class Lecture extends Faculty {
     private String nameLecture;
 
     public Lecture(int courseID) {
-        this.courseID = courseID;
+        super(1);
     }
 
     public Lecture(int courseID, String nameLecture, String nameCourse, String secondNameTeacher) {
-        super();
+        super(1);
 
 
         this.secondNameTeacher = secondNameTeacher;
@@ -53,6 +53,7 @@ public class Lecture extends Faculty {
     public void setNameLecture(String nameLecture) {
         this.nameLecture = nameLecture;
     }
+
 
     @Override
     public String toString() {

@@ -27,10 +27,6 @@ public class LectureService {
     public static Lecture lectureCourseID(int courseID) {
         return new Lecture(courseID);
     }
-
-
-
-
     public static void outputID() {
 
 
@@ -62,6 +58,9 @@ public class LectureService {
         }
 
     }
+
+
+
 
     @Override
     public String toString() {

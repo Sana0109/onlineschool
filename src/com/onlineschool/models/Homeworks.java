@@ -7,6 +7,7 @@ public class Homeworks extends Faculty {
     private Teacher teacher;
 
     public Homeworks(String nameHomeworks,Teacher teacher,Course course) {
+        super(1);
         this.nameHomeworks = nameHomeworks;
         this.course = course;
         this.teacher = teacher;

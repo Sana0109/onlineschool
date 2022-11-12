@@ -5,9 +5,10 @@ public class AdditionalTasks extends Faculty {
     private String nameAdditionalTasks;
     private String date;
     private Teacher teacher;
-    private Course courseID;
+    private int courseID;
 
-    public AdditionalTasks(String nameAdditionalTasks,Course courseID,Teacher teacher,String date) {
+    public AdditionalTasks(String nameAdditionalTasks,int courseID,Teacher teacher,String date) {
+        super(1);
         this.nameAdditionalTasks = nameAdditionalTasks;
         this.courseID = courseID;
         this.teacher = teacher;
@@ -15,12 +16,8 @@ public class AdditionalTasks extends Faculty {
 
     }
 
-    public Course getCourseID() {
+    public int getCourseID() {
         return courseID;
-    }
-
-    public void setCourseID(Course courseID) {
-        this.courseID = courseID;
     }
 
     public Teacher getTeacher() {
