@@ -1,8 +1,9 @@
 package com.onlineschool.models;
 
+import com.onlineschool.Faculty;
 import com.onlineschool.repository.LectureRepository;
 
-public class Lecture {
+public class Lecture extends Faculty {
     private int courseID;
     private String nameCourse;
     private String secondNameTeacher;
@@ -13,6 +14,7 @@ public class Lecture {
     }
 
     public Lecture(int courseID, String nameLecture, String nameCourse, String secondNameTeacher) {
+        super();
 
 
         this.secondNameTeacher = secondNameTeacher;

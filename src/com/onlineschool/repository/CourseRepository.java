@@ -88,6 +88,17 @@ public class CourseRepository {
 
     }
 
+    public int getBOXES() {
+        return BOXES;
+    }
+
+    @Override
+    public String toString() {
+        return "CourseRepository{" +
+                "BOXES=" + BOXES +
+                ", courses=" + Arrays.toString(courses) +
+                '}';
+    }
 }
 
 

@@ -1,6 +1,8 @@
 package com.onlineschool.models;
 
-public class AdditionalTasks {
+import com.onlineschool.Faculty;
+
+public class AdditionalTasks extends Faculty {
 
     private String nameAdditionalTasks;
     private String date;

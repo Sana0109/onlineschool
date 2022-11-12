@@ -34,11 +34,12 @@ public class LectureRepository {
     }
 
     public Lecture[] getLectures() {
+
         return lectures;
     }
 
-    public void setLectures(Lecture[] lectures) {
-        this.lectures = lectures;
+    public int getBOXES() {
+        return BOXES;
     }
 
     @Override
