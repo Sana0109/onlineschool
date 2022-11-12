@@ -1,4 +1,4 @@
-package com.onlineschool;
+package com.onlineschool.models;
 
 import com.onlineschool.models.Course;
 import com.onlineschool.models.Lecture;

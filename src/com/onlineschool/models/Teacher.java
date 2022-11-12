@@ -1,7 +1,5 @@
 package com.onlineschool.models;
 
-import com.onlineschool.Faculty;
-
 public class Teacher extends Faculty {
 
     private String nameTeacher;

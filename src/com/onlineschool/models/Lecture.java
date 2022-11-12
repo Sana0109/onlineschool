@@ -1,8 +1,5 @@
 package com.onlineschool.models;
 
-import com.onlineschool.Faculty;
-import com.onlineschool.repository.LectureRepository;
-
 public class Lecture extends Faculty {
     private int courseID;
     private String nameCourse;
