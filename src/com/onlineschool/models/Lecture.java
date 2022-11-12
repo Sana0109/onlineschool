@@ -6,7 +6,7 @@ public class Lecture {
     private int courseID;
     private String nameCourse;
     private String secondNameTeacher;
-    public String nameLecture;
+    private String nameLecture;
 
     public Lecture(int courseID) {
         this.courseID = courseID;
@@ -23,6 +23,21 @@ public class Lecture {
 
     }
 
+    public String getSecondNameTeacher() {
+        return secondNameTeacher;
+    }
+
+    public void setSecondNameTeacher(String secondNameTeacher) {
+        this.secondNameTeacher = secondNameTeacher;
+    }
+
+    public String getNameCourse() {
+        return nameCourse;
+    }
+
+    public void setNameCourse(String nameCourse) {
+        this.nameCourse = nameCourse;
+    }
 
     public int getCourseID() {
         return courseID;

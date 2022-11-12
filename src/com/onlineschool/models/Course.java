@@ -21,6 +21,38 @@ public class Course {
 
     }
 
+    public String getGroupNumber() {
+        return groupNumber;
+    }
+
+    public void setGroupNumber(String groupNumber) {
+        this.groupNumber = groupNumber;
+    }
+
+    public String getNameLecture() {
+        return nameLecture;
+    }
+
+    public void setNameLecture(String nameLecture) {
+        this.nameLecture = nameLecture;
+    }
+
+    public String getSecondNameTeacher() {
+        return secondNameTeacher;
+    }
+
+    public void setSecondNameTeacher(String secondNameTeacher) {
+        this.secondNameTeacher = secondNameTeacher;
+    }
+
+    public String getNameCourse() {
+        return nameCourse;
+    }
+
+    public void setNameCourse(String nameCourse) {
+        this.nameCourse = nameCourse;
+    }
+
     public int getID() {
         return ID;
     }
