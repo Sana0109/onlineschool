@@ -5,13 +5,13 @@ import com.onlineschool.models.Lecture;
 
 import java.util.Arrays;
 
-public class CourseRepository {
+public class CourseRepository extends FacultyRepository {
     private int BOXES = 10;
     private Course[] courses = new Course[BOXES];
 
-    public void addCourse(Course course) {
+    public void addFaculty() {
 
-        for (int i = 0; i < courses.length; i++) {
+       /* for (int i = 0; i < courses.length; i++) {
 
             if (courses[i] == null) {
                 courses[i] = course;
@@ -25,7 +25,7 @@ public class CourseRepository {
 
             }
         expandArray();
-        System.out.println("Array Increased");
+        System.out.println("Array Increased");*/
         }
 
     public Course[] getCourses() {

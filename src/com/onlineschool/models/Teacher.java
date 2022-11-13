@@ -23,10 +23,10 @@ public class Teacher extends Faculty {
         this.course = course;
     }
 
-    public Lecture getNameLecture() {
+ /*   public Lecture getNameLecture() {
         return nameLecture;
     }
-
+*/
     public void setNameLecture(Lecture nameLecture) {
         this.nameLecture = nameLecture;
     }

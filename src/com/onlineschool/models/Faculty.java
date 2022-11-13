@@ -1,38 +1,50 @@
 package com.onlineschool.models;
 
 public class Faculty {
-    private Course nameCourse;
-    private Lecture nameLecture;
+    private String nameCourse;
+    private String nameLecture;
+    private String groupNumber;
     private int courseID;
-    private Students groupNumber;
 
-    public Faculty(int courseID,Course nameCourse,Lecture nameLecture,Students groupNumber) {
+    public Faculty(int courseID,String nameCourse,String nameLecture,String groupNumber) {
         this.courseID = courseID;
         this.nameCourse = nameCourse;
         this.nameLecture = nameLecture;
         this.groupNumber = groupNumber;
     }
 
-    public Faculty(int courseID) {
+    public Faculty() {
+        this(1);
 
-        this.courseID = courseID;
     }
-
-    public Faculty(Lecture nameLecture) {
-
+    public Faculty(String nameCourse,String nameLecture) {
         this.nameLecture = nameLecture;
-    }
-
-    public Faculty(Course nameCourse) {
         this.nameCourse = nameCourse;
     }
+    public Faculty(int courseID) {
 
+        this("NameCourse","NameLecture");
+        this.courseID = courseID;
+    }
+    public void schedule(){
+        System.out.println("Course Lecture Schedule");
+    }
     public int getCourseID() {
 
         return courseID;
     }
 
+    public String getNameCourse() {
+        return nameCourse;
+    }
 
+    public String getNameLecture() {
+        return nameLecture;
+    }
+
+    public String getGroupNumber() {
+        return groupNumber;
+    }
 
     @Override
     public String toString() {
@@ -43,5 +55,6 @@ public class Faculty {
                 ", groupNumber=" + groupNumber +
                 '}';
     }
+
 }
 

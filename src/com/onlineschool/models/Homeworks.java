@@ -8,16 +8,19 @@ public class Homeworks extends Faculty {
 
     public Homeworks(String nameHomeworks,Teacher teacher,Course course) {
         super(1);
+
         this.nameHomeworks = nameHomeworks;
         this.course = course;
         this.teacher = teacher;
     }
 
     public Course getCourse() {
+
         return course;
     }
 
     public void setCourse(Course course) {
+
         this.course = course;
     }
 

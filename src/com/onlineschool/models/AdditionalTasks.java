@@ -7,7 +7,9 @@ public class AdditionalTasks extends Faculty {
     private Teacher teacher;
     private int courseID;
 
-    public AdditionalTasks(String nameAdditionalTasks,int courseID,Teacher teacher,String date) {
+
+
+    public AdditionalTasks(String nameAdditionalTasks, int courseID, Teacher teacher, String date) {
         super(1);
         this.nameAdditionalTasks = nameAdditionalTasks;
         this.courseID = courseID;
@@ -19,7 +21,9 @@ public class AdditionalTasks extends Faculty {
     public int getCourseID() {
         return courseID;
     }
-
+    public void setCourseID(int courseID) {
+        this.courseID = courseID;
+    }
     public Teacher getTeacher() {
         return teacher;
     }

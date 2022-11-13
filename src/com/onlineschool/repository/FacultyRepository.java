@@ -30,8 +30,9 @@ public class FacultyRepository {
             }
         }
 
-
     }
+
+
     public static void facultyArrayEnter(){
         Faculty[] faculties = new Faculty[10];
         Course[] courses = new Course[10];
