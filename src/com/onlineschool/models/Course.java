@@ -12,7 +12,7 @@ public class Course extends Faculty {
 
 
     public Course(int ID, String nameCourse, String secondNameTeacher, String groupNumber,String nameLecture) {
-        super(1);
+        super(ID);
         ID++;
         this.ID = ID;
         this.nameCourse = nameCourse;

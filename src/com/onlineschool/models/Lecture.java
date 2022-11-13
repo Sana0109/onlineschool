@@ -1,5 +1,7 @@
 package com.onlineschool.models;
 
+
+
 public class Lecture extends Faculty {
     private int courseID;
     private String nameCourse;
@@ -57,7 +59,8 @@ public class Lecture extends Faculty {
 
     @Override
     public String toString() {
-        return  " Course ID " + courseID;
+        return  " Course ID " + courseID+"\n Name Lecture "+nameLecture +"\n Name Course "+nameCourse+
+                "\n Second Name Teacher " +secondNameTeacher;
 
     }
 

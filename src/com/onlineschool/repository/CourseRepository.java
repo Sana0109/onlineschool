@@ -46,16 +46,16 @@ public class CourseRepository {
     public static void courseArrayEnter() {
 
         Course[] courses = new Course[10];
-        Lecture[] lecture = new Lecture[10];
+        Lecture[] lectures = new Lecture[10];
 
         courses[0] = new Course(0, "Name Course", "Group Number", "Group Number", "Name Lecture");
         courses[1] = new Course(1, "Name Course", "Group Number", "Group Number", "Name Lecture");
         courses[2] = new Course(2, "Name Course", "Group Number", "Group Number", "Name Lecture");
 
 
-        lecture[0] = new Lecture(1, "Name Lecture", "Name Course", "Second Name Teacher");
-        lecture[1] = new Lecture(1, "Name Lecture", "Name Course", "Second Name Teacher");
-        lecture[2] = new Lecture(1, "Name Lecture", "Name Course", "Second Name Teacher");
+        lectures[0] = new Lecture(1, "Name Lecture", "Name Course", "Second Name Teacher");
+        lectures[1] = new Lecture(1, "Name Lecture", "Name Course", "Second Name Teacher");
+        lectures[2] = new Lecture(1, "Name Lecture", "Name Course", "Second Name Teacher");
 
 
         int chooseStop = 0;
@@ -72,9 +72,9 @@ public class CourseRepository {
             }
 
         }
-        for (int j = 0; j < lecture.length; j++) {
+        for (int j = 0; j < lectures.length; j++) {
 
-            System.out.println(lecture[j]);
+            System.out.println(lectures[j]);
             System.out.println("---------------");
             {
                 if (j == chooseStop2) {

@@ -6,15 +6,20 @@ public class Faculty {
     private int courseID;
     private Students groupNumber;
 
-    public Faculty(Students groupNumber) {
+    public Faculty(int courseID,Course nameCourse,Lecture nameLecture,Students groupNumber) {
+        this.courseID = courseID;
+        this.nameCourse = nameCourse;
+        this.nameLecture = nameLecture;
         this.groupNumber = groupNumber;
     }
 
     public Faculty(int courseID) {
+
         this.courseID = courseID;
     }
 
     public Faculty(Lecture nameLecture) {
+
         this.nameLecture = nameLecture;
     }
 
@@ -23,8 +28,20 @@ public class Faculty {
     }
 
     public int getCourseID() {
+
         return courseID;
     }
 
+
+
+    @Override
+    public String toString() {
+        return "Faculty{" +
+                "nameCourse=" + nameCourse +
+                ", nameLecture=" + nameLecture +
+                ", courseID=" + courseID +
+                ", groupNumber=" + groupNumber +
+                '}';
+    }
 }
 
