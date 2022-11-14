@@ -4,7 +4,7 @@ import com.onlineschool.models.Teacher;
 
 import java.util.Arrays;
 
-public class TeacherRepository {
+public class TeacherRepository extends FacultyRepository{
     int BOXES = 12;
     Teacher[] teachers = new Teacher[BOXES];
 

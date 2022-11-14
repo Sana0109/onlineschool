@@ -18,20 +18,23 @@ public class Main {
     public static void main(String[] args) {
         CourseRepository courseRepository = new CourseRepository();
         Course course = new Course();
-        Faculty faculty = new Course();
+        Faculty faculties = new Faculty();
         LectureRepository lectureRepository = new LectureRepository();
-        System.out.println(lectureRepository);
+        //System.out.println(lectureRepository);//повертає масив лекцій
     //    System.out.println(courseRepository);;
     //    LectureRepository lectureRepository = new LectureRepository();
     //  lectureRepository.addLecture(new Lecture(1));
         //CourseRepository.courseArrayEnter();
-    //   FacultyRepository facultyRepository =  new FacultyRepository();
+      FacultyRepository facultyRepository =  new FacultyRepository();
     //   System.out.println(lectureRepository);
-    //   FacultyRepository.facultyArrayEnter();
+     //   facultyRepository.addFaculty(faculties);//створені сутності факультету
+    //    facultyRepository.getFacultyID(2);
+       //facultyRepository.addFaculty(new Faculty());
+      // FacultyRepository.facultyArrayEnter();// створена лекція
        // Scanner scanner = new Scanner(System.in);
        // System.out.println("Output ID Course:  YES - 1");
        // int i = scanner.nextInt();
-        //LectureService.outputID();
+       facultyRepository.outputID();
     //    faculty.schedule();
     }
 

@@ -4,7 +4,7 @@ import com.onlineschool.models.Students;
 
 import java.util.Arrays;
 
-public class StudentsRepository {
+public class StudentsRepository extends FacultyRepository {
     int BOXES = 10;
     Students[] student = new Students[BOXES];
 

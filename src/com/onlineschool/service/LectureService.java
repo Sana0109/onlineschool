@@ -27,7 +27,7 @@ public class LectureService {
     public static Lecture lectureCourseID(int courseID) {
         return new Lecture(courseID);
     }
-    public static void outputID() {
+/*    public static void outputID() {
 
 
         com.onlineschool.models.Course course = new com.onlineschool.models.Course(1, "Name Course",
@@ -59,7 +59,7 @@ public class LectureService {
 
     }
 
-
+*/
 
 
     @Override

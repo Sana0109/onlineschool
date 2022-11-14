@@ -5,7 +5,7 @@ import com.onlineschool.models.AdditionalTasks;
 import java.util.Arrays;
 
 
-public class AdditionalTasksRepository {
+public class AdditionalTasksRepository extends FacultyRepository {
     int BOXES = 10;
     AdditionalTasks[] additionalTasks = new AdditionalTasks[BOXES];
 

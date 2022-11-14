@@ -8,7 +8,10 @@ public class Course extends Faculty {
     private String groupNumber;
     private int ID;
 
+    public Course(){
+        super();
 
+    }
     public Course(int ID, String nameCourse, String secondNameTeacher, String groupNumber, String nameLecture) {
         super(1);
         ID++;
@@ -22,9 +25,14 @@ public class Course extends Faculty {
     public  Course(int ID){
         super(1);
     }
-    public Course(){
-
+    public Course (String nameLecture){
+        super(nameLecture);
     }
+
+    public Course(Lecture nameLecture) {
+        super(nameLecture);
+    }
+
     @Override
     public void schedule() {
         System.out.println("Course Lecture secondNameTeacher");

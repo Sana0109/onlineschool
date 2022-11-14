@@ -35,7 +35,7 @@ public class CourseRepository extends FacultyRepository {
     public void setCourses(Course[] course) {
         this.courses = courses;
     }
-        private  void expandArray(){
+     private  void expandArray(){
         int twoBoxes = BOXES;
         BOXES = (BOXES*3) / 2 + 1;
         Course[] twoArrayCourse = new Course[BOXES];

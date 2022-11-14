@@ -4,7 +4,7 @@ import com.onlineschool.models.Homeworks;
 
 import java.util.Arrays;
 
-public class HomeworksRepository {
+public class HomeworksRepository extends FacultyRepository {
     int BOXES = 10;
     Homeworks[] homework = new  Homeworks[BOXES];
 

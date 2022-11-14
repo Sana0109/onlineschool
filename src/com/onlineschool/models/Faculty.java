@@ -13,24 +13,32 @@ public class Faculty {
         this.groupNumber = groupNumber;
     }
 
-    public Faculty() {
+    public Faculty(Lecture nameLecture) {
         this(1);
-
     }
-    public Faculty(String nameCourse,String nameLecture) {
+    public Faculty(String nameLecture) {
+            this.nameLecture = nameLecture;
+    }
+
+    public Faculty(String nameCourse, String nameLecture, String groupNumber) {
         this.nameLecture = nameLecture;
         this.nameCourse = nameCourse;
+        this.groupNumber = groupNumber;
     }
     public Faculty(int courseID) {
-
-        this("NameCourse","NameLecture");
+        this(1,"NameCourse","NameLecture","Group Number");
         this.courseID = courseID;
+
     }
+
+    public Faculty() {
+
+    }
+
     public void schedule(){
         System.out.println("Course Lecture Schedule");
     }
     public int getCourseID() {
-
         return courseID;
     }
 
@@ -48,12 +56,11 @@ public class Faculty {
 
     @Override
     public String toString() {
-        return "Faculty{" +
-                "nameCourse=" + nameCourse +
-                ", nameLecture=" + nameLecture +
-                ", courseID=" + courseID +
-                ", groupNumber=" + groupNumber +
-                '}';
+        return "Faculty\n" +
+                " nameCourse = " + nameCourse +
+                ",\n courseID = " + courseID +
+                ",\n nameLecture = " + nameLecture +
+                ",\n groupNumber = " + groupNumber ;
     }
 
 }
