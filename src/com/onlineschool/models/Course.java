@@ -33,8 +33,8 @@ public class Course extends Faculty {
         super(nameLecture);
     }
 
-    @Override
-    public void schedule() {
+
+    public static void schedule() {
         System.out.println("Course Lecture secondNameTeacher");
     }
 

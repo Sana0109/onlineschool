@@ -7,6 +7,7 @@ public class Faculty {
     private int courseID;
 
     public Faculty(int courseID,String nameCourse,String nameLecture,String groupNumber) {
+        courseID++;
         this.courseID = courseID;
         this.nameCourse = nameCourse;
         this.nameLecture = nameLecture;
@@ -35,7 +36,8 @@ public class Faculty {
 
     }
 
-    public void schedule(){
+    public static void schedule(){
+
         System.out.println("Course Lecture Schedule");
     }
     public int getCourseID() {

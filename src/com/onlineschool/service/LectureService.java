@@ -1,5 +1,6 @@
 package com.onlineschool.service;
 
+import com.onlineschool.models.Faculty;
 import com.onlineschool.models.Lecture;
 import com.onlineschool.repository.LectureRepository;
 
