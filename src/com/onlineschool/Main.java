@@ -16,7 +16,7 @@ import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        //CourseRepository courseRepository = new CourseRepository();
+LectureService lectureService = new LectureService();
         Course course = new Course();
         Faculty faculties = new Faculty();
         LectureRepository lectureRepository = new LectureRepository();
@@ -25,7 +25,7 @@ public class Main {
     //    LectureRepository lectureRepository = new LectureRepository();
     //  lectureRepository.addLecture(new Lecture(1));
         //CourseRepository.courseArrayEnter();
-      FacultyRepository facultyRepository =  new FacultyRepository();
+     FacultyRepository facultyRepository =  new FacultyRepository();
     //   System.out.println(lectureRepository);
        facultyRepository.addFaculty(faculties);//створені сутності факультету виводить увесь масив
        //facultyRepository.getFacultyID(0);
@@ -34,8 +34,10 @@ public class Main {
        Scanner scanner = new Scanner(System.in);
         System.out.println("Output ID Course:  YES - 1");
         int i = scanner.nextInt();
-       facultyRepository.outputID();
+       lectureRepository.outputID();
        //Faculty.schedule();
+//        lectureRepository.getLectures();
+
     }
 
 }

@@ -8,7 +8,7 @@ public class CourseService {
 
 
     public static Course courseCreation(int ID, String nameCourse, String secondNameTeacher, String groupNumber, String nameLecture) {
-        return new Course(ID, nameCourse, secondNameTeacher, groupNumber, nameLecture);
+        return new Course();
 
 
     }

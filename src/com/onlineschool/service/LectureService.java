@@ -20,19 +20,18 @@ public class LectureService {
     }
 
 
-    public static Lecture lectureCreation(int courseID, String nameLecture, String nameCourse, String secondNameTeacher) {
-        return new Lecture(courseID, nameLecture, nameCourse, secondNameTeacher);
+    public static Lecture lectureCreation(int ID, String nameCourse, String nameLecture, String groupNumber, String secondNameTeacher) {
+        return new Lecture(ID,nameCourse,nameLecture,groupNumber, secondNameTeacher);
 
     }
 
     public static Lecture lectureCourseID(int courseID) {
         return new Lecture(courseID);
     }
-/*    public static void outputID() {
+  /* public static void outputID() {
 
 
-        com.onlineschool.models.Course course = new com.onlineschool.models.Course(1, "Name Course",
-                "Group Number", "Group Number", "Name Lecture");
+        com.onlineschool.models.Course course = new com.onlineschool.models.Course();
         com.onlineschool.models.Lecture lectures = new com.onlineschool.models.Lecture(1,
                 "Name Lecture","Name Course","Second Name Teacher");
         lectures.setCourseID(course.getID());
@@ -58,9 +57,9 @@ public class LectureService {
 
         }
 
-    }
+    }*/
 
-*/
+
 
 
     @Override

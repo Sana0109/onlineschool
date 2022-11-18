@@ -48,14 +48,17 @@ public class CourseRepository extends FacultyRepository {
         Course[] courses = new Course[10];
         Lecture[] lectures = new Lecture[10];
 
-        courses[0] = new Course(0, "Name Course", "Group Number", "Group Number", "Name Lecture");
-        courses[1] = new Course(1, "Name Course", "Group Number", "Group Number", "Name Lecture");
-        courses[2] = new Course(2, "Name Course", "Group Number", "Group Number", "Name Lecture");
+        courses[0] = new Course();
+        courses[1] = new Course();
+        courses[2] = new Course();
 
 
-        lectures[0] = new Lecture(1, "Name Lecture", "Name Course", "Second Name Teacher");
-        lectures[1] = new Lecture(1, "Name Lecture", "Name Course", "Second Name Teacher");
-        lectures[2] = new Lecture(1, "Name Lecture", "Name Course", "Second Name Teacher");
+        lectures[0] = new Lecture(1,"Name Lecture ",
+                "Name Course ","Group Number","Second Name Teacher ");
+        lectures[1] = new Lecture(1,"Name Lecture ",
+                "Name Course ","Group Number","Second Name Teacher ");
+        lectures[2] = new Lecture(1,"Name Lecture ",
+                "Name Course ","Group Number","Second Name Teacher ");
 
 
         int chooseStop = 0;

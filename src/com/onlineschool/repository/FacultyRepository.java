@@ -16,7 +16,7 @@ public class FacultyRepository {
         faculties[0] = new Faculty(0, "NameCourse", "NameLecture", "Group Number");
 
         for (int i = 0; i < faculties.length; i++) {
-            if (faculties[i].getCourseID() == ID) {
+            if (faculties[i].getID() == ID) {
                 return faculties[i];
             }
             System.out.println(faculties[i]);
@@ -50,24 +50,25 @@ public class FacultyRepository {
     }
 
 
-    public static void facultyArrayEnter(){
+   /* public static void facultyArrayEnter(){
         Faculty[] faculties = new Faculty[10];
         Course[] courses = new Course[10];
         Lecture[] lectures = new Lecture[10];
         System.out.println("added new lecture");
-        lectures[0] = new Lecture(1,"NameLecture", "Name Course", "Second Name Teacher");
+        lectures[0] = new Lecture(1,"Name Lecture ",
+                "Name Course ","Group Number","Second Name Teacher ");
 
 
-    }
-    public static void outputID() {
+    }*/
+ /*   public static void outputID() {
 
 
         com.onlineschool.models.Course course = new com.onlineschool.models.Course(0, "Name Course", "Group Number", "Group Number", "Name Lecture");
         com.onlineschool.models.Lecture lectures = new com.onlineschool.models.Lecture(1,
                 "Name Lecture","Name Course","Second Name Teacher");
         lectures.setCourseID(course.getCourseID());
-
         com.onlineschool.models.Lecture[] lectures1 = new com.onlineschool.models.Lecture[10];
+
         lectures1[0] = new Lecture(1);
         lectures1[1] = new Lecture(1);
         lectures1[2] = new Lecture(1);
@@ -89,7 +90,7 @@ public class FacultyRepository {
         }
 
     }
-
+*/
 
 
 

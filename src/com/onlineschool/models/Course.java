@@ -2,34 +2,38 @@ package com.onlineschool.models;
 
 public class Course extends Faculty {
 
-    private String nameCourse;
+    //private String nameCourse;
     private String secondNameTeacher;
-    private String nameLecture;
-    private String groupNumber;
-    private int ID;
+   // private String nameLecture;
+    //private String groupNumber;
+   // private int ID;
 
     public Course(){
         super();
 
     }
-    public Course(int ID, String nameCourse, String secondNameTeacher, String groupNumber, String nameLecture) {
-        super(1);
-        ID++;
-        //this.ID = ID;
-        this.nameCourse = nameCourse;
-        this.secondNameTeacher = secondNameTeacher;
-        this.groupNumber = groupNumber;
-        this.nameLecture = nameLecture;
 
+    public Course(int ID, String nameCourse, String nameLecture, String groupNumber, String secondNameTeacher) {
+        super(ID, nameCourse, nameLecture, groupNumber);
+        this.secondNameTeacher = secondNameTeacher;
     }
+
+    /*  public Course(int ID, String nameCourse, String secondNameTeacher, String groupNumber, String nameLecture) {
+            //super(1);
+            ID++;
+
+            super.getNameCourse();
+            this.secondNameTeacher = secondNameTeacher;
+            this.getGroupNumber();
+            this.getNameLecture();
+
+        }*/
     public  Course(int ID){
-        super(1);
+
+        this.getID();
+        //super(1);
     }
     public Course (String nameLecture){
-        super(nameLecture);
-    }
-
-    public Course(Lecture nameLecture) {
         super(nameLecture);
     }
 
@@ -37,8 +41,15 @@ public class Course extends Faculty {
     public static void schedule() {
         System.out.println("Course Lecture secondNameTeacher");
     }
+    public String getSecondNameTeacher() {
 
-    public String getGroupNumber() {
+        return secondNameTeacher;
+    }
+    public void setSecondNameTeacher(String secondNameTeacher) {
+
+        this.secondNameTeacher = secondNameTeacher;
+    }
+/*    public String getGroupNumber() {
 
         return groupNumber;
     }
@@ -58,15 +69,9 @@ public class Course extends Faculty {
         this.nameLecture = nameLecture;
     }
 
-    public String getSecondNameTeacher() {
 
-        return secondNameTeacher;
-    }
 
-    public void setSecondNameTeacher(String secondNameTeacher) {
 
-        this.secondNameTeacher = secondNameTeacher;
-    }
 
     public String getNameCourse() {
 
@@ -87,12 +92,12 @@ public class Course extends Faculty {
 
         this.ID = ID;
     }
-
+*/
     @Override
     public String toString() {
         return "Course\n " +
-                nameCourse + "\n " + secondNameTeacher
-                + "\n " + groupNumber + "\n " + nameLecture + "\n ID Course " + ID;
+                getNameCourse()+ "\n " + secondNameTeacher
+                + "\n " + getGroupNumber() + "\n " + getNameLecture() + "\n ID Course " + getID();
     }
 
 }

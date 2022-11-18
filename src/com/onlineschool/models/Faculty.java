@@ -4,18 +4,19 @@ public class Faculty {
     private String nameCourse;
     private String nameLecture;
     private String groupNumber;
-    private int courseID;
+    private int ID;
 
-    public Faculty(int courseID,String nameCourse,String nameLecture,String groupNumber) {
-        courseID++;
-        this.courseID = courseID;
+    public Faculty(int ID,String nameCourse,String nameLecture,String groupNumber) {
+        ID++;
+        this.ID = ID;
         this.nameCourse = nameCourse;
         this.nameLecture = nameLecture;
         this.groupNumber = groupNumber;
     }
 
-    public Faculty(Lecture nameLecture) {
-        this(1);
+    public Faculty(int ID) {
+        this.ID = ID;
+
     }
     public Faculty(String nameLecture) {
             this.nameLecture = nameLecture;
@@ -25,10 +26,6 @@ public class Faculty {
         this.nameLecture = nameLecture;
         this.nameCourse = nameCourse;
         this.groupNumber = groupNumber;
-    }
-    public Faculty(int courseID) {
-        this(1,"NameCourse","NameLecture","Group Number");
-        this.courseID = courseID;
 
     }
 
@@ -40,8 +37,8 @@ public class Faculty {
 
         System.out.println("Course Lecture Schedule");
     }
-    public int getCourseID() {
-        return courseID;
+    public int getID() {
+        return ID;
     }
 
     public String getNameCourse() {
@@ -60,7 +57,7 @@ public class Faculty {
     public String toString() {
         return "Faculty\n" +
                 " nameCourse = " + nameCourse +
-                ",\n courseID = " + courseID +
+                ",\n courseID = " + ID +
                 ",\n nameLecture = " + nameLecture +
                 ",\n groupNumber = " + groupNumber ;
     }
