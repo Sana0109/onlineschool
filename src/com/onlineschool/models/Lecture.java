@@ -39,8 +39,8 @@ public class Lecture extends Faculty {
 
     @Override
     public String toString() {
-        return  " Course ID " + getID()+"\n Name Lecture "+getNameLecture() +"\n Name Course "+getNameCourse()+
-                "\n Second Name Teacher " +secondNameTeacher;
+        return  "{ Course ID " + getID()+"\n Name Lecture "+getNameLecture() +"\n Name Course "+getNameCourse()+
+                "\n Second Name Teacher " +secondNameTeacher+'}';
 
     }
 

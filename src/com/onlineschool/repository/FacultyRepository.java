@@ -11,7 +11,7 @@ public class FacultyRepository {
     private int BOXES = 10;
     private Faculty[] faculties = new Faculty[BOXES];
 
-    public  Faculty getFacultyID(Integer ID) {
+    public Faculty getFacultyID(Integer ID) {
         Faculty[] faculties = new Faculty[10];
         faculties[0] = new Faculty(0, "NameCourse", "NameLecture", "Group Number");
 
@@ -30,15 +30,15 @@ public class FacultyRepository {
 
     public Faculty addFaculty(Faculty faculty) {
         Faculty[] faculties = new Faculty[10];
-         faculties[0] = new Faculty(0, "NameCourse", "NameLecture", "Group Number");
-         faculties[1] = new Faculty(1, "NameCourse", "NameLecture", "Group Number");
-         faculties[2] = new Faculty(2, "NameCourse", "NameLecture", "Group Number");
+        faculties[0] = new Faculty(0, "NameCourse", "NameLecture", "Group Number");
+        faculties[1] = new Faculty(1, "NameCourse", "NameLecture", "Group Number");
+        faculties[2] = new Faculty(2, "NameCourse", "NameLecture", "Group Number");
 
-         for (int f = 0; f < faculties.length; f++) {
+        for (int f = 0; f < faculties.length; f++) {
             if (faculties[f] == null) {
                 faculties[f] = faculty;
 
-               // return;
+                // return;
 
             }
 
@@ -49,24 +49,24 @@ public class FacultyRepository {
         return faculty;
     }
 
+    public static void facultyArrayEnter() {
 
-   /* public static void facultyArrayEnter(){
-        Faculty[] faculties = new Faculty[10];
-        Course[] courses = new Course[10];
         Lecture[] lectures = new Lecture[10];
-        System.out.println("added new lecture");
-        lectures[0] = new Lecture(1,"Name Lecture ",
-                "Name Course ","Group Number","Second Name Teacher ");
+        System.out.println("Added new Lecture");
+        lectures[0] = new Lecture(1, " Name Course ",
+                " Name Lecture ", "Group Number", "Second Name Teacher ");
+        System.out.println(lectures[0]);
+        System.out.println("-------------------------------");
+
+    }
+
+    public static void outputID() {
 
 
-    }*/
- /*   public static void outputID() {
-
-
-        com.onlineschool.models.Course course = new com.onlineschool.models.Course(0, "Name Course", "Group Number", "Group Number", "Name Lecture");
-        com.onlineschool.models.Lecture lectures = new com.onlineschool.models.Lecture(1,
-                "Name Lecture","Name Course","Second Name Teacher");
-        lectures.setCourseID(course.getCourseID());
+        com.onlineschool.models.Faculty faculty = new com.onlineschool.models.Faculty();
+        com.onlineschool.models.Lecture lectures = new com.onlineschool.models.Lecture(0, "Name Lecture ",
+                "Name Course ", "Group Number", "Second Name Teacher ");
+        lectures.setCourseID(faculty.getID());
         com.onlineschool.models.Lecture[] lectures1 = new com.onlineschool.models.Lecture[10];
 
         lectures1[0] = new Lecture(1);
@@ -79,19 +79,25 @@ public class FacultyRepository {
         lectures1[7] = new Lecture(1);
         lectures1[8] = new Lecture(5);
         lectures1[9] = new Lecture(1);
+
         for (int i = 0; i < lectures1.length; i++) {
 
-            if (lectures1[i].getCourseID() == 1) {
+            if (lectures1[i].getID() == 2) {
 
+                lectures1[i] = lectures;
+                System.out.println("Open selected Lecture");
                 System.out.println(lectures1[i]);
+                System.out.println("---------------");
+
+            } else if (lectures1[i].getID() == 1) {
+                lectures1[i] = null;
+                System.out.println("Deleted the selected Lecture");
+                System.out.println(lectures1[i]);
+                System.out.println("---------------");
             }
 
-
         }
-
     }
-*/
-
 
 
     @Override
