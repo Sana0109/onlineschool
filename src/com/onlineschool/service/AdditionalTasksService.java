@@ -1,13 +1,11 @@
 package com.onlineschool.service;
 
 import com.onlineschool.models.AdditionalTasks;
-import com.onlineschool.models.Course;
-import com.onlineschool.models.Teacher;
 
 public class AdditionalTasksService {
 
-    public AdditionalTasks additionalTasksCreation(String nameAdditionalTasks, int courseID, Teacher teacher, String date) {
-        return new AdditionalTasks(nameAdditionalTasks,courseID,teacher,date);
+    public AdditionalTasks additionalTasksCreation(String nameAdditionalTasks, int courseID,String date) {
+        return new AdditionalTasks(nameAdditionalTasks,courseID,date);
     }
 
     public static int id = 0;

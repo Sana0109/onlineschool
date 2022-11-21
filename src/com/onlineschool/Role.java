@@ -1,2 +1,5 @@
-package com.onlineschool;public enum Role {
+package com.onlineschool;
+
+public enum Role {
+    STUDENT,TEACHER
 }
