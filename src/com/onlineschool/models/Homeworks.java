@@ -6,7 +6,7 @@ public class Homeworks extends Faculty {
     private Course course;
     private Teacher teacher;
 
-    public Homeworks(String nameHomeworks,Teacher teacher,Course course) {
+    public Homeworks(String nameHomeworks, Teacher teacher, Course course) {
         super(1);
 
         this.nameHomeworks = nameHomeworks;

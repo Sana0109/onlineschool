@@ -8,10 +8,9 @@ public class Students extends Faculty {
     private String groupNumber;
 
 
-
-    public Students(String groupNumber,String secondName,String name,Course course) {
+    public Students(String groupNumber, String secondName, String name, Course course) {
         super(1);
-        this.groupNumber= groupNumber;
+        this.groupNumber = groupNumber;
         this.course = course;
         this.name = name;
         this.secondName = secondName;

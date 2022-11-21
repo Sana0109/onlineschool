@@ -26,7 +26,7 @@ public class CourseRepository extends FacultyRepository {
             }
         expandArray();
         System.out.println("Array Increased");*/
-        }
+    }
 
     public Course[] getCourses() {
         return courses;
@@ -35,14 +35,16 @@ public class CourseRepository extends FacultyRepository {
     public void setCourses(Course[] course) {
         this.courses = courses;
     }
-     private  void expandArray(){
+
+    private void expandArray() {
         int twoBoxes = BOXES;
-        BOXES = (BOXES*3) / 2 + 1;
+        BOXES = (BOXES * 3) / 2 + 1;
         Course[] twoArrayCourse = new Course[BOXES];
-        System.arraycopy(courses,0,twoArrayCourse,0,BOXES);
+        System.arraycopy(courses, 0, twoArrayCourse, 0, BOXES);
 
         courses = twoArrayCourse;
-        }
+    }
+
     public static void courseArrayEnter() {
 
         Course[] courses = new Course[10];
@@ -53,12 +55,12 @@ public class CourseRepository extends FacultyRepository {
         courses[2] = new Course();
 
 
-        lectures[0] = new Lecture(1,"Name Lecture ",
-                "Name Course ","Group Number","Second Name Teacher ");
-        lectures[1] = new Lecture(1,"Name Lecture ",
-                "Name Course ","Group Number","Second Name Teacher ");
-        lectures[2] = new Lecture(1,"Name Lecture ",
-                "Name Course ","Group Number","Second Name Teacher ");
+        lectures[0] = new Lecture(1, "Name Lecture ",
+                "Name Course ", "Group Number", "Second Name Teacher ");
+        lectures[1] = new Lecture(2, "Name Lecture ",
+                "Name Course ", "Group Number", "Second Name Teacher ");
+        lectures[2] = new Lecture(3, "Name Lecture ",
+                "Name Course ", "Group Number", "Second Name Teacher ");
 
 
         int chooseStop = 0;

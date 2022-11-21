@@ -1,10 +1,11 @@
 package com.onlineschool.repository;
 
-import com.onlineschool.models.Course;
+
 import com.onlineschool.models.Faculty;
 import com.onlineschool.models.Lecture;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 
 public class FacultyRepository {
@@ -24,7 +25,7 @@ public class FacultyRepository {
 
 
         System.out.println("Faculty not found returning empty one");
-        return new Faculty(1);
+        return new Faculty(0);
 
     }
 
@@ -53,7 +54,7 @@ public class FacultyRepository {
 
         Lecture[] lectures = new Lecture[10];
         System.out.println("Added new Lecture");
-        lectures[0] = new Lecture(1, " Name Course ",
+        lectures[0] = new Lecture(0, " Name Course ",
                 " Name Lecture ", "Group Number", "Second Name Teacher ");
         System.out.println(lectures[0]);
         System.out.println("-------------------------------");
@@ -82,23 +83,30 @@ public class FacultyRepository {
 
         for (int i = 0; i < lectures1.length; i++) {
 
-            if (lectures1[i].getID() == 2) {
+            if (lectures1[i].getID() == 1) {
 
                 lectures1[i] = lectures;
                 System.out.println("Open selected Lecture");
                 System.out.println(lectures1[i]);
                 System.out.println("---------------");
 
-            } else if (lectures1[i].getID() == 1) {
-                lectures1[i] = null;
-                System.out.println("Deleted the selected Lecture");
-                System.out.println(lectures1[i]);
-                System.out.println("---------------");
             }
 
         }
-    }
+        for (int i = 0; i < lectures1.length; i++) {
+            if (lectures1[i].getID() == 4) {
+                lectures1[i] = null;
 
+                Scanner scanner = new Scanner(System.in);
+                System.out.println("Deleted the selected Lecture: Yes - 1");
+                int j = scanner.nextInt();
+                System.out.println(lectures1[i]);
+                System.out.println("---------------");
+            }
+        }
+
+
+    }
 
     @Override
     public String toString() {

@@ -7,7 +7,7 @@ public class Teacher extends Faculty {
     private Lecture nameLecture;
     private Course course;
 
-    public Teacher(String secondNameTeacher,String nameTeacher,Lecture nameLecture,Course course) {
+    public Teacher(String secondNameTeacher, String nameTeacher, Lecture nameLecture, Course course) {
         super(1);
         this.course = course;
         this.secondNameTeacher = secondNameTeacher;
@@ -23,10 +23,7 @@ public class Teacher extends Faculty {
         this.course = course;
     }
 
- /*   public Lecture getNameLecture() {
-        return nameLecture;
-    }
-*/
+
     public void setNameLecture(Lecture nameLecture) {
         this.nameLecture = nameLecture;
     }
