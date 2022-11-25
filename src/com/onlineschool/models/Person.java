@@ -1,11 +1,13 @@
 package com.onlineschool.models;
 
-public class Person {
+import com.onlineschool.Role;
+
+public class Person extends Faculty {
     private int ID;
     private int courseID;
-    private  String role;
+    private Role role;
 
-    public Person(int ID,int courseID,String role){
+    public Person(int ID,int courseID,Role role){
         this.ID = ID;
         this.courseID = courseID;
         this.role = role;

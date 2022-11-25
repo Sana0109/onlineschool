@@ -2,26 +2,38 @@ package com.onlineschool;
 
 public enum Role {
 
-    TEACHER("nameTeacher1") ;
+    TEACHER("Name","Second Name Teacher"),
+    STUDENT("Name","Second Name Student");
 
-
-        private String nameTeacher;
-
-        Role(String nameTeacher) {
-            this.nameTeacher = nameTeacher;
+        private String name;
+        private String secondName;
+private
+        Role(String name,String secondName) {
+            this.name= name;
+            this.secondName= secondName;
         }
 
-/*STUDENT("nameStudent");
-        private String nameStudent;
-    Role(String nameStudent){
-        this.nameStudent = nameStudent;
+    public String getName() {
+        return name;
     }
-*/
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public String getSecondName() {
+        return secondName;
+    }
+
+    public void setSecondName(String secondName) {
+        this.secondName = secondName;
+    }
 
     @Override
     public String toString() {
         return "Role{" +
-                "nameTeacher='" + nameTeacher + '\'' +
+                "name='" + name + '\'' +
+                ", secondName='" + secondName + '\'' +
                 '}';
     }
 }
