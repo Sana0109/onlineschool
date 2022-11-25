@@ -55,12 +55,9 @@ public class CourseRepository extends FacultyRepository {
         courses[2] = new Course();
 
 
-        lectures[0] = new Lecture(1, "Name Lecture ",
-                "Name Course ", "Group Number", "Second Name Teacher ");
-        lectures[1] = new Lecture(2, "Name Lecture ",
-                "Name Course ", "Group Number", "Second Name Teacher ");
-        lectures[2] = new Lecture(3, "Name Lecture ",
-                "Name Course ", "Group Number", "Second Name Teacher ");
+        lectures[0] = new Lecture(1);
+        lectures[1] = new Lecture(2);
+        lectures[2] = new Lecture(3);
 
 
         int chooseStop = 0;

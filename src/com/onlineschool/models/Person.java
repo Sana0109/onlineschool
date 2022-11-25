@@ -12,4 +12,16 @@ public class Person extends Faculty {
         this.courseID = courseID;
         this.role = role;
     }
+    public Person(){
+
+    }
+
+    @Override
+    public String toString() {
+        return "{" +
+                "ID = " + ID +
+                ", course ID= " + courseID +
+                ", teacher = " + role +
+                '}';
+    }
 }

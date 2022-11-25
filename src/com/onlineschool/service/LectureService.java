@@ -2,6 +2,7 @@ package com.onlineschool.service;
 
 import com.onlineschool.models.Faculty;
 import com.onlineschool.models.Lecture;
+import com.onlineschool.models.Person;
 import com.onlineschool.repository.LectureRepository;
 
 public class LectureService {
@@ -20,8 +21,8 @@ public class LectureService {
     }
 
 
-    public static Lecture lectureCreation(int ID, String nameCourse, String nameLecture, String groupNumber, String secondNameTeacher) {
-        return new Lecture(ID,nameCourse,nameLecture,groupNumber, secondNameTeacher);
+    public static Lecture lectureCreation(int ID, String nameCourse, String nameLecture, String groupNumber, Person personID) {
+        return new Lecture(ID,nameCourse,nameLecture,groupNumber, personID);
 
     }
 

@@ -31,9 +31,9 @@ private
 
     @Override
     public String toString() {
-        return "Role{" +
-                "name='" + name + '\'' +
-                ", secondName='" + secondName + '\'' +
+        return " {" +
+                "name = '" + name + '\'' +
+                ", secondName = '" + secondName + '\'' +
                 '}';
     }
 }
