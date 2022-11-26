@@ -13,16 +13,18 @@ public class Lecture extends Faculty {
 
     }
 
-    public Lecture(int ID, String nameCourse, String nameLecture, String groupNumber,Person personID) {
+    public Lecture(int ID, String nameCourse, String nameLecture, String groupNumber, Person personID) {
         super(ID, nameCourse, nameLecture, groupNumber);
-        this.personID= personID;
+        this.personID = personID;
 
     }
-    public Lecture( String nameCourse, String nameLecture, String groupNumber,Person personID) {
+
+    public Lecture(String nameCourse, String nameLecture, String groupNumber, Person personID) {
         super(nameCourse, nameLecture, groupNumber);
         this.personID = personID;
 
     }
+
     public String getSecondNameTeacher() {
         return secondNameTeacher;
     }
@@ -50,7 +52,7 @@ public class Lecture extends Faculty {
     @Override
     public String toString() {
         return " Name Lecture " + getNameLecture() + "\n Name Course " + getNameCourse() +
-                "\n Person " + personID ;
+                "\n Person " + personID;
 
     }
 

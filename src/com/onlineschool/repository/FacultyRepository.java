@@ -54,33 +54,33 @@ public class FacultyRepository {
 
     public static void facultyArrayEnter() {
 
-        Person person = new Person(1,1, Role.TEACHER );
+        Person person = new Person(1, 1, Role.TEACHER);
         Lecture[] lectures = new Lecture[10];
         System.out.println("Added new Lecture");
-        lectures[0] = new Lecture("Name Course", "Name Lecture","Group Number", person);
+        lectures[0] = new Lecture("Name Course", "Name Lecture", "Group Number", person);
         System.out.println(lectures[0]);
         System.out.println("-------------------------------");
 
     }
 
     public static void outputID() {
-        Person person = new Person(1,1, Role.TEACHER );
+        Person person = new Person(1, 1, Role.TEACHER);
 
         com.onlineschool.models.Faculty faculty = new com.onlineschool.models.Faculty();
         com.onlineschool.models.Lecture lectures = new com.onlineschool.models.Lecture(1);
         lectures.setCourseID(faculty.getID());
         com.onlineschool.models.Lecture[] lectures1 = new com.onlineschool.models.Lecture[10];
 
-        lectures1[0] = new Lecture(1, "Name Course", "Name Lecture","Group Number", person);
-        lectures1[1] = new Lecture(1, "Name Course", "Name Lecture","Group Number", person);
-        lectures1[2] = new Lecture(1, "Name Course", "Name Lecture","Group Number", person);
-        lectures1[3] = new Lecture(2, "Name Course", "Name Lecture","Group Number", person);
-        lectures1[4] = new Lecture(3, "Name Course", "Name Lecture","Group Number", person);
-        lectures1[5] = new Lecture(4, "Name Course", "Name Lecture","Group Number", person);
-        lectures1[6] = new Lecture(1, "Name Course", "Name Lecture","Group Number", person);
-        lectures1[7] = new Lecture(1, "Name Course", "Name Lecture","Group Number", person);
-        lectures1[8] = new Lecture(5, "Name Course", "Name Lecture","Group Number", person);
-        lectures1[9] = new Lecture(1, "Name Course", "Name Lecture","Group Number", person);
+        lectures1[0] = new Lecture(1, "Name Course", "Name Lecture", "Group Number", person);
+        lectures1[1] = new Lecture(1, "Name Course", "Name Lecture", "Group Number", person);
+        lectures1[2] = new Lecture(1, "Name Course", "Name Lecture", "Group Number", person);
+        lectures1[3] = new Lecture(2, "Name Course", "Name Lecture", "Group Number", person);
+        lectures1[4] = new Lecture(3, "Name Course", "Name Lecture", "Group Number", person);
+        lectures1[5] = new Lecture(4, "Name Course", "Name Lecture", "Group Number", person);
+        lectures1[6] = new Lecture(1, "Name Course", "Name Lecture", "Group Number", person);
+        lectures1[7] = new Lecture(1, "Name Course", "Name Lecture", "Group Number", person);
+        lectures1[8] = new Lecture(5, "Name Course", "Name Lecture", "Group Number", person);
+        lectures1[9] = new Lecture(1, "Name Course", "Name Lecture", "Group Number", person);
 
         for (int i = 0; i < lectures1.length; i++) {
 

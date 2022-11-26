@@ -7,12 +7,13 @@ public class Person extends Faculty {
     private int courseID;
     private Role role;
 
-    public Person(int ID,int courseID,Role role){
+    public Person(int ID, int courseID, Role role) {
         this.ID = ID;
         this.courseID = courseID;
         this.role = role;
     }
-    public Person(){
+
+    public Person() {
 
     }
 
@@ -20,7 +21,7 @@ public class Person extends Faculty {
     public String toString() {
         return
                 " ID = " + ID +
-                ", Course ID = " + courseID +
-                "\n " + role;
+                        ", Course ID = " + courseID +
+                        "\n " + role;
     }
 }

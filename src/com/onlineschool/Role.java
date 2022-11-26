@@ -32,6 +32,6 @@ public enum Role {
     @Override
     public String toString() {
         return "name First = '" + nameFirst + '\'' +
-                " second Name = '" + secondName + '\'' ;
+                " second Name = '" + secondName + '\'';
     }
 }

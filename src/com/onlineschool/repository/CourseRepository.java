@@ -11,21 +11,7 @@ public class CourseRepository extends FacultyRepository {
 
     public void addFaculty() {
 
-       /* for (int i = 0; i < courses.length; i++) {
 
-            if (courses[i] == null) {
-                courses[i] = course;
-
-                return;
-
-
-
-            }
-
-
-            }
-        expandArray();
-        System.out.println("Array Increased");*/
     }
 
     public Course[] getCourses() {
