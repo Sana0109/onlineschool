@@ -49,8 +49,8 @@ public class Lecture extends Faculty {
 
     @Override
     public String toString() {
-        return "{ "+"\n Name Lecture " + getNameLecture() + "\n Name Course " + getNameCourse() +
-                "\n Person " + personID + '}';
+        return " Name Lecture " + getNameLecture() + "\n Name Course " + getNameCourse() +
+                "\n Person " + personID ;
 
     }
 

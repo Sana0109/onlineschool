@@ -4,23 +4,23 @@ package com.onlineschool;
 
 
 import com.onlineschool.models.Faculty;
+import com.onlineschool.models.Person;
 import com.onlineschool.repository.FacultyRepository;
+
+import java.util.Arrays;
 import java.util.Scanner;
 
 
 public class Main {
     public static void main(String[] args) {
+        Person person = new Person(1,6,Role.STUDENT);
         Faculty faculties = new Faculty();
         FacultyRepository facultyRepository =  new FacultyRepository();
-        //facultyRepository.addFaculty(faculties);//returns an array
-        FacultyRepository.facultyArrayEnter();//added new lecture
+        System.out.println("Create New Student \n"+person);//create new student
+        System.out.println("\n----------------\n");
+        FacultyRepository.facultyArrayEnter();//added a teacher to the lecture
 
-       /* Scanner scanner = new Scanner(System.in);
-        System.out.println("Open the selected Lecture:  YES - 1");
-        int i = scanner.nextInt();
-        facultyRepository.outputID();//open the selected Lecture, deleted the selected Lecture
 
-*/
     }
 
 }

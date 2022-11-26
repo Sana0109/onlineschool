@@ -9,8 +9,6 @@ public class LectureRepository extends FacultyRepository {
     private Lecture[] lectures = new Lecture[BOXES];
 
     public Lecture getFacultyID(Integer ID) {
-
-
         return new Lecture(0);
     }
 

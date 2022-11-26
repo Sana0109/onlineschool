@@ -18,10 +18,9 @@ public class Person extends Faculty {
 
     @Override
     public String toString() {
-        return "{" +
-                "ID = " + ID +
-                ", course ID= " + courseID +
-                ", teacher = " + role +
-                '}';
+        return
+                " ID = " + ID +
+                ", Course ID = " + courseID +
+                "\n " + role;
     }
 }
