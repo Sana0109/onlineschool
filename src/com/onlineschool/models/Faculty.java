@@ -7,7 +7,7 @@ public class Faculty {
     private int ID;
 
     public Faculty(int ID,String nameCourse,String nameLecture,String groupNumber) {
-        ID++;
+
         this.ID = ID;
         this.nameCourse = nameCourse;
         this.nameLecture = nameLecture;

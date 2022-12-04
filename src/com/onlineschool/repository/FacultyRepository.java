@@ -1,13 +1,17 @@
 package com.onlineschool.repository;
 
 
-import com.onlineschool.Role;
+import com.onlineschool.models.Role;
 import com.onlineschool.models.Faculty;
 import com.onlineschool.models.Lecture;
 import com.onlineschool.models.Person;
 
 import java.util.Arrays;
 import java.util.Scanner;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+import static java.lang.System.in;
 
 
 public class FacultyRepository {
@@ -54,12 +58,13 @@ public class FacultyRepository {
 
     public static void facultyArrayEnter() {
 
-        Person person = new Person(1, 1, Role.TEACHER);
+        Person person = new Person(2, 5, Role.TEACHER);
         Lecture[] lectures = new Lecture[10];
         System.out.println("Added new Lecture");
         lectures[0] = new Lecture("Name Course", "Name Lecture", "Group Number", person);
         System.out.println(lectures[0]);
         System.out.println("-------------------------------");
+
 
     }
 
@@ -108,7 +113,28 @@ public class FacultyRepository {
 
 
     }
+    public static void nameCoursePattern(){
+        Scanner scanner = new Scanner(in);
 
+        System.out.println("enter Course Name " );
+        String nameCourseP = "\\D[a-zA-Z]\\D+";
+        Pattern ptrn = Pattern.compile(nameCourseP);
+        String nameCoursePattern = scanner.next();
+        Matcher matcher = ptrn.matcher(nameCoursePattern);
+        System.out.println("Course Name  "+nameCoursePattern + "\n" + matcher.find());
+
+    }
+    public static void nameLecturePattern(){
+        Scanner scanner = new Scanner(in);
+
+        System.out.println("enter Lecture Name " );
+        String nameLectureP = "\\D[a-zA-Z]\\D+";
+        Pattern ptrn = Pattern.compile(nameLectureP);
+        String nameLecturePattern = scanner.next();
+        Matcher matcher = ptrn.matcher(nameLecturePattern);
+        System.out.println("Lecture Name "+nameLecturePattern + "\n" + matcher.find());
+
+    }
     @Override
     public String toString() {
         return "FacultyRepository\n" +

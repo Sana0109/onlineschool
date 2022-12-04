@@ -1,5 +1,6 @@
 package com.onlineschool.repository;
 
+import com.onlineschool.models.Role;
 import com.onlineschool.models.Course;
 import com.onlineschool.models.Lecture;
 
@@ -75,7 +76,13 @@ public class CourseRepository extends FacultyRepository {
         }
 
     }
-
+    public static void facultyArrayEnter() {
+        Course[] courses = new Course[10];
+        System.out.println("Added new Course");
+        courses[3] = new Course(1,"","","", Role.TEACHER);
+        System.out.println(courses[3]);
+        System.out.println("-------------------------------");
+    }
     public int getBOXES() {
         return BOXES;
     }

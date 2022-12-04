@@ -4,7 +4,6 @@ package com.onlineschool.models;
 public class Lecture extends Faculty {
     private int courseID;
 
-    private String secondNameTeacher;
     private Person personID;
 
     public Lecture(int ID) {
@@ -25,13 +24,7 @@ public class Lecture extends Faculty {
 
     }
 
-    public String getSecondNameTeacher() {
-        return secondNameTeacher;
-    }
 
-    public void setSecondNameTeacher(String secondNameTeacher) {
-        this.secondNameTeacher = secondNameTeacher;
-    }
 
     public int getCourseID() {
         return courseID;
