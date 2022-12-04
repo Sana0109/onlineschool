@@ -17,7 +17,6 @@ public class Person extends Faculty {
     }
 
 
-
     @Override
     public int getID() {
         return ID;
@@ -32,6 +31,6 @@ public class Person extends Faculty {
         return
                 " ID = " + ID +
                         ", Course ID = " + courseID +
-                        "\n " + role ;
+                        "\n " + role;
     }
 }
