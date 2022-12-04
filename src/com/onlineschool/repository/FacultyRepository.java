@@ -113,28 +113,31 @@ public class FacultyRepository {
 
 
     }
-    public static void nameCoursePattern(){
+
+    public static void nameCoursePattern() {
         Scanner scanner = new Scanner(in);
 
-        System.out.println("enter Course Name " );
+        System.out.println("enter Course Name ");
         String nameCourseP = "\\D[a-zA-Z]\\D+";
         Pattern ptrn = Pattern.compile(nameCourseP);
         String nameCoursePattern = scanner.next();
         Matcher matcher = ptrn.matcher(nameCoursePattern);
-        System.out.println("Course Name  "+nameCoursePattern + "\n" + matcher.find());
+        System.out.println("Course Name  " + nameCoursePattern + "\n" + matcher.find());
 
     }
-    public static void nameLecturePattern(){
+
+    public static void nameLecturePattern() {
         Scanner scanner = new Scanner(in);
 
-        System.out.println("enter Lecture Name " );
+        System.out.println("enter Lecture Name ");
         String nameLectureP = "\\D[a-zA-Z]\\D+";
         Pattern ptrn = Pattern.compile(nameLectureP);
         String nameLecturePattern = scanner.next();
         Matcher matcher = ptrn.matcher(nameLecturePattern);
-        System.out.println("Lecture Name "+nameLecturePattern + "\n" + matcher.find());
+        System.out.println("Lecture Name " + nameLecturePattern + "\n" + matcher.find());
 
     }
+
     @Override
     public String toString() {
         return "FacultyRepository\n" +

@@ -3,15 +3,17 @@ package com.onlineschool.models;
 public enum Role {
 
     TEACHER("Name First Teacher", "Second Name Teacher",
-            "Phone","Email"),
+            "Phone", "Email"),
     STUDENT("Name First Student", "Second Name Student",
-            "Phone","Email");
+
+            "Phone", "Email");
 
     private String nameFirst;
     private String secondName;
     private String phone = "Phone";
     private String email = "Email";
-    private Role(String nameFirst, String secondName,String phone,String email) {
+
+    private Role(String nameFirst, String secondName, String phone, String email) {
         this.nameFirst = nameFirst;
         this.secondName = secondName;
         this.phone = phone;
@@ -53,6 +55,6 @@ public enum Role {
     @Override
     public String toString() {
         return "name First = '" + nameFirst + '\'' +
-                " second Name = '" + secondName + '\''+"\n Phone "+ phone +"\n Email "+ email;
+                " second Name = '" + secondName + '\'' + "\n Phone " + phone + "\n Email " + email;
     }
 }

@@ -26,27 +26,11 @@ public class Main {
         PersonRepository.emailPattern();//audit enter email
         FacultyRepository.nameCoursePattern();//audit enter course
         FacultyRepository.nameLecturePattern();//audit enter lecture
- /*
 
-        System.out.println("enter Email" );
-        String email = scanner.next();
-       String simvol = "@";
-*/
 
-       // System.out.println(email+" "+email.contains(simvol));
-       // System.out.println("Create New Student \n" + person);//create new student
-        //System.out.println("\n----------------\n");
-        //FacultyRepository.facultyArrayEnter();//added a teacher to the lecture
-        //CourseRepository.facultyArrayEnter();//Added Course
-
-       // System.out.println(pattern);
     }
-
-    private static boolean nameFirstS(int start, int end) {
-        return false;
-    }
-
 }
+
 
 
 
