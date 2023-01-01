@@ -1,31 +1,36 @@
 package com.onlineschool.models;
 
-public class Course extends Faculty {
+public class Course {
+
+    private int ID;
+    private String nameCourse;
+    private  String nameLecture;
 
 
-    public Course() {
-        super();
+    public String getNameLecture() {
+        return nameLecture;
     }
 
-    public Course(int ID, String nameCourse, String nameLecture, Role role) {
-        super(ID, nameCourse, nameLecture);
-
+    public void setNameLecture(String nameLecture) {
+        this.nameLecture = nameLecture;
     }
 
-    public Course(int ID) {
-
-        this.getID();
-
+    public int getID() {
+        return ID;
     }
-    public Course(int ID,String nameCourse, String nameLecture) {
 
-        this.getID();
-
+    public void setID(int ID) {
+        this.ID = ID;
     }
-    public Course(String nameLecture) {
 
-        super(nameLecture);
+    public String getNameCourse() {
+        return nameCourse;
     }
+
+    public void setNameCourse(String nameCourse) {
+        this.nameCourse = nameCourse;
+    }
+
     @Override
     public String toString() {
         return "Course:\n " +

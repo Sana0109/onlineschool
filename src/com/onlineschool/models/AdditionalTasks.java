@@ -1,6 +1,6 @@
 package com.onlineschool.models;
 
-public class AdditionalTasks extends Faculty {
+public class AdditionalTasks  {
 
     private String nameAdditionalTasks;
     private String date;
@@ -10,7 +10,7 @@ public class AdditionalTasks extends Faculty {
 
 
     public AdditionalTasks(String nameAdditionalTasks, int courseID, String date) {
-        super(1);
+
         this.nameAdditionalTasks = nameAdditionalTasks;
         this.courseID = courseID;
         this.date = date;

@@ -107,7 +107,7 @@ public class CourseRepository extends GenericRepository {
     public static void facultyArrayEnter() {
         Course[] courses = new Course[10];
         System.out.println("Added new Course");
-        courses[1] = new Course(1, "", "", Role.TEACHER);
+        courses[1] = new Course();
         System.out.println(courses[3]);
         System.out.println("-------------------------------");
     }

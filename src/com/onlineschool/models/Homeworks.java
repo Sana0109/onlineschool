@@ -1,17 +1,51 @@
 package com.onlineschool.models;
 
-public class Homeworks extends Faculty {
-
+public class Homeworks  {
+    private int ID;
+    private int lectureID;
+    private String task;
     private String nameHomeworks;
     private Course course;
 
 
+    public Homeworks(int ID, int lectureID, String task, String nameHomeworks) {
+        this.ID = ID;
+        this.lectureID = lectureID;
+        this.task = task;
+        this.nameHomeworks = nameHomeworks;
+
+    }
+
     public Homeworks(String nameHomeworks, Course course) {
-        super(1);
+
 
         this.nameHomeworks = nameHomeworks;
         this.course = course;
 
+    }
+
+    public int getID() {
+        return ID;
+    }
+
+    public void setID(int ID) {
+        this.ID = ID;
+    }
+
+    public int getLectureID() {
+        return lectureID;
+    }
+
+    public void setLectureID(int lectureID) {
+        this.lectureID = lectureID;
+    }
+
+    public String getTask() {
+        return task;
+    }
+
+    public void setTask(String task) {
+        this.task = task;
     }
 
     public Course getCourse() {
