@@ -6,20 +6,22 @@ public class Faculty {
     private String groupNumber;
     private int ID;
 
-    public Faculty(int ID,String nameCourse,String nameLecture,String groupNumber) {
+    public Faculty(int ID, String nameCourse, String nameLecture) {
 
         this.ID = ID;
         this.nameCourse = nameCourse;
         this.nameLecture = nameLecture;
         this.groupNumber = groupNumber;
+
     }
 
     public Faculty(int ID) {
         this.ID = ID;
 
     }
+
     public Faculty(String nameLecture) {
-            this.nameLecture = nameLecture;
+        this.nameLecture = nameLecture;
     }
 
     public Faculty(String nameCourse, String nameLecture, String groupNumber) {
@@ -33,10 +35,7 @@ public class Faculty {
 
     }
 
-    public static void schedule(){
 
-        System.out.println("Course Lecture Schedule");
-    }
     public int getID() {
         return ID;
     }
@@ -55,11 +54,11 @@ public class Faculty {
 
     @Override
     public String toString() {
-        return "Faculty\n" +
+        return "\n Faculty\n" +
                 " nameCourse = " + nameCourse +
                 ",\n courseID = " + ID +
                 ",\n nameLecture = " + nameLecture +
-                ",\n groupNumber = " + groupNumber ;
+                ",\n groupNumber = " + groupNumber;
     }
 
 }

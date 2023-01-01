@@ -3,7 +3,6 @@ package com.onlineschool.service;
 import com.onlineschool.models.Course;
 
 
-
 public class CourseService {
 
 
@@ -12,5 +11,7 @@ public class CourseService {
 
 
     }
+
 }
+
 

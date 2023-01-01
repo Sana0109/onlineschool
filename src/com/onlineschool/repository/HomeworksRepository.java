@@ -4,9 +4,9 @@ import com.onlineschool.models.Homeworks;
 
 import java.util.Arrays;
 
-public class HomeworksRepository extends FacultyRepository {
-    int BOXES = 10;
-    Homeworks[] homework = new  Homeworks[BOXES];
+public class HomeworksRepository extends GenericRepository {
+    private final int BOXES = 10;
+    Homeworks[] homework = new Homeworks[BOXES];
 
     public Homeworks[] getHomework() {
         return homework;
@@ -14,6 +14,11 @@ public class HomeworksRepository extends FacultyRepository {
 
     public int getBOXES() {
         return BOXES;
+    }
+
+    @Override
+    public int getArray(int index) {
+        return 0;
     }
 
     @Override

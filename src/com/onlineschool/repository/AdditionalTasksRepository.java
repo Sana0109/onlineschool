@@ -5,8 +5,8 @@ import com.onlineschool.models.AdditionalTasks;
 import java.util.Arrays;
 
 
-public class AdditionalTasksRepository extends FacultyRepository {
-    int BOXES = 10;
+public class AdditionalTasksRepository extends GenericRepository {
+    private final int BOXES = 10;
     AdditionalTasks[] additionalTasks = new AdditionalTasks[BOXES];
 
     public int getBOXES() {
@@ -15,6 +15,11 @@ public class AdditionalTasksRepository extends FacultyRepository {
 
     public AdditionalTasks[] getAdditionalTasks() {
         return additionalTasks;
+    }
+
+    @Override
+    public int getArray(int index) {
+        return 0;
     }
 
     @Override

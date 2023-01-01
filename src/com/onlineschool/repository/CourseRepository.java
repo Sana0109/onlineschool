@@ -1,35 +1,62 @@
 package com.onlineschool.repository;
 
-import com.onlineschool.models.Role;
-import com.onlineschool.models.Course;
-import com.onlineschool.models.Lecture;
+import com.onlineschool.models.*;
 
-import java.util.Arrays;
 
-public class CourseRepository extends FacultyRepository {
-    private int BOXES = 10;
-    private Course[] courses = new Course[BOXES];
 
-    public void addFaculty() {
+public class CourseRepository extends GenericRepository {
+    private static int BOXES = 10;
+    private static Course[] courses = new Course[BOXES];
+
+
+    public int size() {
+
+        return super.size();
+
+    }
+
+    @Override
+    public boolean isEmpty() {
+        return super.isEmpty();
+
+    }
+
+    @Override
+    public Object get(int index) {
+
+        return super.get(index);
+
+    }
+
+    @Override
+    public int getArray(int index) {
+        return 0;
+    }
+
+    @Override
+    public void add(Object element) {
+        super.add(element);
+
+    }
+
+
+    @Override
+    public void add(int index, Object element) {
+
+        super.add(index, element);
 
 
     }
 
-    public Course[] getCourses() {
-        return courses;
+    @Override
+    public void remove(int index) {
+
+        super.remove(index);
     }
 
-    public void setCourses(Course[] course) {
-        this.courses = courses;
-    }
-
-    private void expandArray() {
-        int twoBoxes = BOXES;
-        BOXES = (BOXES * 3) / 2 + 1;
-        Course[] twoArrayCourse = new Course[BOXES];
-        System.arraycopy(courses, 0, twoArrayCourse, 0, BOXES);
-
-        courses = twoArrayCourse;
+    @Override
+    public void expandArray() {
+        super.expandArray();
     }
 
     public static void courseArrayEnter() {
@@ -76,23 +103,22 @@ public class CourseRepository extends FacultyRepository {
         }
 
     }
+
     public static void facultyArrayEnter() {
         Course[] courses = new Course[10];
         System.out.println("Added new Course");
-        courses[3] = new Course(1,"","","", Role.TEACHER);
+        courses[1] = new Course(1, "", "", Role.TEACHER);
         System.out.println(courses[3]);
         System.out.println("-------------------------------");
     }
+
     public int getBOXES() {
         return BOXES;
     }
 
     @Override
     public String toString() {
-        return "CourseRepository{" +
-                "BOXES=" + BOXES +
-                ", courses=" + Arrays.toString(courses) +
-                '}';
+        return "CourseRepository{}";
     }
 }
 

@@ -1,6 +1,6 @@
 package com.onlineschool.service;
 
-import com.onlineschool.models.Faculty;
+
 import com.onlineschool.models.Lecture;
 import com.onlineschool.models.Person;
 import com.onlineschool.repository.LectureRepository;
@@ -21,54 +21,20 @@ public class LectureService {
     }
 
 
-    public static Lecture lectureCreation(int ID, String nameCourse, String nameLecture, String groupNumber, Person personID) {
-        return new Lecture(ID,nameCourse,nameLecture,groupNumber, personID);
+    public static Lecture lectureCreation(int ID, String nameCourse, String nameLecture, Person personID) {
+        return new Lecture(ID, nameCourse, nameLecture, personID);
 
     }
 
     public static Lecture lectureCourseID(int courseID) {
         return new Lecture(courseID);
     }
-  /* public static void outputID() {
-
-
-        com.onlineschool.models.Course course = new com.onlineschool.models.Course();
-        com.onlineschool.models.Lecture lectures = new com.onlineschool.models.Lecture(1,
-                "Name Lecture","Name Course","Second Name Teacher");
-        lectures.setCourseID(course.getID());
-
-        com.onlineschool.models.Lecture[] lectures1 = new com.onlineschool.models.Lecture[10];
-        lectures1[0] = new Lecture(1);
-        lectures1[1] = new Lecture(1);
-        lectures1[2] = new Lecture(1);
-        lectures1[3] = new Lecture(2);
-        lectures1[4] = new Lecture(3);
-        lectures1[5] = new Lecture(4);
-        lectures1[6] = new Lecture(1);
-        lectures1[7] = new Lecture(1);
-        lectures1[8] = new Lecture(5);
-        lectures1[9] = new Lecture(1);
-        for (int i = 0; i < lectures1.length; i++) {
-
-            if (lectures1[i].getCourseID() == 1) {
-
-                System.out.println(lectures1[i]);
-            }
-
-
-        }
-
-    }*/
-
-
 
 
     @Override
     public String toString() {
         return "LectureService{" +
                 "lectureRepository=" + lectureRepository +
-                ", lecture=" + lecture +
-                ", idTest=" + idTest +
                 '}';
     }
 }

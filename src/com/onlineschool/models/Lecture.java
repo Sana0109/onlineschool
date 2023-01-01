@@ -12,8 +12,8 @@ public class Lecture extends Faculty {
 
     }
 
-    public Lecture(int ID, String nameCourse, String nameLecture, String groupNumber, Person personID) {
-        super(ID, nameCourse, nameLecture, groupNumber);
+    public Lecture(int ID, String nameCourse, String nameLecture, Person personID) {
+        super(ID, nameCourse, nameLecture);
         this.personID = personID;
 
     }
@@ -24,6 +24,9 @@ public class Lecture extends Faculty {
 
     }
 
+    public Lecture() {
+
+    }
 
 
     public int getCourseID() {
@@ -44,11 +47,12 @@ public class Lecture extends Faculty {
 
     @Override
     public String toString() {
-        return " Name Lecture " + getNameLecture() + "\n Name Course " + getNameCourse() +
-                "\n Person " + personID;
+        return " Name Lecture " + getNameLecture() + "\n Course ID " + getID() + "\n Name Course " + getNameCourse() +
+                "\n Person ";
 
     }
+//+ personID
 
 
 }
-
+//"\n Course ID "+getCourseID()+
