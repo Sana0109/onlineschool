@@ -16,6 +16,10 @@ public class Homeworks  {
 
     }
 
+    public Homeworks(int lectureID) {
+        this.lectureID = lectureID;
+    }
+
     public Homeworks(String nameHomeworks, Course course) {
 
 
