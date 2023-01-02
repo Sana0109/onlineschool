@@ -65,7 +65,7 @@ public class FacultyRepository {
         Person person = new Person(2, 5, Role.TEACHER);
         Lecture[] lectures = new Lecture[10];
         System.out.println("Added new Lecture");
-        lectures[0] = new Lecture();
+        lectures[0] = new Lecture(courseID);
         System.out.println(lectures[0]);
         System.out.println("-------------------------------");
 

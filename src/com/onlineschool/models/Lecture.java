@@ -1,33 +1,30 @@
 package com.onlineschool.models;
 
 
-public class Lecture extends Faculty {
+public class Lecture  {
+    private String nameLecture;
     private int courseID;
-
+    private Homeworks homeworksID;
     private Person personID;
 
-    public Lecture(int ID) {
-
-        super(ID);
-
-    }
-
-    public Lecture(int ID, String nameCourse, String nameLecture, Person personID) {
-        super(ID, nameCourse, nameLecture);
+    public Lecture(String nameLecture, int courseID, Homeworks homeworksID, Person personID) {
+        this.nameLecture = nameLecture;
+        this.courseID = courseID;
+        this.homeworksID = homeworksID;
         this.personID = personID;
+    }
+
+    public Lecture(int courseID) {
 
     }
 
-    public Lecture(String nameCourse, String nameLecture, String groupNumber, Person personID) {
-        super(nameCourse, nameLecture, groupNumber);
-        this.personID = personID;
-
+    public String getNameLecture() {
+        return nameLecture;
     }
 
-    public Lecture() {
-
+    public void setNameLecture(String nameLecture) {
+        this.nameLecture = nameLecture;
     }
-
 
     public int getCourseID() {
         return courseID;
@@ -35,6 +32,14 @@ public class Lecture extends Faculty {
 
     public void setCourseID(int courseID) {
         this.courseID = courseID;
+    }
+
+    public Homeworks getHomeworksID() {
+        return homeworksID;
+    }
+
+    public void setHomeworksID(Homeworks homeworksID) {
+        this.homeworksID = homeworksID;
     }
 
     public Person getPersonID() {
@@ -47,7 +52,7 @@ public class Lecture extends Faculty {
 
     @Override
     public String toString() {
-        return " Name Lecture " + getNameLecture() + "\n Course ID " + getID() + "\n Name Course " + getNameCourse() +
+        return " Name Lecture " + getNameLecture() + "\n Course ID " + getCourseID() + "\n Homeworks ID " + getHomeworksID() +
                 "\n Person ";
 
     }
