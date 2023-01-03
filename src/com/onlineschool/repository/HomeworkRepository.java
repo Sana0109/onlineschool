@@ -1,13 +1,23 @@
 package com.onlineschool.repository;
 
 import com.onlineschool.models.Homeworks;
+import com.onlineschool.models.Lecture;
 
 import java.util.Arrays;
 
 public class HomeworksRepository extends GenericRepository {
     private final int BOXES = 10;
-    Homeworks[] homework = new Homeworks[BOXES];
-
+    Homework[] homework = new Homework[BOXES];
+    public final GenericRepository<Homework> homeworksArray = new GenericRepository<>(new Homework[]{
+            new Homework(1,1,"Task ","Name Homeworks "),
+            new Homework(2,2,"Task ","Name Homeworks "),
+            new Homework(3,3,"Task ","Name Homeworks "),
+    }) {
+        @Override
+        public int getArray(int index) {
+            return 0;
+        }
+    };
     @Override
     public int size() {
         return super.size();

@@ -1,10 +1,7 @@
-package com.onlineschool.repository;
+package com.animal;
 
 
-import com.onlineschool.models.Role;
-import com.onlineschool.models.Faculty;
-import com.onlineschool.models.Lecture;
-import com.onlineschool.models.Person;
+import com.onlineschool.models.*;
 
 import java.util.Arrays;
 import java.util.Scanner;
@@ -65,14 +62,14 @@ public class FacultyRepository {
         Person person = new Person(2, 5, Role.TEACHER);
         Lecture[] lectures = new Lecture[10];
         System.out.println("Added new Lecture");
-        lectures[0] = new Lecture(courseID);
+        lectures[0] = new Lecture("Name lecture",1,new Homeworks(),new Person());
         System.out.println(lectures[0]);
         System.out.println("-------------------------------");
 
 
     }
 
-    public static void outputID() {
+    /*public static void outputID() {
         Person person = new Person(1, 1, Role.TEACHER);
 
         com.onlineschool.models.Faculty faculty = new com.onlineschool.models.Faculty();
@@ -117,7 +114,7 @@ public class FacultyRepository {
 
         Utilit utilit = new Utilit();
         System.out.println((utilit));
-    }
+    }*/
 
     public static void nameCoursePattern() {
         Scanner scanner = new Scanner(in);
