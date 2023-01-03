@@ -10,12 +10,7 @@ import com.onlineschool.repository.*;
 
 public class Main {
     public static void main(String[] args) {
-        GenericRepository<Homework> homeworksArray = new GenericRepository<>(new Homework[]{}) {
-            @Override
-            public int getArray(int index) {
-                return 0;
-            }
-        };
+        
         GenericRepository<Lecture> lecturesArray = new GenericRepository<>(new Lecture[]{
                 new Lecture("Name lecture ",1,new Homework[]{new Homework(1,1,"Task",
                         "Name homework")},new Person()),
