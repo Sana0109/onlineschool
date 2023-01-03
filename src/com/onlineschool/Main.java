@@ -36,7 +36,13 @@ public class Main {
         System.out.println("---------------");
         lecturesArray.remove(1);//видалити по індексу
 
-
+     System.out.println("Person ");
+        Utilit.nameFirstStudentPattern();//audit first name student
+        Utilit.nameSecondStudent();//audit second name student
+        Utilit.phonePattern();//audit enter phone
+        Utilit.emailPattern();//audit enter email
+        Utilit.nameCoursePattern();//audit enter course
+        Utilit.nameLecturePattern();//audit enter lecture
     }
 
 
