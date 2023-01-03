@@ -1,7 +1,8 @@
 package com.onlineschool.service;
 
 
-import com.onlineschool.models.Homeworks;
+import com.onlineschool.models.Homework;
+
 import com.onlineschool.models.Lecture;
 import com.onlineschool.models.Person;
 import com.onlineschool.repository.LectureRepository;
@@ -22,8 +23,8 @@ public class LectureService {
     }
 
 
-    public static Lecture lectureCreation(String nameLecture, int courseID, Homeworks homeworksID, Person personID) {
-        return new Lecture(nameLecture, courseID, homeworksID, personID);
+    public static Lecture lectureCreation(String nameLecture, int courseID, Homework[] homeworks, Person personID) {
+        return new Lecture(nameLecture, courseID, homeworks, personID);
 
     }
 

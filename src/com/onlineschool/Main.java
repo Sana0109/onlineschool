@@ -1,6 +1,8 @@
 package com.onlineschool;
 
 
+import com.onlineschool.models.Homework;
+
 import com.onlineschool.models.Lecture;
 import com.onlineschool.models.Person;
 import com.onlineschool.repository.*;
@@ -8,11 +10,21 @@ import com.onlineschool.repository.*;
 
 public class Main {
     public static void main(String[] args) {
+        GenericRepository<Homework> homeworksArray = new GenericRepository<>(new Homework[]{}) {
+            @Override
+            public int getArray(int index) {
+                return 0;
+            }
+        };
         GenericRepository<Lecture> lecturesArray = new GenericRepository<>(new Lecture[]{
-                new Lecture(1, " c1", " l1", new Person()),
-                new Lecture(2, " c2", " l2", new Person()),
-                new Lecture(3, " c3", " l3", new Person()),
-                new Lecture(4, " c4", " l4", new Person()), null, null}) {
+                new Lecture("Name lecture ",1,new Homework[]{new Homework(1,1,"Task",
+                        "Name homework")},new Person()),
+                new Lecture("Name lecture ",2,new Homework[]{new Homework(2,2,"Task",
+                        "Name homework")},new Person()),
+                new Lecture("Name lecture ",3,new Homework[]{new Homework(3,3,"Task",
+                        "Name homework")},new Person()),
+
+                null, null}) {
             @Override
             public int getArray(int index) {
                 return 0;
@@ -27,12 +39,14 @@ public class Main {
         System.out.println("Get = " + lecturesArray.get(2));//взяти елемент по індексу з масиву
         System.out.println("---------------");
         System.out.println("Added Lecture element = ");
-        // lecturesArray.add(new Lecture(5,"name course5","name lecture1",new Person()));//додати елемент масиву
+        lecturesArray.add(new Lecture("Name lecture ",4,new Homework[]{new Homework(4,4,"Task",
+                               "Name homework")},new Person()));//додати елемент масиву
 
         System.out.println("---------------");
         System.out.println("Added Lecture = ");
-        lecturesArray.add(5
-                , new Lecture(6, "name course6", "name lecture6", new Person()));//додати елемент масиву по індексу
+       // lecturesArray.add(4
+        //        , new Lecture("Name lecture ",5,new Homework[]{new Homework(5,5,"Task",
+           //             "Name homework")},new Person()));//додати елемент масиву по індексу
         System.out.println("---------------");
         lecturesArray.remove(1);//видалити по індексу
 

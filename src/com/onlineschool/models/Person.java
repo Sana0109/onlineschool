@@ -11,19 +11,14 @@ public class Person  {
         this.role = role;
 
     }
-
     public Person() {
-
     }
-
     public int getID() {
         return ID;
     }
-
     public void setID(int ID) {
         this.ID = ID;
     }
-
     public int getCourseID() {
         return courseID;
     }
@@ -31,11 +26,9 @@ public class Person  {
     public void setCourseID(int courseID) {
         this.courseID = courseID;
     }
-
     public Role getRole() {
         return role;
     }
-
     public void setRole(Role role) {
         this.role = role;
     }
@@ -43,8 +36,8 @@ public class Person  {
     @Override
     public String toString() {
         return
-                " ID = " + ID +
-                        ", Course ID = " + courseID +
-                        "\n " + role;
+                " ID = " +getID() +
+                        ", Course ID = " + getCourseID() +
+                        "\n " + getRole();
     }
 }

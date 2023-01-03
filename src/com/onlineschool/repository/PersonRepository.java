@@ -32,7 +32,7 @@ public class PersonRepository extends GenericRepository {
     public String toString() {
         return "PersonRepository" +
                 "BOXES=" + BOXES +
-                ", people=" + Arrays.toString(people)
+                " people=" + Arrays.toString(people)
                 ;
     }
 }

@@ -63,8 +63,6 @@ public abstract class GenericRepository<E> implements FacultyInterface<E> {
         return getArrayGeneric()[index];
     }
 
-    public abstract int getArray(int index);
-
     @Override
     public void add(E element) {
         for (int i = 0; i < size(); i++) {
@@ -112,6 +110,8 @@ public abstract class GenericRepository<E> implements FacultyInterface<E> {
         System.out.println("After removal - " + Arrays.toString(arrayGeneric));
     }
 
+
+    public abstract int getArray(int index);
 
     @Override
     public String toString() {

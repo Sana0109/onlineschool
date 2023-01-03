@@ -1,4 +1,4 @@
-package com.animal;
+package com.onlineschool.repository;
 
 
 import com.onlineschool.models.*;
@@ -62,7 +62,7 @@ public class FacultyRepository {
         Person person = new Person(2, 5, Role.TEACHER);
         Lecture[] lectures = new Lecture[10];
         System.out.println("Added new Lecture");
-        lectures[0] = new Lecture("Name lecture",1,new Homeworks(),new Person());
+        lectures[0] = new Lecture("Name lecture ",6,new Homework[]{},new Person());
         System.out.println(lectures[0]);
         System.out.println("-------------------------------");
 

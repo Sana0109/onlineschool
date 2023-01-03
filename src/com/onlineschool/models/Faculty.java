@@ -11,7 +11,7 @@ public class Faculty {
         this.ID = ID;
         this.nameCourse = nameCourse;
         this.nameLecture = nameLecture;
-        this.groupNumber = groupNumber;
+
 
     }
 

@@ -1,17 +1,19 @@
 package com.onlineschool.repository;
 
-import com.onlineschool.models.Homeworks;
-import com.onlineschool.models.Lecture;
+import com.onlineschool.models.Homework;
+
+
 
 import java.util.Arrays;
 
-public class HomeworksRepository extends GenericRepository {
+public class HomeworkRepository extends GenericRepository {
     private final int BOXES = 10;
-    Homework[] homework = new Homework[BOXES];
+    Homework[] homeworks = new Homework[BOXES];
     public final GenericRepository<Homework> homeworksArray = new GenericRepository<>(new Homework[]{
             new Homework(1,1,"Task ","Name Homeworks "),
             new Homework(2,2,"Task ","Name Homeworks "),
-            new Homework(3,3,"Task ","Name Homeworks "),
+            new Homework(3,3,"Task ","Name Homeworks "),null,null
+
     }) {
         @Override
         public int getArray(int index) {
@@ -48,8 +50,8 @@ public class HomeworksRepository extends GenericRepository {
         super.remove(index);
     }
 
-    public Homeworks[] getHomework() {
-        return homework;
+    public Homework[] getHomework() {
+        return homeworks;
     }
 
     public int getBOXES() {
@@ -65,7 +67,7 @@ public class HomeworksRepository extends GenericRepository {
     public String toString() {
         return "HomeworksRepository{" +
                 "BOXES=" + BOXES +
-                ", homework=" + Arrays.toString(homework) +
+                ", homeworks =" + Arrays.toString(homeworks) +
                 '}';
     }
 }

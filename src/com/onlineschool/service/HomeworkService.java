@@ -1,11 +1,11 @@
 package com.onlineschool.service;
 
 
-import com.onlineschool.models.Homeworks;
+import com.onlineschool.models.Homework;
 
 public class HomeworkService {
-    public static Homework homeworCreation(int ID,  int lectureID, String task, String nameHomeworks) {
-        return new Homework(ID,lectureID,task,nameHomeworks);
+    public static Homework homeworkCreation(int ID,  int lectureID, String task, String nameHomework) {
+        return new Homework(ID,lectureID,task,nameHomework);
     }
 public static Homework homeworkLectureID(int lectureID){
         return new Homework(lectureID);
@@ -15,12 +15,12 @@ public static Homework homeworkLectureID(int lectureID){
 
     @Override
     public String toString() {
-        return "HomeworksService{" +
+        return "HomeworkService{" +
                 "idTest=" + idTest +
                 '}';
     }
 
-    public HomeworksService() {
+    public HomeworkService() {
         id++;
         idTest++;
 

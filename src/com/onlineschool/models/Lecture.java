@@ -1,16 +1,18 @@
 package com.onlineschool.models;
 
 
-public class Lecture  {
+import java.util.Arrays;
+
+public class Lecture {
     private String nameLecture;
     private int courseID;
-    private Homeworks homeworksID;
+    private Homework[] homeworks;
     private Person personID;
 
-    public Lecture(String nameLecture, int courseID, Homeworks homeworksID, Person personID) {
+    public Lecture(String nameLecture, int courseID, Homework[] homeworks, Person personID) {
         this.nameLecture = nameLecture;
         this.courseID = courseID;
-        this.homeworksID = homeworksID;
+        this.homeworks = homeworks;
         this.personID = personID;
     }
 
@@ -34,13 +36,6 @@ public class Lecture  {
         this.courseID = courseID;
     }
 
-    public Homeworks getHomeworksID() {
-        return homeworksID;
-    }
-
-    public void setHomeworksID(Homeworks homeworksID) {
-        this.homeworksID = homeworksID;
-    }
 
     public Person getPersonID() {
         return personID;
@@ -52,12 +47,9 @@ public class Lecture  {
 
     @Override
     public String toString() {
-        return " Name Lecture " + getNameLecture() + "\n Course ID " + getCourseID() + "\n Homeworks ID " + getHomeworksID() +
-                "\n Person ";
+        return " Name Lecture " + getNameLecture() + "\n Course ID " + getCourseID() + "\n Homeworks ID " + Arrays.toString(homeworks) +
+                "\n Person \n" ;
 
     }
-//+ personID
-
-
 }
-//"\n Course ID "+getCourseID()+
+

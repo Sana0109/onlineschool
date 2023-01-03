@@ -70,7 +70,7 @@ public class LectureRepository extends GenericRepository {
     @Override
     public String toString() {
         return "LectureRepository{" +
-                "lectures=" + Arrays.toString(new GenericRepository[]{lecturesArray}) +
+                "lectures = " + Arrays.toString(new GenericRepository[]{lecturesArray}) +
                 '}';
     }
 }
