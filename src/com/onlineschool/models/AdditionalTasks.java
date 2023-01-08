@@ -5,11 +5,11 @@ public class AdditionalTasks  {
     private String nameAdditionalTasks;
     private String date;
 
-    private int courseID;
+    private Integer courseID;
 
 
 
-    public AdditionalTasks(String nameAdditionalTasks, int courseID, String date) {
+    public AdditionalTasks(String nameAdditionalTasks, Integer courseID, String date) {
 
         this.nameAdditionalTasks = nameAdditionalTasks;
         this.courseID = courseID;
@@ -20,7 +20,7 @@ public class AdditionalTasks  {
     public int getCourseID() {
         return courseID;
     }
-    public void setCourseID(int courseID) {
+    public void setCourseID(Integer courseID) {
         this.courseID = courseID;
     }
 

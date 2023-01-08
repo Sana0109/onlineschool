@@ -5,7 +5,7 @@ import com.onlineschool.models.*;
 
 
 public class CourseRepository extends GenericRepository {
-    private static int BOXES = 10;
+    private final static int BOXES = 10;
     private static Course[] courses = new Course[BOXES];
 
 
@@ -74,7 +74,7 @@ public class CourseRepository extends GenericRepository {
         lectures[2] = new Lecture(3);
 
 
-        int chooseStop = 0;
+
         int chooseStop2 = 2;
         for (int i = 0; i < courses.length; i++) {
 
@@ -82,10 +82,7 @@ public class CourseRepository extends GenericRepository {
 
             System.out.println("---------------");
 
-            if (i == chooseStop) {
-                break;
 
-            }
 
         }
         for (int j = 0; j < lectures.length; j++) {

@@ -1,15 +1,46 @@
 package com.onlineschool.repository;
 
+import com.onlineschool.models.Course;
 import com.onlineschool.models.Lecture;
+import com.onlineschool.models.Role;
 
-import java.util.Arrays;
+import java.util.*;
 
 public class LectureRepository extends GenericRepository {
-    private int BOXES = 10;
-    private Lecture[] lectures = new Lecture[BOXES];
+    //SimpleIterator simpleIterator = new SimpleIterator();
+    public static void findAll() {
+        SimpleIterator<Lecture> simpleIteratorArray = new SimpleIterator<>(new Lecture[]{});
+        List<Lecture> lectureCollectionArray = new ArrayList<>();
+        lectureCollectionArray.add(new Lecture(1));
+        lectureCollectionArray.add(new Lecture(2));
+        lectureCollectionArray.add(new Lecture(3));
+        lectureCollectionArray.add(new Lecture(4));
+        lectureCollectionArray.add(new Lecture(5));
 
-    public final GenericRepository<Lecture> lecturesArray = new GenericRepository<>(new Lecture[]{}) {
+        System.out.println(lectureCollectionArray);
+        System.out.println("---------------");
+        Set<String> simpleIt = new HashSet<>();
+        ListIterator<Lecture> simpleIterator = lectureCollectionArray.listIterator(2);
+        if (simpleIterator.hasNext())
+            System.out.println(simpleIterator.next());
+        System.out.println("---------------");
+        simpleIterator.remove();
+        System.out.println(lectureCollectionArray);
+    }
+    private final int BOXES = 10;
+    private final Lecture[] lectures = new Lecture[BOXES];
 
+    public final GenericRepository<Lecture> lecturesArray = new GenericRepository<Lecture>(new Lecture[]{}) {
+/*        public <E> int find(E[] arrayGenRepository, E element) {
+            for (int i = 0; i < arrayGenRepository.length; i++) {
+                if (element.equals(arrayGenRepository[i])) {
+                    return i;
+                }
+                System.out.println("arrayGenRepository = " + Arrays.deepToString(arrayGenRepository) + ", element = " );
+            }
+
+            return -1;
+        }*/
         @Override
         public void expandArray() {
             super.expandArray();
@@ -33,7 +64,14 @@ public class LectureRepository extends GenericRepository {
     }
 
     @Override
-    public Object get(int index) {
+    public  Object get(int index) {
+try {
+    lecturesArray.get(1);
+}catch (ArrayIndexOutOfBoundsException e){
+    System.out.println("wrong index " );
+}finally {
+    System.out.println("index = " );
+}
 
         return super.get(index);
     }
@@ -66,6 +104,37 @@ public class LectureRepository extends GenericRepository {
     public void expandArray() {
         super.expandArray();
     }
+    public static void category() {
+        Scanner scanner = new Scanner(System.in);
+
+        Course course = new Course();
+        Lecture lecture = new Lecture();
+        System.out.println("Choose Category: 1 - Course, 2 - Teacher, 3 - Students, 4 - Lecture");
+        int i = 0;
+
+        do {
+                i = scanner.nextInt();
+            } while (1 > 4);
+
+            switch (i) {
+                case 1:
+                    System.out.println(course);
+                    break;
+                case 2:
+                    System.out.println("Teacher " + Role.TEACHER);
+                    break;
+                case 3:
+                    System.out.println("Students " + Role.STUDENT);
+                    break;
+                case 4:
+                    System.out.println(lecture);
+                    break;
+                //default:
+                 //   System.out.println("Error");
+            }
+
+        }
+
 
     @Override
     public String toString() {

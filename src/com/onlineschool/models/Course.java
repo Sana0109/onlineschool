@@ -2,7 +2,7 @@ package com.onlineschool.models;
 
 public class Course {
 
-    private int ID;
+    private Integer ID;
     private String nameCourse;
     private  String nameLecture;
 
@@ -15,11 +15,11 @@ public class Course {
         this.nameLecture = nameLecture;
     }
 
-    public int getID() {
+    public Integer getID() {
         return ID;
     }
 
-    public void setID(int ID) {
+    public void setID(Integer ID) {
         this.ID = ID;
     }
 
@@ -35,7 +35,7 @@ public class Course {
     public String toString() {
         return "Course:\n " +
                "Name Course " +getNameCourse() + "\n "  + "Name Lecture "
-                +getNameLecture() + "\n ID Course " + getID() + "\n " + Role.TEACHER;
+                +getNameLecture() + "\n ID Course " + getID() + "\n " + Role.TEACHER.getSecondName();
     }
 
 }

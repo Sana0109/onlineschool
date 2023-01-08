@@ -1,11 +1,11 @@
 package com.onlineschool.models;
 
 public class Person  {
-    private int ID;
-    private int courseID;
+    private Integer ID;
+    private Integer courseID;
     private Role role;
 
-    public Person(int ID, int courseID, Role role) {
+    public Person(Integer ID, Integer courseID, Role role) {
         this.ID = ID;
         this.courseID = courseID;
         this.role = role;
@@ -23,7 +23,7 @@ public class Person  {
         return courseID;
     }
 
-    public void setCourseID(int courseID) {
+    public void setCourseID(Integer courseID) {
         this.courseID = courseID;
     }
     public Role getRole() {

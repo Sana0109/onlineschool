@@ -6,10 +6,10 @@ import java.util.Arrays;
 
 
 public class AdditionalTasksRepository extends GenericRepository {
-    private final int BOXES = 10;
+    private final static int BOXES = 10;
     AdditionalTasks[] additionalTasks = new AdditionalTasks[BOXES];
 
-    public int getBOXES() {
+    public  int getBOXES() {
         return BOXES;
     }
 

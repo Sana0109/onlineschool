@@ -13,12 +13,10 @@ import static java.lang.System.in;
 
 public class FacultyRepository {
 
-    private final int BOXES = 10;
+    private final static int BOXES = 10;
     private Faculty[] faculties = new Faculty[BOXES];
 
-    public Faculty[] getFaculties() {
-        return faculties;
-    }
+
 
     public Faculty getFacultyID(Integer ID) {
         Faculty[] faculties = new Faculty[10];
@@ -59,7 +57,6 @@ public class FacultyRepository {
 
     public static void facultyArrayEnter() {
 
-        Person person = new Person(2, 5, Role.TEACHER);
         Lecture[] lectures = new Lecture[10];
         System.out.println("Added new Lecture");
         lectures[0] = new Lecture("Name lecture ",6,new Homework[]{},new Person());
@@ -68,6 +65,7 @@ public class FacultyRepository {
 
 
     }
+
 
     /*public static void outputID() {
         Person person = new Person(1, 1, Role.TEACHER);

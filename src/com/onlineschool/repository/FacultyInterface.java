@@ -13,7 +13,7 @@ public interface FacultyInterface<E> {
     void add(E element);
 
 
-    void add(int index, E element);
+    void add(int index, E element)  ;
 
     void remove(int index);
 

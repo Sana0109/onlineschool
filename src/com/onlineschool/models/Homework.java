@@ -1,14 +1,14 @@
 package com.onlineschool.models;
 
 public class Homework {
-    private int ID;
-    private int lectureID;
+    private Integer ID;
+    private Integer lectureID;
     private String task;
     private String nameHomework;
     private Course course;
 
 
-    public Homework(int ID, int lectureID, String task, String nameHomework) {
+    public Homework(Integer ID, Integer lectureID, String task, String nameHomework) {
         this.ID = ID;
         this.lectureID = lectureID;
         this.task = task;
@@ -18,7 +18,7 @@ public class Homework {
     public Homework() {
 
     }
-    public Homework(int lectureID) {
+    public Homework(Integer lectureID) {
         this.lectureID = lectureID;
     }
 
@@ -41,7 +41,7 @@ public class Homework {
         return lectureID;
     }
 
-    public void setLectureID(int lectureID) {
+    public void setLectureID(Integer lectureID) {
         this.lectureID = lectureID;
     }
 

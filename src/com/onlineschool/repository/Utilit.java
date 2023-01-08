@@ -18,7 +18,7 @@ public class Utilit extends GenericRepository {
         Scanner scanner = new Scanner(in);
 
         System.out.println("enter Course Name ");
-        String nameCourseP = "\\D[a-zA-Z]\\D+";
+       final String nameCourseP = "\\D[a-zA-Z]\\D+";
         Pattern ptrn = Pattern.compile(nameCourseP);
         String nameCoursePattern = scanner.next();
         Matcher matcher = ptrn.matcher(nameCoursePattern);
@@ -30,7 +30,7 @@ public class Utilit extends GenericRepository {
         Scanner scanner = new Scanner(in);
 
         System.out.println("enter Lecture Name ");
-        String nameLectureP = "\\D[a-zA-Z]\\D+";
+       final String nameLectureP = "\\D[a-zA-Z]\\D+";
         Pattern ptrn = Pattern.compile(nameLectureP);
         String nameLecturePattern = scanner.next();
         Matcher matcher = ptrn.matcher(nameLecturePattern);
@@ -94,6 +94,6 @@ public class Utilit extends GenericRepository {
 
     @Override
     public void expandArray() {
-
+        super.expandArray();
     }
 }

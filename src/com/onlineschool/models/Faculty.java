@@ -21,6 +21,7 @@ public class Faculty {
     }
 
     public Faculty(String nameLecture) {
+
         this.nameLecture = nameLecture;
     }
 
