@@ -5,14 +5,13 @@ import com.onlineschool.models.*;
 
 import com.onlineschool.repository.*;
 
-import java.util.*;
+import java.util.InputMismatchException;
 
 
 public class Main {
     public static void main(String[] args) {
 
 
-//CourseRepository.courseArrayEnter();
         GenericRepository<Lecture> lecturesArray = new GenericRepository<>(new Lecture[]{
                 new Lecture("Name lecture ",1,new Homework[]{new Homework(1,1,"Task",
                         "Name homework")},new Person()),
@@ -31,11 +30,11 @@ public class Main {
 
         };
 
-//LectureRepository.findAll();
 
-        //Exception exception = new Exception();
+
+        Exception exception = new Exception();
 //виключення для вибору категорії
-  /*      try {
+        try {
         LectureRepository.category();
         }catch (InputMismatchException e){
             System.out.println("wrong argument  " );
@@ -44,14 +43,14 @@ public class Main {
         }
         System.out.println("---------------");
 //виключення для випадку виклика сутності по ID
-        try {
-            lecturesArray.get(7);
-        }catch (ArrayIndexOutOfBoundsException e){
-        System.out.println("index out of bounds for length ");
-        } finally {
-            System.out.println("Length = " + lecturesArray.size()  );
-        }
-*/
+       // try {
+            //lecturesArray.get(4);
+        //}catch (ArrayIndexOutOfBoundsException e){
+       // System.out.println("index out of bounds for length ");
+       // } finally {
+            System.out.println( lecturesArray.get(7));
+
+
        // System.out.println("Get = " + lecturesArray.get(2));//взяти елемент по індексу з масиву
         //System.out.println("---------------");
       //  System.out.println("Array length = " + lecturesArray.size());//розмір масиву
@@ -66,7 +65,7 @@ public class Main {
 
         System.out.println("---------------");
         System.out.println("Added Lecture = ");
-        lecturesArray.add(4
+        lecturesArray.add(10
                 , new Lecture("Name lecture ",5,new Homework[]{new Homework(5,5,"Task",
                     "Name homework")},new Person()));//додати елемент масиву по індексу
         //System.out.println("---------------");

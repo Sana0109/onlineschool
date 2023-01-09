@@ -52,13 +52,18 @@ public abstract class GenericRepository<E> implements FacultyInterface<E> {
 
    @Override
     public E get(int index) {
-       {
+       try{
            for (int i = 0; i < size(); i++) {
                if (index < 0 || index > size());
-                  // throw new IllegalArgumentException("Index is not correct");
+
            }
            return getArrayGeneric()[index];
-       }
+       }catch (ArrayIndexOutOfBoundsException e){
+           System.out.println("index out of bounds for length ");
+       } finally {
+           System.out.println("Length = " + size());
+   }
+       return null;
    }
     @Override
     public void add(E element) {
