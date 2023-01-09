@@ -7,8 +7,7 @@ public abstract class GenericRepository<E> implements FacultyInterface<E> {
 
 
     private E[] arrayGeneric;
-    private  static int BOXES = 10;
-
+    private static int BOXES = 10;
 
 
     @Override
@@ -50,21 +49,40 @@ public abstract class GenericRepository<E> implements FacultyInterface<E> {
     }
 
 
-   @Override
+    @Override
     public E get(int index) {
-       try{
-           for (int i = 0; i < size(); i++) {
-               if (index < 0 || index > size());
+        try {
+            for (int i = 0; i < size(); i++) {
+                if (index < 0 || index > size()) ;
 
-           }
-           return getArrayGeneric()[index];
-       }catch (ArrayIndexOutOfBoundsException e){
-           System.out.println("index out of bounds for length ");
-       } finally {
-           System.out.println("Length = " + size());
-   }
-       return null;
-   }
+            }
+            return getArrayGeneric()[index];
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println("index out of bounds for length ");
+        } finally {
+            System.out.println("Length = " + size());
+        }
+        return null;
+    }
+
+
+    @Override
+    public void add(int index, E element) {
+        try {
+            for (int i = 0; i < size(); i++) {
+                if (arrayGeneric[i] == null && index != 0) {
+                    arrayGeneric[index] = (E) element;
+                    System.out.println("Array improve " + Arrays.toString(arrayGeneric));
+                    break;
+                }
+
+            }
+        } catch (ArrayIndexOutOfBoundsException e) {
+            System.out.println(" input wrong index = " + index);
+        }
+
+    }
+
     @Override
     public void add(E element) {
         for (int i = 0; i < size(); i++) {
@@ -78,23 +96,6 @@ public abstract class GenericRepository<E> implements FacultyInterface<E> {
         }
     }
 
-
-    @Override
-    public void add(int index, E element) {
-        try {
-            for (int i = 0; i < size(); i++) {
-                if (arrayGeneric[i] == null && index != 0) {
-                    arrayGeneric[index] = (E) element;
-                    System.out.println("Array improve " + Arrays.toString(arrayGeneric));
-
-                }
-
-            }
-        } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println(" input wrong index = " + index );
-        }
-
-    }
     public GenericRepository(E[] arrayGeneric) {
 
         this.arrayGeneric = arrayGeneric;
@@ -117,11 +118,6 @@ public abstract class GenericRepository<E> implements FacultyInterface<E> {
 
     public abstract int getArray(int index);
 
-    @Override
-    public String toString() {
-        return "GenericRepository{" +
-                "arrayGenRepository=" + Arrays.toString(arrayGeneric) +
 
-                '}';
-    }
 }
+

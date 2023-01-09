@@ -27,20 +27,12 @@ public class LectureRepository extends GenericRepository {
         simpleIterator.remove();
         System.out.println(lectureCollectionArray);
     }
+
     private final int BOXES = 10;
     private final Lecture[] lectures = new Lecture[BOXES];
 
-    public final GenericRepository<Lecture> lecturesArray = new GenericRepository<Lecture>(new Lecture[]{}) {
-/*        public <E> int find(E[] arrayGenRepository, E element) {
-            for (int i = 0; i < arrayGenRepository.length; i++) {
-                if (element.equals(arrayGenRepository[i])) {
-                    return i;
-                }
-                System.out.println("arrayGenRepository = " + Arrays.deepToString(arrayGenRepository) + ", element = " );
-            }
+    public final GenericRepository<Lecture> lecturesArray = new GenericRepository<>(new Lecture[]{}) {
 
-            return -1;
-        }*/
         @Override
         public void expandArray() {
             super.expandArray();
@@ -64,14 +56,7 @@ public class LectureRepository extends GenericRepository {
     }
 
     @Override
-    public  Object get(int index) {
-try {
-    lecturesArray.get(1);
-}catch (ArrayIndexOutOfBoundsException e){
-    System.out.println("wrong index " );
-}finally {
-    System.out.println("index = " );
-}
+    public Object get(int index) {
 
         return super.get(index);
     }
@@ -104,6 +89,7 @@ try {
     public void expandArray() {
         super.expandArray();
     }
+
     public static void category() {
         Scanner scanner = new Scanner(System.in);
 
@@ -113,27 +99,26 @@ try {
         int i = 0;
 
         do {
-                i = scanner.nextInt();
-            } while (1 > 4);
+            i = scanner.nextInt();
+        } while (1 > 4);
 
-            switch (i) {
-                case 1:
-                    System.out.println(course);
-                    break;
-                case 2:
-                    System.out.println("Teacher " + Role.TEACHER);
-                    break;
-                case 3:
-                    System.out.println("Students " + Role.STUDENT);
-                    break;
-                case 4:
-                    System.out.println(lecture);
-                    break;
-                //default:
-                 //   System.out.println("Error");
-            }
+        switch (i) {
+            case 1:
+                System.out.println(course);
+                break;
+            case 2:
+                System.out.println("Teacher " + Role.TEACHER);
+                break;
+            case 3:
+                System.out.println("Students " + Role.STUDENT);
+                break;
+            case 4:
+                System.out.println(lecture);
+                break;
 
         }
+
+    }
 
 
     @Override
