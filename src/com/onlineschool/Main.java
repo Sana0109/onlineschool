@@ -14,7 +14,7 @@ public class Main {
     public static void main(String[] args) {
 
 
-        GenericRepository<Lecture> lecturesArray = new GenericRepository<>(new Lecture[]{
+       /* GenericRepository<Lecture> lecturesArray = new GenericRepository<>(new Lecture[]{
                 new Lecture("Name lecture ", 1, new Homework[]{new Homework(1, 1, "Task",
                         "Name homework")}, new Person()),
                 new Lecture("Name lecture ", 2, new Homework[]{new Homework(2, 2, "Task",
@@ -28,8 +28,11 @@ public class Main {
                 return 0;
             }
 
+        };*/
 
-        };
+        LectureRepository.findAll();
+
+        /*
 //виключення для вибору категорії
         try {
             LectureRepository.category();
@@ -52,7 +55,7 @@ public class Main {
                 , new Lecture("Name lecture ", 5, new Homework[]{new Homework(5, 5, "Task",
                         "Name homework")}, new Person()));//додати елемент масиву по індексу
 
-
+*/
     }
 
 

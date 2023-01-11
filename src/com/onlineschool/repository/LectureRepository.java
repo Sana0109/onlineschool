@@ -7,10 +7,10 @@ import com.onlineschool.models.Role;
 import java.util.*;
 
 public class LectureRepository extends GenericRepository {
-    //SimpleIterator simpleIterator = new SimpleIterator();
+
     public static void findAll() {
-        SimpleIterator<Lecture> simpleIteratorArray = new SimpleIterator<>(new Lecture[]{});
-        List<Lecture> lectureCollectionArray = new ArrayList<>();
+
+       List<Lecture> lectureCollectionArray = new ArrayList<>();
         lectureCollectionArray.add(new Lecture(1));
         lectureCollectionArray.add(new Lecture(2));
         lectureCollectionArray.add(new Lecture(3));
@@ -19,7 +19,7 @@ public class LectureRepository extends GenericRepository {
 
         System.out.println(lectureCollectionArray);
         System.out.println("---------------");
-        Set<String> simpleIt = new HashSet<>();
+        //Set<String> simpleIt = new HashSet<>();
         ListIterator<Lecture> simpleIterator = lectureCollectionArray.listIterator(2);
         if (simpleIterator.hasNext())
             System.out.println(simpleIterator.next());

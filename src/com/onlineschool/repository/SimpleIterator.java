@@ -2,7 +2,10 @@ package com.onlineschool.repository;
 
 import com.onlineschool.models.Lecture;
 
-public class SimpleIterator <E>{
+
+import java.util.ListIterator;
+
+public class SimpleIterator<E> implements ListIterator {
 
 
     public SimpleIterator(Lecture[] lectures) {
@@ -16,24 +19,50 @@ public class SimpleIterator <E>{
         return null;
     }
 
-   public boolean hasNext() {
+    public boolean hasNext() {
+        return false;
+    }
+    public void remove() {
+
+    }
+    @Override
+    public boolean hasPrevious() {
         return false;
     }
 
-  public   void remove() {
-
-    }
-
-
-    public void add(E lecture) {
-    }
-
-    public SimpleIterator<E> simpleIterator() {
+    @Override
+    public Object previous() {
         return null;
     }
 
+    @Override
+    public int nextIndex() {
+        return 0;
+    }
+
+    @Override
+    public int previousIndex() {
+        return 0;
+    }
 
 
+
+
+
+    @Override
+    public void set(Object o) {
+
+    }
+
+    @Override
+    public void add(Object o) {
+
+    }
+
+
+    public ListIterator<E> listIterator(int i) {
+        return null;
+    }
 }
 
 
