@@ -19,7 +19,7 @@ public class LectureRepository extends GenericRepository {
 
         System.out.println("The whole collection :\n" + lectureCollectionArray);
         System.out.println("---------------");
-        //Set<String> simpleIt = new HashSet<>();
+
         ListIterator<Lecture> simpleIterator = lectureCollectionArray.listIterator(2);
         if (simpleIterator.hasNext())
             System.out.println("Choose element :\n" + simpleIterator.next());
