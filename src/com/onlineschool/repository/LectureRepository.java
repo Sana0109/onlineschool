@@ -17,15 +17,15 @@ public class LectureRepository extends GenericRepository {
         lectureCollectionArray.add(new Lecture(4));
         lectureCollectionArray.add(new Lecture(5));
 
-        System.out.println(lectureCollectionArray);
+        System.out.println("The whole collection :\n" + lectureCollectionArray);
         System.out.println("---------------");
         //Set<String> simpleIt = new HashSet<>();
         ListIterator<Lecture> simpleIterator = lectureCollectionArray.listIterator(2);
         if (simpleIterator.hasNext())
-            System.out.println(simpleIterator.next());
+            System.out.println("Choose element :\n" + simpleIterator.next());
         System.out.println("---------------");
         simpleIterator.remove();
-        System.out.println(lectureCollectionArray);
+        System.out.println("A collection without a deleted element :\n" + lectureCollectionArray);
     }
 
     private final int BOXES = 10;
