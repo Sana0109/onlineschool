@@ -41,13 +41,13 @@ public class Main {
         System.out.println("---------------");
 //виключення для випадку виклика сутності по ID
 
-        System.out.println(lecturesArray.get(7));
+        System.out.println(lecturesArray.get(5));
         System.out.println("---------------");
 
-        //виключення для add
+//виключення для add
 
         System.out.println("Added Lecture = ");
-        lecturesArray.add(10
+        lecturesArray.add(7
 
                 , new Lecture("Name lecture ", 5, new Homework[]{new Homework(5, 5, "Task",
                         "Name homework")}, new Person()));//додати елемент масиву по індексу

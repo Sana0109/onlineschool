@@ -62,7 +62,7 @@ public abstract class GenericRepository<E> implements FacultyInterface<E> {
         } finally {
             System.out.println("Length = " + size());
         }
-        return null;
+        return arrayGeneric[0];
     }
 
 
