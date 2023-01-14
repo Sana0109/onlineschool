@@ -4,8 +4,8 @@ import com.onlineschool.models.AdditionalTasks;
 
 public class AdditionalTasksService {
 
-    public AdditionalTasks additionalTasksCreation(String nameAdditionalTasks, int courseID,String date) {
-        return new AdditionalTasks(nameAdditionalTasks,courseID,date);
+    public AdditionalTasks additionalTasksCreation(String nameAdditionalTasks, Integer ID,Integer lectureID) {
+        return new AdditionalTasks(nameAdditionalTasks, ID, lectureID);
     }
 
     public static int id = 0;

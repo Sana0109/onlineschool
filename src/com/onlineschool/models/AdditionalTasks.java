@@ -3,34 +3,14 @@ package com.onlineschool.models;
 public class AdditionalTasks  {
 
     private String nameAdditionalTasks;
-    private String date;
+    private Integer ID;
 
-    private Integer courseID;
+    private Integer lectureID;
 
-
-
-    public AdditionalTasks(String nameAdditionalTasks, Integer courseID, String date) {
-
+    public AdditionalTasks(String nameAdditionalTasks, Integer ID, Integer lectureID) {
         this.nameAdditionalTasks = nameAdditionalTasks;
-        this.courseID = courseID;
-        this.date = date;
-
-    }
-
-    public int getCourseID() {
-        return courseID;
-    }
-    public void setCourseID(Integer courseID) {
-        this.courseID = courseID;
-    }
-
-
-    public String getDate() {
-        return date;
-    }
-
-    public void setDate(String date) {
-        this.date = date;
+        this.ID = ID;
+        this.lectureID = lectureID;
     }
 
     public String getNameAdditionalTasks() {
@@ -41,12 +21,28 @@ public class AdditionalTasks  {
         this.nameAdditionalTasks = nameAdditionalTasks;
     }
 
+    public Integer getID() {
+        return ID;
+    }
+
+    public void setID(Integer ID) {
+        this.ID = ID;
+    }
+
+    public Integer getLectureID() {
+        return lectureID;
+    }
+
+    public void setLectureID(Integer lectureID) {
+        this.lectureID = lectureID;
+    }
+
     @Override
     public String toString() {
         return "AdditionalTasks{" +
                 "nameAdditionalTasks='" + nameAdditionalTasks + '\'' +
-                ", date='" + date + '\'' +
-                ", courseID=" + courseID +
+                ", ID=" + ID +
+                ", lectureID=" + lectureID +
                 '}';
     }
 }

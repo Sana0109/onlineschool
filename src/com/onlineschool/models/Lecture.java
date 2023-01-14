@@ -8,7 +8,7 @@ public class Lecture {
     private Integer courseID;
     private Homework[] homeworks;
     private Person personID;
-
+    private ResourceType resourceType;
     public Lecture(String nameLecture, Integer courseID, Homework[] homeworks, Person personID) {
         this.nameLecture = nameLecture;
         this.courseID = courseID;
@@ -19,7 +19,8 @@ public class Lecture {
 
 
 
-    public Lecture(Integer courseID) {
+    public Lecture(Integer courseID, ResourceType resourceType) {
+        this.resourceType = resourceType;
         this.courseID = courseID;
     }
 
