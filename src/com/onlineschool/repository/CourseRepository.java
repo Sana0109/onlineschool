@@ -69,9 +69,9 @@ public class CourseRepository extends GenericRepository {
         courses[2] = new Course();
 
 
-        lectures[0] = new Lecture(1);
-        lectures[1] = new Lecture(2);
-        lectures[2] = new Lecture(3);
+        lectures[0] = new Lecture();
+        lectures[1] = new Lecture();
+        lectures[2] = new Lecture();
 
 
 

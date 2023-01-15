@@ -74,6 +74,7 @@ public class Utilit extends GenericRepository {
     public static void emailPattern() {
         Scanner scanner = new Scanner(in);
         String email = "^([a-z0-9_-]+\\.)*[a-z0-9_-]+@[a-z0-9_-]+(\\.[a-z0-9_-]+)*\\.[a-z]{2,6}$";
+
         Pattern ptrn3 = Pattern.compile(email);
         System.out.println("enter email x@x.x.x");
         String emailP = scanner.next();

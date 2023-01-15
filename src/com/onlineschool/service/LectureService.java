@@ -5,6 +5,7 @@ import com.onlineschool.models.Homework;
 
 import com.onlineschool.models.Lecture;
 import com.onlineschool.models.Person;
+import com.onlineschool.models.ResourceType;
 import com.onlineschool.repository.LectureRepository;
 
 public class LectureService {
@@ -29,7 +30,7 @@ public class LectureService {
     }
 
     public static Lecture lectureCourseID(int courseID) {
-        return new Lecture(courseID);
+        return new Lecture(courseID, ResourceType.BOOK);
     }
 
 

@@ -9,6 +9,7 @@ public class Lecture {
     private Homework[] homeworks;
     private Person personID;
     private ResourceType resourceType;
+
     public Lecture(String nameLecture, Integer courseID, Homework[] homeworks, Person personID) {
         this.nameLecture = nameLecture;
         this.courseID = courseID;
@@ -56,7 +57,7 @@ public class Lecture {
     @Override
     public String toString() {
         return " Name Lecture " + getNameLecture() + "\n Course ID " + getCourseID() + "\n Homeworks ID " + Arrays.toString(homeworks) +
-                "\n Person \n" +Role.TEACHER.getSecondName();
+                "\n Person \n" +Role.TEACHER.getSecondName() +  "\n" + ResourceType.BOOK;
 
     }
 }

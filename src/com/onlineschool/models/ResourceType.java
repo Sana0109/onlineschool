@@ -29,8 +29,8 @@ public enum ResourceType {
     @Override
     public String toString() {
         return "ResourceType{" +
-                "nameBook='" + nameBook + '\'' +
-                ", author='" + author + '\'' +
+                "Name Book = '" + nameBook + '\'' +
+                ", author = '" + author + '\'' +
                 '}';
     }
 }
