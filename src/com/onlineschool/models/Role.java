@@ -13,12 +13,24 @@ public enum Role {
     private String phone = "Phone";
     private String email = "Email";
 
-    private Role(String nameFirst, String secondName, String phone, String email) {
+    Role(String nameFirst, String secondName, String phone, String email) {
         this.nameFirst = nameFirst;
         this.secondName = secondName;
         this.phone = phone;
         this.email = email;
     }
+
+
+
+
+     Role(String secondName) {
+        this.secondName = secondName;
+    }
+
+    public static String TEACHER(String secondName) {return secondName;
+    }
+
+
 
     public String getPhone() {
         return phone;
@@ -44,7 +56,7 @@ public enum Role {
         this.nameFirst = nameFirst;
     }
 
-    public String getSecondName() {
+    public String getSecondName(String secondName) {
         return secondName;
     }
 

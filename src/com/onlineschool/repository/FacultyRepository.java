@@ -59,7 +59,7 @@ public class FacultyRepository {
 
         Lecture[] lectures = new Lecture[10];
         System.out.println("Added new Lecture");
-        lectures[0] = new Lecture("Name lecture ",6,new Homework[]{},new Person());
+        lectures[0] = new Lecture("Name lecture ",6,new Homework[]{},new Person(3, 3, Role.TEACHER("second name")));
         System.out.println(lectures[0]);
         System.out.println("-------------------------------");
 

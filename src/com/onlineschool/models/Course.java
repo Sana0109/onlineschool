@@ -31,15 +31,20 @@ public class Course {
         this.nameCourse = nameCourse;
     }
 
+    public Course(String nameCourse) {
+        this.nameCourse = nameCourse;
+    }
+
     @Override
     public String toString() {
         return "Course:\n " +
                "Name Course " +getNameCourse() + "\n "  + "Name Lecture "
-                +getNameLecture() + "\n ID Course " + getID() + "\n " + Role.TEACHER.getSecondName();
+                +getNameLecture() + "\n ID Course " + getID() + "\n " ;
     }
 
-}
 
+}
+// + Role.TEACHER.getSecondName()
 
 
 

@@ -3,16 +3,55 @@ package com.onlineschool;
 
 
 
-import com.onlineschool.models.Lecture;
-import com.onlineschool.models.ResourceType;
-import java.util.ArrayList;
-import java.util.List;
+import com.onlineschool.comparator.CourseComparator;
+import com.onlineschool.comparator.PersonComparator;
+import com.onlineschool.models.*;
+
+
+import java.util.Arrays;
+import java.util.SortedSet;
+import java.util.TreeSet;
 
 
 public class Main {
     public static void main(String[] args) {
+        //сортування курсів за назвою
+       /* CourseComparator courseComparator = new CourseComparator() {};
+        SortedSet<Course> nameCourse = new TreeSet<>(courseComparator);
+        nameCourse.add(new Course("name 2"));
+        nameCourse.add(new Course("name 3"));
+        nameCourse.add(new Course("name 1"));
+        nameCourse.add(new Course("name 4"));
+        nameCourse.forEach(System.out::println);
+    }*/
+//сортування вчитилів за прізвищем
+  /*      PersonComparator personComparator = new PersonComparator(){};
+        SortedSet<Person> teacherName = new TreeSet<>(personComparator);
 
-        List<Lecture> lectureArrayList = new ArrayList<>();
+        teacherName.add(new Person(Role.TEACHER.getSecondName("fifth name")));
+        teacherName.add(new Person(Role.TEACHER.getSecondName("first name")));
+        teacherName.add(new Person(Role.TEACHER.getSecondName("third name")));
+        teacherName.add(new Person(Role.TEACHER.getSecondName("fours name")));
+        teacherName.add(new Person(Role.TEACHER.getSecondName("second name")));
+
+        teacherName.forEach(System.out::println);
+
+        }
+*/
+//сортування студентів за прізвищем
+    PersonComparator personComparator = new PersonComparator(){};
+    SortedSet<Person> studentName = new TreeSet<>(personComparator);
+
+        studentName.add(new Person(Role.STUDENT.getSecondName("Second name")));
+        studentName.add(new Person(Role.STUDENT.getSecondName("Third name")));
+        studentName.add(new Person(Role.STUDENT.getSecondName("Fours name")));
+        studentName.add(new Person(Role.STUDENT.getSecondName("Fifth name")));
+
+        studentName.forEach(System.out::println);
+
+}
+}
+ /*  List<Lecture> lectureArrayList = new ArrayList<>();
         List<Lecture> lecturesCopyList = new ArrayList<>();
         lecturesCopyList.add(0,new Lecture(6,ResourceType.BOOK));
         lecturesCopyList.add(1,new Lecture(7,ResourceType.BOOK));
@@ -39,12 +78,7 @@ public class Main {
 
         System.out.println("--------------------");
         System.out.println("Remove 5" + lectureArrayList.remove(5));
-        System.out.println("\n Array after remove " + lectureArrayList);
-    }
-
-
-}
-
+        System.out.println("\n Array after remove " + lectureArrayList);*/
 
 
 

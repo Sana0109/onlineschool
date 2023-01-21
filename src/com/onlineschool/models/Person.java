@@ -4,15 +4,36 @@ public class Person  {
     private Integer ID;
     private Integer courseID;
     private Role role;
-
+private String second_name;
     public Person(Integer ID, Integer courseID, Role role) {
         this.ID = ID;
-        this.courseID = courseID;
+       this.courseID = courseID;
         this.role = role;
 
     }
-    public Person() {
+    public Person(int id, int courseID, String second_name) {
     }
+
+    public Person(Role role) {
+
+        this.role = role;
+    }
+
+    public Person(String second_name) {
+        this.second_name = second_name;
+    }
+
+    public String Person(String second_name) {return second_name;
+    }
+
+    public String getSecond_name() {
+        return second_name;
+    }
+
+    public void setSecond_name(String second_name) {
+        this.second_name = second_name;
+    }
+
     public int getID() {
         return ID;
     }
@@ -21,23 +42,34 @@ public class Person  {
     }
     public int getCourseID() {
         return courseID;
-    }
+   }
 
     public void setCourseID(Integer courseID) {
+
         this.courseID = courseID;
     }
+
     public Role getRole() {
-        return role;
+        return setRole(Role.TEACHER);
     }
-    public void setRole(Role role) {
+
+    public Role setRole(Role role) {
         this.role = role;
+        return role;
     }
 
     @Override
     public String toString() {
-        return
-                " ID = " +getID() +
-                        ", Course ID = " + getCourseID() +
-                        "\n " + getRole();
+        return "Person{" +
+                "second_name='" + second_name + '\'' +
+                '}';
     }
+/*  @Override
+    public String toString() {
+        return
+                " ID = " +
+                        ", Course ID = "  +
+                        "\n " + getRole();
+    }*/
 }
+//+getID() + getCourseID()

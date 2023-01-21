@@ -20,19 +20,27 @@ public class PersonRepository extends GenericRepository {
 
     public static Person createNewRole(int ID, int courseID, Role role) {
         return new Person(ID, courseID, role);
+
     }
 
+    @Override
+    public String toString() {
+        return "PersonRepository{" +
+                "people=" + Arrays.toString(people) +
+                '}';
+    }
+
+    public static Person createRole(Role role) {
+        return new Person(role);
+
+
+
+
+        }
 
     @Override
     public int getArray(int index) {
         return 0;
     }
-
-    @Override
-    public String toString() {
-        return "PersonRepository" +
-                "BOXES=" + BOXES +
-                " people=" + Arrays.toString(people)
-                ;
-    }
 }
+

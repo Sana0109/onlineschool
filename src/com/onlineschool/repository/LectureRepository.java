@@ -76,7 +76,7 @@ public class LectureRepository extends GenericRepository {
     public static void category() {
         Scanner scanner = new Scanner(System.in);
 
-        Course course = new Course();
+        //Course course = new Course();
         Lecture lecture = new Lecture();
         System.out.println("Choose Category: 1 - Course, 2 - Teacher, 3 - Students, 4 - Lecture");
         int i = 0;
@@ -87,7 +87,7 @@ public class LectureRepository extends GenericRepository {
 
         switch (i) {
             case 1:
-                System.out.println(course);
+                //System.out.println(course);
                 break;
             case 2:
                 System.out.println("Teacher " + Role.TEACHER);

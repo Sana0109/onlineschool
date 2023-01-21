@@ -57,8 +57,8 @@ public class Lecture {
     @Override
     public String toString() {
         return " Name Lecture " + getNameLecture() + "\n Course ID " + getCourseID() + "\n Homeworks ID " + Arrays.toString(homeworks) +
-                "\n Person \n" +Role.TEACHER.getSecondName() +  "\n" + ResourceType.BOOK;
+                "\n Person \n"  +  "\n" + ResourceType.BOOK;
 
     }
 }
-
+//+Role.TEACHER.getSecondName()
