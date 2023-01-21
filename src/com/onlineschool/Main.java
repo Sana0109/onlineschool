@@ -6,6 +6,7 @@ package com.onlineschool;
 import com.onlineschool.comparator.CourseComparator;
 import com.onlineschool.comparator.PersonComparator;
 import com.onlineschool.models.*;
+import com.onlineschool.repository.AdditionalTasksRepository;
 
 
 import java.util.Arrays;
@@ -48,8 +49,11 @@ public class Main {
         studentName.add(new Person(Role.STUDENT.getSecondName("Fifth name")));
 
         studentName.forEach(System.out::println);
+        AdditionalTasksRepository additionalTasksRepository = new AdditionalTasksRepository();
 
+        System.out.println(additionalTasksRepository.chooseSort());
 }
+
 }
  /*  List<Lecture> lectureArrayList = new ArrayList<>();
         List<Lecture> lecturesCopyList = new ArrayList<>();
