@@ -21,15 +21,13 @@ public enum Role {
     }
 
 
-
-
-     Role(String secondName) {
+    Role(String secondName) {
         this.secondName = secondName;
     }
 
-    public static String TEACHER(String secondName) {return secondName;
+    public static String TEACHER(String secondName) {
+        return secondName;
     }
-
 
 
     public String getPhone() {

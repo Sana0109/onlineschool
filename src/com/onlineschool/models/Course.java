@@ -4,7 +4,7 @@ public class Course {
 
     private Integer ID;
     private String nameCourse;
-    private  String nameLecture;
+    private String nameLecture;
 
 
     public String getNameLecture() {
@@ -38,8 +38,8 @@ public class Course {
     @Override
     public String toString() {
         return "Course:\n " +
-               "Name Course " +getNameCourse() + "\n "  + "Name Lecture "
-                +getNameLecture() + "\n ID Course " + getID() + "\n " ;
+                "Name Course " + getNameCourse() + "\n " + "Name Lecture "
+                + getNameLecture() + "\n ID Course " + getID() + "\n ";
     }
 
 

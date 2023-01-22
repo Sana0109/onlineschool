@@ -4,7 +4,7 @@ import com.onlineschool.models.AdditionalTasks;
 
 import java.util.Comparator;
 
-public abstract class AdditionalTasksComparator implements Comparator <AdditionalTasks>{
+public abstract class AdditionalTasksComparator implements Comparator<AdditionalTasks> {
 
     @Override
     public int compare(AdditionalTasks o1, AdditionalTasks o2) {

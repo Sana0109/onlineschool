@@ -1,6 +1,6 @@
 package com.onlineschool.models;
 
-public class AdditionalTasks  {
+public class AdditionalTasks implements Comparable {
 
     private String nameAdditionalTasks;
     private Integer ID;
@@ -39,11 +39,28 @@ public class AdditionalTasks  {
 
     @Override
     public String toString() {
-        return "AdditionalTasks{" +
-                "nameAdditionalTasks='" + nameAdditionalTasks + '\'' +
-                ", ID=" + ID +
-                ", lectureID=" + lectureID +
-                '}';
+        return
+                "\n " + nameAdditionalTasks + ", " +
+                "ID = " + ID +
+                ", lectureID = " + lectureID
+               ;
     }
+
+    @Override
+    public int compareTo(Object o) {
+        AdditionalTasks tasks = (AdditionalTasks) o;
+
+        int result = 0;
+        if (ID > tasks.ID)
+            result = 1;
+        if (ID < tasks.ID)
+            result = -1;
+        else if (lectureID > tasks.lectureID)
+            result = 1;
+        if (lectureID < tasks.lectureID)
+            result = -1;
+        return result;
+    }
+
 }
 
