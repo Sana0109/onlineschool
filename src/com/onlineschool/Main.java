@@ -1,19 +1,37 @@
 package com.onlineschool;
 
 
-import com.onlineschool.comparator.CourseComparator;
-import com.onlineschool.comparator.PersonComparator;
+import com.onlineschool.comparator.HomeworkComparator;
 import com.onlineschool.models.*;
-import com.onlineschool.repository.AdditionalTasksRepository;
 
 
-
-import java.util.SortedSet;
-import java.util.TreeSet;
+import java.util.*;
 
 
 public class Main {
     public static void main(String[] args) {
+ //зберігання домашніх завдань в Мар з lectureID та nameHomework
+        Map<Homework, Homework> homeworkMap1 = Map.of(
+                new Homework(3), new Homework("third"),
+                new Homework(2), new Homework("second"),
+                new Homework(1), new Homework("first")
+        );
+        System.out.println(homeworkMap1.values());
+  /*     HomeworkComparator homeworkComparator = new HomeworkComparator() {};
+        SortedMap<Homework , Homework> homeworkMap = new TreeMap<>(homeworkComparator);
+        homeworkMap.put(new Homework(3), new Homework("String"));
+        homeworkMap.put(new Homework(2), new Homework("second"));
+        homeworkMap.put(new Homework(1), new Homework("first"));
+    Iterator<Map.Entry<Homework , Homework>> itr = homeworkMap.entrySet().iterator();
+        while (itr.hasNext()){
+        Map.Entry<Homework , Homework> entry = itr.next();
+            Homework key = entry.getKey();
+            Homework value = entry.getValue();
+
+}
+       System.out.println(homeworkMap.lastKey());
+
+
         //сортування курсів за назвою
        /* CourseComparator courseComparator = new CourseComparator() {};
         SortedSet<Course> nameCourse = new TreeSet<>(courseComparator);
@@ -38,7 +56,7 @@ public class Main {
         }
 */
 //сортування студентів за прізвищем
-        PersonComparator personComparator = new PersonComparator() {
+  /*      PersonComparator personComparator = new PersonComparator() {
         };
         SortedSet<Person> studentName = new TreeSet<>(personComparator);
 
@@ -51,7 +69,7 @@ public class Main {
         System.out.println("-----------------");
 //сортування додаткових матеріалів за ID, lectureID, nameAdditionalTasks
         AdditionalTasksRepository additionalTasksRepository = new AdditionalTasksRepository();
-        System.out.println(additionalTasksRepository.chooseSort());
+        System.out.println(additionalTasksRepository.chooseSort());*/
     }
 
 }

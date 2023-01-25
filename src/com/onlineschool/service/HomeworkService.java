@@ -4,8 +4,8 @@ package com.onlineschool.service;
 import com.onlineschool.models.Homework;
 
 public class HomeworkService {
-    public static Homework homeworkCreation(int ID,  int lectureID, String task, String nameHomework) {
-        return new Homework(ID,lectureID,task,nameHomework);
+    public static Homework homeworkCreation(int ID,  int lectureID,  String nameHomework) {
+        return new Homework(ID,lectureID,nameHomework);
     }
 public static Homework homeworkLectureID(int lectureID){
         return new Homework(lectureID);

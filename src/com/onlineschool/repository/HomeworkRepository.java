@@ -9,17 +9,17 @@ import java.util.Arrays;
 public class HomeworkRepository extends GenericRepository {
     private final int BOXES = 10;
     Homework[] homeworks = new Homework[BOXES];
-    public final GenericRepository<Homework> homeworksArray = new GenericRepository<>(new Homework[]{
-            new Homework(1,1,"Task ","Name Homeworks "),
-            new Homework(2,2,"Task ","Name Homeworks "),
-            new Homework(3,3,"Task ","Name Homeworks "),null,null
+  /*  public final GenericRepository<Homework> homeworksArray = new GenericRepository<>(new Homework[]{
+            new Homework(1,1,"Name Homeworks "),
+            new Homework(2,2,"Name Homeworks "),
+            new Homework(3,3,"Name Homeworks "),null,null
 
     }) {
         @Override
         public int getArray(int index) {
             return 0;
         }
-    };
+    };*/
     @Override
     public int size() {
         return super.size();
@@ -67,7 +67,7 @@ public class HomeworkRepository extends GenericRepository {
     public String toString() {
         return "HomeworksRepository{" +
                 "BOXES=" + BOXES +
-                ", homeworks =" + Arrays.toString(homeworks) +
+                ", homeworks =" +
                 '}';
     }
 }

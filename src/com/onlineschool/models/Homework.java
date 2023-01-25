@@ -1,6 +1,6 @@
 package com.onlineschool.models;
 
-public class Homework {
+public class Homework implements Comparable{
     private Integer ID;
     private Integer lectureID;
     private String task;
@@ -8,10 +8,9 @@ public class Homework {
     private Course course;
 
 
-    public Homework(Integer ID, Integer lectureID, String task, String nameHomework) {
+    public Homework(Integer ID, Integer lectureID,  String nameHomework) {
         this.ID = ID;
         this.lectureID = lectureID;
-        this.task = task;
         this.nameHomework = nameHomework;
 
     }
@@ -22,11 +21,9 @@ public class Homework {
         this.lectureID = lectureID;
     }
 
-    public Homework(String nameHomework, Course course) {
-
-
+    public Homework(String nameHomework) {
         this.nameHomework = nameHomework;
-        this.course = course;
+
 
     }
     public int getID() {
@@ -73,9 +70,23 @@ public class Homework {
 
     @Override
     public String toString() {
-        return "Homework{" +
-                "Name Homework = " + getNameHomework()+ ", Lecture ID = "+ getLectureID() +
-                ", Task = " + getTask() +
-                '}';
+        return "Homework { " +
+                "Lecture ID = "+
+                lectureID
+                +", Name Homework = " + nameHomework+
+                '}'+"\n";
+    }
+
+    @Override
+    public int compareTo(Object o) {
+        Homework homework = (Homework) o;
+
+        int result = 0;
+        if (lectureID > homework.lectureID)
+            result = -1;
+        if (lectureID < homework.lectureID)
+            result = 1;
+
+        return result;
     }
 }
