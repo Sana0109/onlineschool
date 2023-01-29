@@ -11,7 +11,7 @@ public class LectureRepository extends GenericRepository {
     private final int BOXES = 10;
     private final Lecture[] lectures = new Lecture[BOXES];
 
-    public final GenericRepository<Lecture> lecturesArray = new GenericRepository<>(new Lecture[]{}) {
+    public final GenericRepository<Lecture> lecturesArray = new GenericRepository<Lecture>(new Lecture[]{}) {
 
         @Override
         public void expandArray() {

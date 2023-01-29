@@ -108,5 +108,7 @@ public abstract class GenericRepository<E> implements FacultyInterface<E> {
         }
         System.out.println("After removal - " + Arrays.toString(arrayGeneric));
     }
+
+    public abstract int getArray(int index);
 }
 
