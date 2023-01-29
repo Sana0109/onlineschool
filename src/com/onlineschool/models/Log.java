@@ -15,6 +15,13 @@ public class Log {
         this.stackTrace = stackTrace;
     }
 
+    public Log(Integer localDateTime,LevelLog level,String name,String message) {
+        this.localDateTime = localDateTime;
+        this.level = level;
+        this.name = name;
+        this.message = message;
+    }
+
     public String getName() {
         return name;
     }
