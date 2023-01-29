@@ -1,11 +1,9 @@
 package com.onlineschool.repository;
 
-import com.onlineschool.models.Course;
-import com.onlineschool.models.Lecture;
-import com.onlineschool.models.ResourceType;
-import com.onlineschool.models.Role;
+import com.onlineschool.models.*;
 
 import java.util.*;
+
 
 public class LectureRepository extends GenericRepository {
 
@@ -13,27 +11,9 @@ public class LectureRepository extends GenericRepository {
     private final int BOXES = 10;
     private final Lecture[] lectures = new Lecture[BOXES];
 
-    public final GenericRepository<Lecture> lecturesArray = new GenericRepository<Lecture>(new Lecture[]{}) {
-        public static void findAll() {
+    public final GenericRepository<Lecture> lecturesArray = new GenericRepository<>(new Lecture[]{}) {
 
-            List<Lecture> lectureCollectionArray = new ArrayList<>();
-            lectureCollectionArray.add(new Lecture(1));
-            lectureCollectionArray.add(new Lecture(2));
-            lectureCollectionArray.add(new Lecture(3));
-            lectureCollectionArray.add(new Lecture(4));
-            lectureCollectionArray.add(new Lecture(5));
-
-            System.out.println("The whole collection :\n" + lectureCollectionArray);
-            System.out.println("---------------");
-
-            ListIterator<Lecture> simpleIterator = lectureCollectionArray.listIterator(2);
-            if (simpleIterator.hasNext())
-                System.out.println("Choose element :\n" + simpleIterator.next());
-            System.out.println("---------------");
-            simpleIterator.remove();
-            System.out.println("A collection without a deleted element :\n" + lectureCollectionArray);
-        }
-    @Override
+        @Override
         public void expandArray() {
             super.expandArray();
         }
@@ -43,8 +23,37 @@ public class LectureRepository extends GenericRepository {
             return 0;
         }
 
-
     };
+
+    public static void findAll() {
+
+        List<Lecture> lectureCollectionArray = new ArrayList<>();
+        lectureCollectionArray.add(new Lecture(1, new Homework[]{new Homework(1, "nameHomework 1")},
+                new AdditionalTasks[]{new AdditionalTasks("aTasks 1")}));
+        lectureCollectionArray.add(new Lecture(2, new Homework[]{new Homework(2,
+                "nameHomework 2")}, new AdditionalTasks[]{new AdditionalTasks("aTasks2")}));
+        lectureCollectionArray.add(new Lecture(3, new Homework[]{new Homework(3,
+                "nameHomework 3")}, new AdditionalTasks[]{new AdditionalTasks("aTasks 3")}));
+        lectureCollectionArray.add(new Lecture(4, new Homework[]{new Homework(4,
+                "nameHomework 4")}, new AdditionalTasks[]{new AdditionalTasks("aTasks 4")}));
+        lectureCollectionArray.add(new Lecture(5, new Homework[]{new Homework(5,
+                "nameHomework 5")}, new AdditionalTasks[]{new AdditionalTasks("aTasks 5")}));
+
+//перегляд домашніх завдань та додаткових завдань через відкриття лекції по іd
+        ListIterator<Lecture> simpleIterator = lectureCollectionArray.listIterator(3);
+        if (simpleIterator.hasNext())
+            System.out.println("Choose lecture for ID :\n" + simpleIterator.next());
+        System.out.println("---------------");
+//видалити елемент
+        simpleIterator.remove();
+        System.out.println("After remove " + lectureCollectionArray);
+        System.out.println("---------------");
+//додати елемент
+        simpleIterator.add(new Lecture(4, new Homework[]{new Homework(4,
+                "nameHomework 4")}, new AdditionalTasks[]{new AdditionalTasks("aTasks 4")}));
+        System.out.println("After added " + lectureCollectionArray);
+
+    }
 
     @Override
     public int size() {
@@ -94,8 +103,6 @@ public class LectureRepository extends GenericRepository {
 
     public static void category() {
         Scanner scanner = new Scanner(System.in);
-
-        //Course course = new Course();
         Lecture lecture = new Lecture();
         System.out.println("Choose Category: 1 - Course, 2 - Teacher, 3 - Students, 4 - Lecture");
         int i = 0;

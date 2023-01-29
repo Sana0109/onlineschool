@@ -3,23 +3,31 @@ package com.onlineschool.repository;
 import com.onlineschool.models.Homework;
 
 
-
 import java.util.Arrays;
+import java.util.HashMap;
+import java.util.Map;
+
 
 public class HomeworkRepository extends GenericRepository {
     private final int BOXES = 10;
     Homework[] homeworks = new Homework[BOXES];
-  /*  public final GenericRepository<Homework> homeworksArray = new GenericRepository<>(new Homework[]{
-            new Homework(1,1,"Name Homeworks "),
-            new Homework(2,2,"Name Homeworks "),
-            new Homework(3,3,"Name Homeworks "),null,null
 
-    }) {
-        @Override
-        public int getArray(int index) {
-            return 0;
+    public static void homeworkMap() {
+        HashMap<Homework[], Homework[]> homeworkMap1 = new HashMap<>();
+        homeworkMap1.put(new Homework[]{new Homework(2, "Name Homework 2")}, new Homework[]{new Homework(2, "Name Homework 2")});
+        homeworkMap1.put(new Homework[]{new Homework(1, "Name Homework 1")}, new Homework[]{new Homework(1, "Name Homework 1")});
+        homeworkMap1.put(new Homework[]{new Homework(3, "Name Homework 3")}, new Homework[]{new Homework(3, "Name Homework 3")});
+        for (Map.Entry<Homework[], Homework[]> item : homeworkMap1.entrySet()) {
+            System.out.println(Arrays.toString(item.getKey()));
         }
-    };*/
+    }
+
+    public static void printData(HashMap<Homework[], Homework[]> homeworkMap1) {
+        for (Map.Entry<Homework[], Homework[]> item : homeworkMap1.entrySet()) {
+            System.out.println(item.getKey());
+        }
+    }
+
     @Override
     public int size() {
         return super.size();
@@ -45,6 +53,7 @@ public class HomeworkRepository extends GenericRepository {
         super.add(index, element);
     }
 
+
     @Override
     public void remove(int index) {
         super.remove(index);
@@ -52,10 +61,6 @@ public class HomeworkRepository extends GenericRepository {
 
     public Homework[] getHomework() {
         return homeworks;
-    }
-
-    public int getBOXES() {
-        return BOXES;
     }
 
     @Override

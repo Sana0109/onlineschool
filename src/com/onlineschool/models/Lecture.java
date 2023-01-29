@@ -3,12 +3,15 @@ package com.onlineschool.models;
 
 import java.util.Arrays;
 
-public class Lecture {
+public class Lecture implements Comparable {
     private String nameLecture;
     private Integer courseID;
-    private Homework[] homeworks;
+
     private Person personID;
     private ResourceType resourceType;
+    private Integer ID;
+    private Homework[] homeworks;
+    private AdditionalTasks[] additionalTasks;
 
     public Lecture(String nameLecture, Integer courseID, Homework[] homeworks, Person personID) {
         this.nameLecture = nameLecture;
@@ -18,7 +21,22 @@ public class Lecture {
 
     }
 
+    public Lecture(Integer ID, Homework[] homeworks, AdditionalTasks[] additionalTasks) {
+        this.ID = ID;
+        this.homeworks = homeworks;
+        this.additionalTasks = additionalTasks;
+    }
 
+    public Lecture(Integer ID, String nameLecture) {
+        this.ID = ID;
+        this.nameLecture = nameLecture;
+    }
+
+    public Lecture(String nameLecture, Homework[] homeworks, AdditionalTasks[] additionalTasks) {
+        this.nameLecture = nameLecture;
+        this.homeworks = homeworks;
+        this.additionalTasks = additionalTasks;
+    }
 
     public Lecture(Integer courseID, ResourceType resourceType) {
         this.resourceType = resourceType;
@@ -29,6 +47,34 @@ public class Lecture {
 
     }
 
+    public Integer getCourseID() {
+        return courseID;
+    }
+
+    public Integer getID() {
+        return ID;
+    }
+
+    public void setID(Integer ID) {
+        this.ID = ID;
+    }
+
+    public Homework[] getHomeworks() {
+        return homeworks;
+    }
+
+    public void setHomeworks(Homework[] homeworks) {
+        this.homeworks = homeworks;
+    }
+
+    public AdditionalTasks[] getAdditionalTasks() {
+        return additionalTasks;
+    }
+
+    public void setAdditionalTasks(AdditionalTasks[] additionalTasks) {
+        this.additionalTasks = additionalTasks;
+    }
+
     public String getNameLecture() {
         return nameLecture;
     }
@@ -37,9 +83,6 @@ public class Lecture {
         this.nameLecture = nameLecture;
     }
 
-    public int getCourseID() {
-        return courseID;
-    }
 
     public void setCourseID(Integer courseID) {
         this.courseID = courseID;
@@ -56,9 +99,23 @@ public class Lecture {
 
     @Override
     public String toString() {
-        return " Name Lecture " + getNameLecture() + "\n Course ID " + getCourseID() + "\n Homeworks ID " + Arrays.toString(homeworks) +
-                "\n Person \n"  +  "\n" + ResourceType.BOOK;
+        return "Lecture  " +
+                Arrays.toString(homeworks) +
+                Arrays.toString(additionalTasks) +
+                '}' + "\n";
+    }
 
+    @Override
+    public int compareTo(Object o) {
+        Lecture lecture = (Lecture) o;
+
+        int result = 0;
+        if (ID > lecture.ID)
+            result = 1;
+        if (ID < lecture.ID)
+            result = -1;
+
+        return result;
     }
 }
-//+Role.TEACHER.getSecondName()
+

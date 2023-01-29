@@ -13,6 +13,10 @@ public class AdditionalTasks implements Comparable {
         this.lectureID = lectureID;
     }
 
+    public AdditionalTasks(String nameAdditionalTasks) {
+        this.nameAdditionalTasks = nameAdditionalTasks;
+    }
+
     public String getNameAdditionalTasks() {
         return nameAdditionalTasks;
     }
@@ -39,11 +43,9 @@ public class AdditionalTasks implements Comparable {
 
     @Override
     public String toString() {
-        return
-                "\n " + nameAdditionalTasks + ", " +
-                "ID = " + ID +
-                ", lectureID = " + lectureID
-               ;
+        return "AdditionalTasks = " + nameAdditionalTasks + ", "
+
+                ;
     }
 
     @Override

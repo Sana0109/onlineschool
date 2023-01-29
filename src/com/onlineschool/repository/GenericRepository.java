@@ -28,7 +28,7 @@ public abstract class GenericRepository<E> implements FacultyInterface<E> {
 
     public int size() {
 
-        int i = 0;// використовую в  35 рядку
+        int i = 0;// використовую в  34 рядку
         for (E element : arrayGeneric) {
             if (element != null) {
                 i++;
@@ -47,7 +47,6 @@ public abstract class GenericRepository<E> implements FacultyInterface<E> {
         }
         return true;
     }
-
 
     @Override
     public E get(int index) {
@@ -75,7 +74,6 @@ public abstract class GenericRepository<E> implements FacultyInterface<E> {
                     System.out.println("Array improve " + Arrays.toString(arrayGeneric));
                     break;
                 }
-
             }
         } catch (ArrayIndexOutOfBoundsException e) {
             System.out.println(" input wrong index = " + index);
@@ -88,16 +86,13 @@ public abstract class GenericRepository<E> implements FacultyInterface<E> {
         for (int i = 0; i < size(); i++) {
             if (arrayGeneric[i] == null) {
                 arrayGeneric[i] = (E) element;
-
                 System.out.println(Arrays.toString(arrayGeneric));
                 break;
             }
-
         }
     }
 
     public GenericRepository(E[] arrayGeneric) {
-
         this.arrayGeneric = arrayGeneric;
     }
 
@@ -106,7 +101,6 @@ public abstract class GenericRepository<E> implements FacultyInterface<E> {
         for (int i = 0; i < size(); i++) {
             if (arrayGeneric[index] == getArrayGeneric()[i]) {
                 System.out.println("Before removal - " + Arrays.toString(arrayGeneric));
-
                 arrayGeneric[i] = null;
                 break;
 
@@ -114,10 +108,5 @@ public abstract class GenericRepository<E> implements FacultyInterface<E> {
         }
         System.out.println("After removal - " + Arrays.toString(arrayGeneric));
     }
-
-
-    public abstract int getArray(int index);
-
-
 }
 

@@ -1,6 +1,8 @@
 package com.onlineschool.models;
 
-public class Homework implements Comparable{
+import java.util.function.Function;
+
+public class Homework implements Comparable {
     private Integer ID;
     private Integer lectureID;
     private String task;
@@ -8,17 +10,26 @@ public class Homework implements Comparable{
     private Course course;
 
 
-    public Homework(Integer ID, Integer lectureID,  String nameHomework) {
+    public Homework(Integer ID, Integer lectureID, String nameHomework) {
         this.ID = ID;
         this.lectureID = lectureID;
         this.nameHomework = nameHomework;
 
     }
+
     public Homework() {
 
     }
+
     public Homework(Integer lectureID) {
         this.lectureID = lectureID;
+    }
+
+    public Homework(Integer lectureID, String nameHomework) {
+
+        this.lectureID = lectureID;
+
+        this.nameHomework = nameHomework;
     }
 
     public Homework(String nameHomework) {
@@ -26,6 +37,7 @@ public class Homework implements Comparable{
 
 
     }
+
     public int getID() {
         return ID;
     }
@@ -58,7 +70,9 @@ public class Homework implements Comparable{
         this.course = course;
     }
 
-
+    public void setID(Integer ID) {
+        this.ID = ID;
+    }
 
     public String getNameHomework() {
         return nameHomework;
@@ -70,11 +84,9 @@ public class Homework implements Comparable{
 
     @Override
     public String toString() {
-        return "Homework { " +
-                "Lecture ID = "+
-                lectureID
-                +", Name Homework = " + nameHomework+
-                '}'+"\n";
+        return "Homework  " +
+                "lectureID = " + lectureID + ", " + nameHomework +
+                '}';
     }
 
     @Override
@@ -83,9 +95,9 @@ public class Homework implements Comparable{
 
         int result = 0;
         if (lectureID > homework.lectureID)
-            result = -1;
-        if (lectureID < homework.lectureID)
             result = 1;
+        if (lectureID < homework.lectureID)
+            result = -1;
 
         return result;
     }
