@@ -1,13 +1,15 @@
 package com.onlineschool.models;
 
+import java.time.LocalDateTime;
+
 public class Log {
     private String name;
     private LevelLog level;
     private String message;
-    private Integer localDateTime;
+    private LocalDateTime localDateTime;
     private String stackTrace;
 
-    public Log(String name, LevelLog level, String message, Integer localDateTime, String stackTrace) {
+    public Log(String name, LevelLog level, String message, LocalDateTime localDateTime, String stackTrace) {
         this.name = name;
         this.level = level;
         this.message = message;
@@ -15,7 +17,7 @@ public class Log {
         this.stackTrace = stackTrace;
     }
 
-    public Log(Integer localDateTime,LevelLog level,String name,String message) {
+    public Log(LocalDateTime localDateTime, LevelLog level, String name, String message) {
         this.localDateTime = localDateTime;
         this.level = level;
         this.name = name;
@@ -46,11 +48,11 @@ public class Log {
         this.message = message;
     }
 
-    public Integer getLocalDateTime() {
+    public LocalDateTime getLocalDateTime() {
         return localDateTime;
     }
 
-    public void setLocalDateTime(Integer localDateTime) {
+    public void setLocalDateTime(LocalDateTime localDateTime) {
         this.localDateTime = localDateTime;
     }
 
