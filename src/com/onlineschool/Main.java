@@ -2,18 +2,12 @@ package com.onlineschool;
 
 
 import com.onlineschool.models.*;
-
 import com.onlineschool.repository.*;
-
-import java.sql.Array;
-import java.util.Arrays;
 import java.util.InputMismatchException;
 
 
 public class Main {
     public static void main(String[] args) {
-
-
         GenericRepository<Lecture> lecturesArray = new GenericRepository<>(new Lecture[]{
                 new Lecture("Name lecture ", 1, new Homework[]{new Homework(1, 1, "Task",
                         "Name homework")}, new Person()),
@@ -39,12 +33,12 @@ public class Main {
             System.out.println("Choose from the proposed");
         }
         System.out.println("---------------");
-//виключення для випадку виклика сутності по ID
+//виключення для випадку виклика сутності по ID створено в класі GenericRepository
 
         System.out.println(lecturesArray.get(5));
         System.out.println("---------------");
 
-//виключення для add
+//виключення для add створено в класі GenericRepository
 
         System.out.println("Added Lecture = ");
         lecturesArray.add(7
@@ -57,7 +51,6 @@ public class Main {
 
 
 }
-
 
 
 

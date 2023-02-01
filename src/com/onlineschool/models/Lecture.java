@@ -35,13 +35,6 @@ public class Lecture {
         this.nameLecture = nameLecture;
     }
 
-    public int getCourseID() {
-        return courseID;
-    }
-
-    public void setCourseID(Integer courseID) {
-        this.courseID = courseID;
-    }
 
 
     public Person getPersonID() {
@@ -54,7 +47,7 @@ public class Lecture {
 
     @Override
     public String toString() {
-        return " Name Lecture " + getNameLecture() + "\n Course ID " + getCourseID() + "\n Homeworks ID " + Arrays.toString(homeworks) +
+        return " Name Lecture " + getNameLecture() +  "\n Homeworks ID " + Arrays.toString(homeworks) +
                 "\n Person \n" +Role.TEACHER.getSecondName();
 
     }
