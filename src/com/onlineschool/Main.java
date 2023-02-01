@@ -15,18 +15,18 @@ import java.util.TreeSet;
 public class Main {
     public static void main(String[] args) {
         //сортування курсів за назвою
-       /* CourseComparator courseComparator = new CourseComparator() {};
+        {
+       CourseComparator courseComparator = new CourseComparator() {};
         SortedSet<Course> nameCourse = new TreeSet<>(courseComparator);
         nameCourse.add(new Course("name 2"));
         nameCourse.add(new Course("name 3"));
         nameCourse.add(new Course("name 1"));
         nameCourse.add(new Course("name 4"));
         nameCourse.forEach(System.out::println);
-    }*/
+    }
 //сортування вчитилів за прізвищем
-  /*      PersonComparator personComparator = new PersonComparator(){};
+        { PersonComparator personComparator = new PersonComparator(){};
         SortedSet<Person> teacherName = new TreeSet<>(personComparator);
-
         teacherName.add(new Person(Role.TEACHER.getSecondName("fifth name")));
         teacherName.add(new Person(Role.TEACHER.getSecondName("first name")));
         teacherName.add(new Person(Role.TEACHER.getSecondName("third name")));
@@ -36,12 +36,10 @@ public class Main {
         teacherName.forEach(System.out::println);
 
         }
-*/
-//сортування студентів за прізвищем
-        PersonComparator personComparator = new PersonComparator() {
-        };
-        SortedSet<Person> studentName = new TreeSet<>(personComparator);
 
+//сортування студентів за прізвищем
+        PersonComparator personComparator = new PersonComparator(){};
+        SortedSet<Person> studentName = new TreeSet<>(personComparator);
         studentName.add(new Person(Role.STUDENT.getSecondName("Second name")));
         studentName.add(new Person(Role.STUDENT.getSecondName("Third name")));
         studentName.add(new Person(Role.STUDENT.getSecondName("Fours name")));
