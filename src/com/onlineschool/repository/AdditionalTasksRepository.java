@@ -3,23 +3,11 @@ package com.onlineschool.repository;
 import com.onlineschool.comparator.AdditionalTasksComparator;
 import com.onlineschool.models.AdditionalTasks;
 
+import java.util.*;
 
-import java.util.Arrays;
-import java.util.Scanner;
-import java.util.SortedSet;
-import java.util.TreeSet;
-
+import static com.onlineschool.comparator.AdditionalTasksComparator.StuGetID;
 
 public class AdditionalTasksRepository extends GenericRepository {
-    private final static int BOXES = 10;
-    AdditionalTasks[] additionalTasks = new AdditionalTasks[BOXES];
-    public final GenericRepository<AdditionalTasks> additionalTasksArray = new GenericRepository<>(new AdditionalTasks[]{}) {
-        @Override
-        public int getArray(int index) {
-            return 0;
-        }
-    };
-
     public boolean chooseSort() {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Sort by: 1 - for ID ; 2 - for lectureID; 3 - nameAdditionalTasks");
@@ -31,26 +19,24 @@ public class AdditionalTasksRepository extends GenericRepository {
 
         switch (i) {
             case 1:
-                AdditionalTasks[] additionalTasks1 = new AdditionalTasks[]{
-                        new AdditionalTasks("nameAdditionalTasks 3", 3, 3),
-                        new AdditionalTasks("nameAdditionalTasks 1", 2, 4),
-                        new AdditionalTasks("nameAdditionalTasks 2", 1, 1),
-                };
-                Arrays.sort(additionalTasks1);
-                System.out.println("AdditionalTasks \n ");
-                System.out.println(Arrays.toString(additionalTasks1));
+                //вибір по ІД
+                ArrayList<AdditionalTasks> additionalTasks1 = new ArrayList<>();
+                additionalTasks1.add(new AdditionalTasks("nameAdditionalTasks 3", 3, 3));
+                additionalTasks1.add(new AdditionalTasks("nameAdditionalTasks 1", 2, 4));
+                additionalTasks1.add(new AdditionalTasks("nameAdditionalTasks 2", 1, 1));
+                Collections.sort(additionalTasks1, StuGetID);
+                additionalTasks1.forEach(System.out::println);
                 break;
+            //вибір по lectureID
             case 2:
-
-                AdditionalTasks[] additionalTasks2 = new AdditionalTasks[]{
-                        new AdditionalTasks("nameAdditionalTasks 3", 3, 3),
-                        new AdditionalTasks("nameAdditionalTasks 1", 4, 2),
-                        new AdditionalTasks("nameAdditionalTasks 2", 1, 1),
-                };
-                Arrays.sort(additionalTasks2);
-                System.out.println("AdditionalTasks \n ");
-                System.out.println(Arrays.toString(additionalTasks2));
+                ArrayList<AdditionalTasks> additionalTasks2 = new ArrayList<>();
+                additionalTasks2.add(new AdditionalTasks("nameAdditionalTasks 8", 3, 3));
+                additionalTasks2.add(new AdditionalTasks("nameAdditionalTasks 1", 2, 1));
+                additionalTasks2.add(new AdditionalTasks("nameAdditionalTasks 2", 1, 4));
+                additionalTasks2.sort(AdditionalTasks::compareTo);
+                additionalTasks2.forEach(System.out::println);
                 break;
+            //вибір по назві
             case 3:
                 AdditionalTasksComparator additionalTasksComparator = new AdditionalTasksComparator() {
                 };
@@ -61,19 +47,11 @@ public class AdditionalTasksRepository extends GenericRepository {
                 nameAdditionalTasks.forEach(System.out::println);
                 break;
 
-
+            default:
+                throw new IllegalStateException("Unexpected value: " + i);
         }
 
-
         return false;
-    }
-
-    public int getBOXES() {
-        return BOXES;
-    }
-
-    public AdditionalTasks[] getAdditionalTasks() {
-        return additionalTasks;
     }
 
     @Override
@@ -84,8 +62,7 @@ public class AdditionalTasksRepository extends GenericRepository {
     @Override
     public String toString() {
         return "AdditionalTasksRepository{" +
-                "BOXES = " + BOXES +
-                ", additionalTasks = " + Arrays.toString(additionalTasks) +
+                ", additionalTasks = " +
                 '}';
     }
 }

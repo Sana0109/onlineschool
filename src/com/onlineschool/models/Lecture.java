@@ -1,8 +1,6 @@
 package com.onlineschool.models;
 
 
-import java.util.Arrays;
-
 public class Lecture implements Comparable {
     private String nameLecture;
     private Integer courseID;
@@ -10,10 +8,10 @@ public class Lecture implements Comparable {
     private Person personID;
     private ResourceType resourceType;
     private Integer ID;
-    private Homework[] homeworks;
-    private AdditionalTasks[] additionalTasks;
+    private Homework homeworks;
+    private AdditionalTasks additionalTasks;
 
-    public Lecture(String nameLecture, Integer courseID, Homework[] homeworks, Person personID) {
+    public Lecture(String nameLecture, Integer courseID, Homework homeworks, Person personID) {
         this.nameLecture = nameLecture;
         this.courseID = courseID;
         this.homeworks = homeworks;
@@ -21,7 +19,7 @@ public class Lecture implements Comparable {
 
     }
 
-    public Lecture(Integer ID, Homework[] homeworks, AdditionalTasks[] additionalTasks) {
+    public Lecture(Integer ID, Homework homeworks, AdditionalTasks additionalTasks) {
         this.ID = ID;
         this.homeworks = homeworks;
         this.additionalTasks = additionalTasks;
@@ -32,7 +30,7 @@ public class Lecture implements Comparable {
         this.nameLecture = nameLecture;
     }
 
-    public Lecture(String nameLecture, Homework[] homeworks, AdditionalTasks[] additionalTasks) {
+    public Lecture(String nameLecture, Homework homeworks, AdditionalTasks additionalTasks) {
         this.nameLecture = nameLecture;
         this.homeworks = homeworks;
         this.additionalTasks = additionalTasks;
@@ -59,19 +57,27 @@ public class Lecture implements Comparable {
         this.ID = ID;
     }
 
-    public Homework[] getHomeworks() {
+    public ResourceType getResourceType() {
+        return resourceType;
+    }
+
+    public void setResourceType(ResourceType resourceType) {
+        this.resourceType = resourceType;
+    }
+
+    public Homework getHomeworks() {
         return homeworks;
     }
 
-    public void setHomeworks(Homework[] homeworks) {
+    public void setHomeworks(Homework homeworks) {
         this.homeworks = homeworks;
     }
 
-    public AdditionalTasks[] getAdditionalTasks() {
+    public AdditionalTasks getAdditionalTasks() {
         return additionalTasks;
     }
 
-    public void setAdditionalTasks(AdditionalTasks[] additionalTasks) {
+    public void setAdditionalTasks(AdditionalTasks additionalTasks) {
         this.additionalTasks = additionalTasks;
     }
 
@@ -99,10 +105,10 @@ public class Lecture implements Comparable {
 
     @Override
     public String toString() {
-        return "Lecture  " +
-                Arrays.toString(homeworks) +
-                Arrays.toString(additionalTasks) +
-                '}' + "\n";
+        return "Lecture  " + ID + " " +
+                homeworks +
+                additionalTasks +
+                '}' + " \n ";
     }
 
     @Override
