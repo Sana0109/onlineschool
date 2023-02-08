@@ -1,9 +1,12 @@
 package com.onlineschool.repository;
 
+import com.onlineschool.models.AdditionalTasks;
+
 import java.util.Arrays;
+import java.util.Comparator;
 
 
-public abstract class GenericRepository<E> implements FacultyInterface<E> {
+public abstract class GenericRepository<E> implements FacultyInterface<E>, Comparator<AdditionalTasks> {
 
 
     private E[] arrayGeneric;
@@ -110,5 +113,10 @@ public abstract class GenericRepository<E> implements FacultyInterface<E> {
     }
 
     public abstract int getArray(int index);
+
+    @Override
+    public int compare(AdditionalTasks o1, AdditionalTasks o2) {
+        return 0;
+    }
 }
 

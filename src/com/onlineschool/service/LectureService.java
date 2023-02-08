@@ -23,15 +23,15 @@ public class LectureService {
     }
 
 
-    public static Lecture lectureCreation(String nameLecture, int courseID, Homework[] homeworks, Person personID) {
+    public static Lecture lectureCreation(String nameLecture, int courseID, Homework homeworks, Person personID) {
         return new Lecture(nameLecture, courseID, homeworks, personID);
 
     }
 
-    //public static Lecture lectureCourseID(int courseID) {
-    // return new Lecture(courseID, ResourceType.BOOK);
-    //}
-
+  /*  public static Lecture lectureCourseID(int courseID) {
+     return new Lecture(courseID, ResourceType.BOOK);
+    }
+*/
 
     @Override
     public String toString() {

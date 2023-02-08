@@ -1,5 +1,8 @@
 package com.onlineschool.models;
 
+
+import java.util.Objects;
+
 public class AdditionalTasks implements Comparable {
 
     private String nameAdditionalTasks;
@@ -15,6 +18,17 @@ public class AdditionalTasks implements Comparable {
 
     public AdditionalTasks(String nameAdditionalTasks) {
         this.nameAdditionalTasks = nameAdditionalTasks;
+    }
+
+    public AdditionalTasks(String nameAdditionalTasks, Integer lectureID) {
+        this.nameAdditionalTasks = nameAdditionalTasks;
+        this.lectureID = lectureID;
+    }
+
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(nameAdditionalTasks, ID);
     }
 
     public String getNameAdditionalTasks() {
@@ -43,26 +57,17 @@ public class AdditionalTasks implements Comparable {
 
     @Override
     public String toString() {
-        return "AdditionalTasks = " + nameAdditionalTasks + ", "
-
-                ;
+        return "ID = "+ ID +", AdditionalTasks = " + nameAdditionalTasks + ", LectureID = " + lectureID + ", ";
     }
 
     @Override
-    public int compareTo(Object o) {
-        AdditionalTasks tasks = (AdditionalTasks) o;
+    public int compareTo(Object compareResult) {
 
-        int result = 0;
-        if (ID > tasks.ID)
-            result = 1;
-        if (ID < tasks.ID)
-            result = -1;
-        else if (lectureID > tasks.lectureID)
-            result = 1;
-        if (lectureID < tasks.lectureID)
-            result = -1;
-        return result;
+        Integer result = ((AdditionalTasks) compareResult).getLectureID();
+
+        return this.lectureID - result;
     }
 
 }
+
 

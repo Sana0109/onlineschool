@@ -1,30 +1,23 @@
 package com.onlineschool.repository;
 
+import com.onlineschool.models.AdditionalTasks;
 import com.onlineschool.models.Homework;
 
 
-import java.util.Arrays;
-import java.util.HashMap;
-import java.util.Map;
+import java.util.*;
 
 
 public class HomeworkRepository extends GenericRepository {
-    private final int BOXES = 10;
-    Homework[] homeworks = new Homework[BOXES];
+
 
     public static void homeworkMap() {
-        HashMap<Homework[], Homework[]> homeworkMap1 = new HashMap<>();
-        homeworkMap1.put(new Homework[]{new Homework(2, "Name Homework 2")}, new Homework[]{new Homework(2, "Name Homework 2")});
-        homeworkMap1.put(new Homework[]{new Homework(1, "Name Homework 1")}, new Homework[]{new Homework(1, "Name Homework 1")});
-        homeworkMap1.put(new Homework[]{new Homework(3, "Name Homework 3")}, new Homework[]{new Homework(3, "Name Homework 3")});
-        for (Map.Entry<Homework[], Homework[]> item : homeworkMap1.entrySet()) {
-            System.out.println(Arrays.toString(item.getKey()));
-        }
-    }
-
-    public static void printData(HashMap<Homework[], Homework[]> homeworkMap1) {
-        for (Map.Entry<Homework[], Homework[]> item : homeworkMap1.entrySet()) {
+        HashMap<Homework, Homework> homeworkMap = new HashMap<>();
+        homeworkMap.put(new Homework(2, "Name Homework 2"), new Homework(2, "Name Homework 2"));
+        homeworkMap.put(new Homework(1, "Name Homework 1"), new Homework(1, "Name Homework 1"));
+        homeworkMap.put(new Homework(3, "Name Homework 3"), new Homework(3, "Name Homework 3"));
+        for (Map.Entry<Homework, Homework> item : homeworkMap.entrySet()) {
             System.out.println(item.getKey());
+
         }
     }
 
@@ -59,9 +52,6 @@ public class HomeworkRepository extends GenericRepository {
         super.remove(index);
     }
 
-    public Homework[] getHomework() {
-        return homeworks;
-    }
 
     @Override
     public int getArray(int index) {
@@ -71,7 +61,7 @@ public class HomeworkRepository extends GenericRepository {
     @Override
     public String toString() {
         return "HomeworksRepository{" +
-                "BOXES=" + BOXES +
+
                 ", homeworks =" +
                 '}';
     }
