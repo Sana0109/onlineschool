@@ -1,8 +1,7 @@
 package com.onlineschool.repository;
 
-import com.onlineschool.models.AdditionalTasks;
-import com.onlineschool.models.Homework;
 
+import com.onlineschool.models.Homework;
 
 import java.util.*;
 

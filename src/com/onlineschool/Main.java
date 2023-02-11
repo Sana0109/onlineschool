@@ -1,9 +1,5 @@
 package com.onlineschool;
 
-
-
-
-
 import com.onlineschool.comparator.CourseComparator;
 import com.onlineschool.comparator.PersonComparator;
 import com.onlineschool.models.Course;
@@ -14,14 +10,14 @@ import com.onlineschool.repository.HomeworkRepository;
 import com.onlineschool.repository.LectureRepository;
 import com.onlineschool.repository.LogRepository;
 
-
-import java.util.Arrays;
 import java.util.SortedSet;
 import java.util.TreeSet;
 
 
 public class Main {
     public static void main(String[] args) {
+
+        //журнал роботи програми класс Log
         LogRepository.logAll();
         //зберігання домашніх завдань в Мар з lectureID та nameHomework
         HomeworkRepository.homeworkMap();

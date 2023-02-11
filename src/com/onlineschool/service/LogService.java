@@ -6,8 +6,8 @@ import com.onlineschool.models.Log;
 import java.time.LocalDateTime;
 
 public class LogService {
-    public static Log logCreation(LocalDateTime localDateTime, LevelLog level, String name, String message) {
-        return new Log(localDateTime, level, name, message);
+    public static Log logCreation(LocalDateTime localDateTime, LevelLog level, String name, String message, String stackTrace) {
+        return new Log(localDateTime, level, name, message, stackTrace);
     }
 
     @Override

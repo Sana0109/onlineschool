@@ -1,6 +1,5 @@
 package com.onlineschool.models;
 
-import jdk.jfr.StackTrace;
 
 import java.time.LocalDateTime;
 
@@ -9,22 +8,24 @@ public class Log {
     private LevelLog level;
     private String message;
     private LocalDateTime localDateTime;
-    private StackTrace stackTrace;
-
-    public Log(String name, LevelLog level, String message, LocalDateTime localDateTime, StackTrace stackTrace) {
-        this.name = name;
-        this.level = level;
-        this.message = message;
-        this.localDateTime = localDateTime;
-        this.stackTrace = stackTrace;
-    }
+    private String stackTrace;
 
     public Log(LocalDateTime localDateTime, LevelLog level, String name, String message) {
         this.localDateTime = localDateTime;
         this.level = level;
         this.name = name;
         this.message = message;
+
     }
+
+    public Log(LocalDateTime localDateTime, LevelLog level, String name, String message, String stackTrace) {
+        this.localDateTime = localDateTime;
+        this.level = level;
+        this.name = name;
+        this.message = message;
+        this.stackTrace = stackTrace;
+    }
+
 
     public String getName() {
         return name;
@@ -59,11 +60,11 @@ public class Log {
     }
 
 
-    public StackTrace getStackTrace() {
+    public String getStackTrace() {
         return stackTrace;
     }
 
-    public void setStackTrace(StackTrace stackTrace) {
+    public void setStackTrace(String stackTrace) {
         this.stackTrace = stackTrace;
     }
 
@@ -75,6 +76,6 @@ public class Log {
                 ", message = '" + message + '\'' +
                 ", localDateTime = " + localDateTime +
                 ", stackTrace = '" + stackTrace + '\'' +
-                '}';
+                '}' + "\n";
     }
 }

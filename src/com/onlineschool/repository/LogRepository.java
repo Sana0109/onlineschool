@@ -2,20 +2,23 @@ package com.onlineschool.repository;
 
 import com.onlineschool.models.LevelLog;
 import com.onlineschool.models.Log;
-import jdk.jfr.StackTrace;
 
 import java.time.LocalDateTime;
 import java.util.ArrayList;
 
 
-public class LogRepository  extends GenericRepository{
-    public static void logAll(){
+public class LogRepository extends GenericRepository {
 
-        ArrayList<Log> logArray = new ArrayList<>();
-        logArray.add(new Log(LocalDateTime.now(), LevelLog.ERROR, LogRepository.class.getName(),"is true"));
-       //logArray.add(new Log("",LevelLog.WARNING,"xcv",LocalDateTime.now(),
-        //       ));
-        System.out.println(logArray);
+    public static void logAll() {
+
+        ArrayList<Log> logStorage = new ArrayList<>();
+        logStorage.add(new Log(LocalDateTime.now(), LevelLog.ERROR, "Name ", "You have a mistake", "ERROR"));
+
+        logStorage.add(new Log(LocalDateTime.now(), LevelLog.WARNING, "Name ", "Unexpected action",
+                "WARNING"));
+        logStorage.add(new Log(LocalDateTime.now(), LevelLog.DEBUG, "Name ", "Method is working"));
+        logStorage.forEach(System.out::println);
+
     }
 
 
@@ -53,4 +56,5 @@ public class LogRepository  extends GenericRepository{
     public void add(Object element) {
         super.add(element);
     }
+
 }
