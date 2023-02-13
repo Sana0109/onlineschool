@@ -28,7 +28,9 @@ public enum Role {
     public static String TEACHER(String secondName) {
         return secondName;
     }
-
+    public static String STUDENT(String secondName) {
+        return secondName;
+    }
 
     public String getPhone() {
         return phone;

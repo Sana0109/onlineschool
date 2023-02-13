@@ -71,7 +71,7 @@ public class Log {
     @Override
     public String toString() {
         return "Log{" +
-                "name = '" + name + '\'' +
+                "name = '" + getClass().getName() + '\'' +
                 ", level = " + level +
                 ", message = '" + message + '\'' +
                 ", localDateTime = " + localDateTime +

@@ -1,6 +1,6 @@
 package com.onlineschool.models;
 
-public class Person {
+public class Person implements Runnable {
     private Integer ID;
     private Integer courseID;
     private Role role;
@@ -72,5 +72,30 @@ public class Person {
         return "Person{" +
                 "second_name='" + second_name + '\'' +
                 '}';
+    }
+
+    public synchronized void printPerson() {
+
+        String threadName = Thread.currentThread().getName();
+        System.out.println("---Student---");
+        try{
+            //if (Thread.currentThread().getName().equals("First thread"))
+            Thread.sleep(10000);
+        }catch (InterruptedException e){
+            System.out.println("error"+e.getMessage());
+        }
+       //if (Thread.currentThread().getName().equals("first thread"))
+        //Thread.yield();
+       System.out.println(threadName + "lock" + Thread.holdsLock(this));
+
+        System.out.println(threadName + "second name 1 " + Role.STUDENT);
+        System.out.println("---finish---");
+
+
+    }
+
+    @Override
+    public void run() {
+        printPerson();
     }
 }
