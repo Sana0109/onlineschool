@@ -2,13 +2,12 @@ package com.onlineschool.repository;
 
 import com.onlineschool.comparator.AdditionalTasksComparator;
 import com.onlineschool.models.AdditionalTasks;
-
 import java.util.*;
 
 import static com.onlineschool.comparator.AdditionalTasksComparator.StuGetID;
 
 public class AdditionalTasksRepository extends GenericRepository {
-    public boolean chooseSort() {
+    public boolean chooseSort() throws IllegalStateException {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Sort by: 1 - for ID ; 2 - for lectureID; 3 - nameAdditionalTasks");
         int i = 0;

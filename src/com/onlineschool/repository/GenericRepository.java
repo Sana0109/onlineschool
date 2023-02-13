@@ -1,6 +1,7 @@
 package com.onlineschool.repository;
 
 import com.onlineschool.models.AdditionalTasks;
+import com.onlineschool.models.Log;
 
 import java.util.Arrays;
 import java.util.Comparator;
@@ -60,7 +61,7 @@ public abstract class GenericRepository<E> implements FacultyInterface<E>, Compa
             }
             return getArrayGeneric()[index];
         } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println("index out of bounds for length ");
+            Log.warning("Warning index out of bounds for length ");
         } finally {
             System.out.println("Length = " + size());
         }
@@ -79,7 +80,7 @@ public abstract class GenericRepository<E> implements FacultyInterface<E>, Compa
                 }
             }
         } catch (ArrayIndexOutOfBoundsException e) {
-            System.out.println(" input wrong index = " + index);
+            Log.error("Error input wrong index = " + index);
         }
 
     }
