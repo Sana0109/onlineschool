@@ -19,6 +19,7 @@ public class Main {
 
         //журнал роботи програми класс Log
         LogRepository.logAll();
+        System.out.println("---------------");
         //зберігання домашніх завдань в Мар з lectureID та nameHomework
         HomeworkRepository.homeworkMap();
         System.out.println("---------------");
