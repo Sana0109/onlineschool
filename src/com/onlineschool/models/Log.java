@@ -27,7 +27,7 @@ public class Log {
     }
 
     public static void warning(String s) {
-        return ;
+        return;
     }
 
     public static void error(String s) {
@@ -77,7 +77,7 @@ public class Log {
 
     @Override
     public String toString() {
-        return "Log{" +" localDateTime = " + localDateTime +
+        return "Log{" + " localDateTime = " + localDateTime +
                 ", level = " + level +
                 ", name = '" + getClass().getName() + '\'' +
                 ", message = '" + message + '\'' +
