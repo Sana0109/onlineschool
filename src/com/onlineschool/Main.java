@@ -1,28 +1,61 @@
 package com.onlineschool;
 
-import com.onlineschool.comparator.CourseComparator;
-import com.onlineschool.comparator.PersonComparator;
-import com.onlineschool.models.Course;
 import com.onlineschool.models.Person;
 import com.onlineschool.models.Role;
-import com.onlineschool.repository.*;
+import com.onlineschool.repository.ControlWork;
 
-import java.util.SortedSet;
-import java.util.TreeSet;
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.*;
 
 
 public class Main {
-   // public static void printThread(Thread myThread){
-      //  System.out.println("State thread = " + myThread.currentThread().getState()+ "thread name" + myThread.getName());
-   // }
-    public  static void main(String[] args) {
-       Person person = new Person(Role.STUDENT);
+    // public static void printThread(Thread myThread){
+    //  System.out.println("State thread = " + myThread.currentThread().getState()+ "thread name" + myThread.getName());
+    // }
+    public static void main(String[] args) throws InterruptedException {
+       // ControlWork.choseTask();
+
+        Person person = new Person(Role.STUDENT);
+       person.printPerson();
         //ControlWork controlWork = new ControlWork();
-        Thread t1 = new Thread(person);
+       /* Thread t1 = new Thread(person);
         t1.setName(" first   ");
         Thread t2 = new Thread(person);
-        t2.setName(" second task for person ");
+        t2.setName(" second task for person ");*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      /* int  n = 10;
+       int student = task.nextInt(n);
+       int taskStudent = (student+1+task.nextInt(n-1))%n;
+        for (int i = 0; i <10; i++) {
+            int r = (student+1+task.nextInt(n-2))%n;
+            if (r==taskStudent)
+                r = (student+n-1)%n;
+            student = taskStudent;
+            taskStudent = r;*/
+           //taskStudent = 1 + task.nextInt(10);
+           // int taskStudent = (int)((Math.random())*10 + 1);
+
+
+
+
+
        /* Thread t3 = new Thread(person);
         t3.setName(" third thread for person ");
         Thread t4 = new Thread(person);
@@ -40,7 +73,7 @@ public class Main {
         Thread t10 = new Thread(person);
         t10.setName(" tenth thread for person ");*/
 
-        t1.start();
+           //       t1.start();
        /* t10.start();
         t9.start();
         t8.start();
@@ -49,12 +82,10 @@ public class Main {
         t5.start();
         t4.start();
         t3.start();*/
-        t2.start();
+           //    t2.start();
 
 
-
-
-       // System.out.println("-----------------");
+           // System.out.println("-----------------");
        /* Thread runnable = new Thread(new ControlWork()," Thread first");
         printThread(runnable);
         runnable.start();
@@ -65,8 +96,8 @@ public class Main {
             }
         }
         printThread(runnable);*/
-        //System.out.println("-----------------");
-        //журнал роботи програми класс Log
+           //System.out.println("-----------------");
+           //журнал роботи програми класс Log
 
 /*        LogRepository.logAll();
         System.out.println("Storage Log:");
@@ -118,9 +149,8 @@ public class Main {
         AdditionalTasksRepository additionalTasksRepository = new AdditionalTasksRepository();
         System.out.println(additionalTasksRepository.chooseSort());*/
 
-    }
 
-}
+       }}
 
 
 

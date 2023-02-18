@@ -26,6 +26,12 @@ public class Log {
         this.stackTrace = stackTrace;
     }
 
+    public static void error(String s) {
+        System.out.println("Error" + s);
+    }
+    public static void warning(String s) {
+        System.out.println("Warning" + s);
+    }
 
     public String getName() {
         return name;

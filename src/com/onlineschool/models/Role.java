@@ -56,11 +56,11 @@ public enum Role {
         this.nameFirst = nameFirst;
     }
 
-    public String getSecondName(String secondName) {
+    public String getSecondName() {
         return secondName;
     }
 
-    public void setSecondName(String secondName) {
+    public void setSecondName() {
         this.secondName = secondName;
     }
 
