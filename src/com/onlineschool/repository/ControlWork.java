@@ -1,205 +1,105 @@
 package com.onlineschool.repository;
 
-import com.onlineschool.models.Log;
-
+import com.onlineschool.models.Person;
+import com.onlineschool.models.Role;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.PrintStream;
 import java.util.*;
 
-public class ControlWork implements Runnable{
-    private String task;
+import static java.lang.Thread.sleep;
 
-    public ControlWork(ControlWork controlWork, ControlWork work, ControlWork controlWork1, ControlWork work1, ControlWork controlWork2, ControlWork work2, ControlWork controlWork3, ControlWork work3, ControlWork controlWork4, ControlWork work4, ControlWork controlWork5) {
-        this.task = task;
+
+public class ControlWork implements Runnable {
+    private final List<Person> AI1;// масив що записується
+    private final String fileNameTask;//імя файлу
+    private final String nameThread; //імя потоку
+    private final Thread t;//посилання на поточний потік
+
+
+    private final int id;
+
+    public ControlWork(int id, List<Person> AI1, String fileNameTask, String nameThread) {
+        this.AI1 = AI1;
+        this.fileNameTask = fileNameTask;
+        this.nameThread = nameThread;
+        t = new Thread(this, "save thread");
+        this.id = id;
     }
 
-
-    public synchronized void printControlWork() {
-
-        String threadName = Thread.currentThread().getName();
-        System.out.println("---task---");
-       // if (Thread.currentThread().getName().equals("first thread"))
-       // Thread.yield();
-        //System.out.println(threadName + "lock" + Thread.holdsLock(this));
-        System.out.println(threadName + "task " + task);
-        System.out.println("---finish2---");
-
-
+    public List<Person> getAI1() {
+        return AI1;
     }
-public static void choseTask() {
-    System.out.println("По черзі виберіть завдання від 1 до 10");
-   // Random task = new Random();
-    Scanner scanner = new Scanner(System.in);
-    List<Integer> taskWork = new ArrayList<>(10);
-    taskWork.add(2);
-    taskWork.add(7);
-    taskWork.add(1);
-    taskWork.add(8);
-    taskWork.add(3);
-    taskWork.add(10);
-    taskWork.add(6);
-    taskWork.add(5);
-    taskWork.add(4);
-    taskWork.add(9);
+    public static int m = 0;
 
+    public void number() {
+        m++;
 
-    for (int controlWork = 0; controlWork < 11; controlWork++) {
-
-        controlWork = scanner.nextInt();
-        int taskStudent = 0;
-        // for (taskStudent = 1; taskStudent < 12; ) {
-        // taskStudent = 1 + task.nextInt(10);
-        //int workTask = taskWork.get(taskStudent);
-        //if (taskStudent == (int) ((Math.random()) * 10 + 1)) ;
-        System.out.println("студенту " + controlWork + " Випало Завдання - " + taskWork.get(taskStudent));
-        taskWork.remove(taskStudent);
-
-
-
-
-
-    }
-}
-   /* for (int controlWork = 0; controlWork <= 10; controlWork++) {
-
-        controlWork = scanner.nextInt();
-        int taskStudent ;
-        do {
-            taskStudent = task.nextInt(10);
-        }
-        while (controlWorks.contains(taskStudent));
-        controlWorks.add(taskStudent);
-        if (controlWorks.size() == 1) controlWorks.removeFirst();
-
-        System.out.println("студенту " + controlWork + " Випало Завдання - " + taskStudent);
-    }*/
-
-
-
-
-
-
-
- /*    for (int controlWork = 1; controlWork <=10 ; controlWork++) {
-        controlWork = scanner.nextInt();
-
-         int min =1 ;
-         int max =10 ;
-         int first = max-min;
-         Random task = new Random();
-         int i = task.nextInt(first+1);
-         i+= min;
-         System.out.println("студенту " + controlWork+ " Випало Завдання - " + i);
-         }
-*/
-
-       /*int  n = 10;//кількість завдань
-        int student = task.nextInt(n);
-
-        int taskStudent = (student  + task.nextInt(n - 1)) % n;
-        for (int i = 1; i <=10; i++) {
-            int r = (student +  task.nextInt(n - 2)) % n;
-            if (r == taskStudent)
-                r = (student + n - 1) % n;
-            student = taskStudent;
-            taskStudent = r;}
-        System.out.println("студенту " + controlWork+ " Випало Завдання - " + taskStudent);
-    }*/
-
-   /* do {
-        taskStudent = task.nextInt(10);}
-    while (controlWorks.contains(taskStudent)) ;
-    controlWorks.add(taskStudent);
-    if (controlWorks.size() == 1) controlWorks.removeFirst();
-    System.out.println("студенту " + controlWork+ " Випало Завдання - " + taskStudent);
-    int taskStudent1;
-    int controlWork1 = scanner.nextInt();
-    do {
-
-        taskStudent1 = task.nextInt(10);}
-    while (controlWorks.contains(taskStudent1)) ;
-    controlWorks.add(taskStudent1);
-    if (controlWorks.size() == 1) controlWorks.removeFirst();
-
-    System.out.println("студенту " + controlWork1+ " Випало Завдання - " + taskStudent1);
-
-    int taskStudent2;
-    int controlWork2 = scanner.nextInt();
-  */
-      /*  for (int controlWork = 0; controlWork <= 10; controlWork++) {
-
-            controlWork = scanner.nextInt();
-            int taskStudent;
-            do {
-                taskStudent = task.nextInt(10);
-            }
-            while (controlWorks.contains(taskStudent));
-            controlWorks.add(taskStudent);
-            if (controlWorks.size() == 1) controlWorks.removeFirst();
-
-            System.out.println("студенту " + controlWork + " Випало Завдання - " + taskStudent);
-        }*/
- /*   int taskStudent3;
-    int controlWork3 = scanner.nextInt();
-    do {
-
-        taskStudent3 = task.nextInt(10);}
-    while (controlWorks.contains(taskStudent3)) ;
-    controlWorks.add(taskStudent3);
-    if (controlWorks.size() == 1) controlWorks.removeFirst();
-
-    System.out.println("студенту " + controlWork3+ " Випало Завдання - " + taskStudent3);
-
-
-    int taskStudent4;
-    int controlWork4 = scanner.nextInt();
-    do {
-
-        taskStudent4 = task.nextInt(10);}
-    while (controlWorks.contains(taskStudent4)) ;
-    controlWorks.add(taskStudent4);
-    if (controlWorks.size() == 1) controlWorks.removeFirst();
-
-    System.out.println("студенту " + controlWork4+ " Випало Завдання - " + taskStudent4);
-
-    int taskStudent5;
-    int controlWork5 = scanner.nextInt();
-    do {
-
-        taskStudent5 = task.nextInt(10);}
-    while (controlWorks.contains(taskStudent5)) ;
-    controlWorks.add(taskStudent5);
-    if (controlWorks.size() == 1) controlWorks.removeFirst();
-
-    System.out.println("студенту " + controlWork5+ " Випало Завдання - " + taskStudent5);
-
-    int taskStudent6;
-    int controlWork6 = scanner.nextInt();
-    do {
-
-        taskStudent6 = task.nextInt(10);}
-    while (controlWorks.contains(taskStudent6)) ;
-    controlWorks.add(taskStudent6);
-    if (controlWorks.size() == 1) controlWorks.removeFirst();
-
-    System.out.println("студенту " + controlWork6+ " Випало Завдання - " + taskStudent6);
-    int taskStudent7;
-    int controlWork7 = scanner.nextInt();
-    do {
-
-        taskStudent7 = task.nextInt(10);}
-    while (controlWorks.contains(taskStudent7)) ;
-    controlWorks.add(taskStudent2);
-    if (controlWorks.size() == 1) controlWorks.removeFirst();
-
-    System.out.println("студенту " + controlWork7+ " Випало Завдання - " + taskStudent7);*/
-
-
-    public String getTask () {
-        return task;
     }
 
     @Override
-    public void run () {
-        printControlWork();
-    }
-}
+    public String toString() {
+        return "ControlWork{" +
+                "AI1=" + AI1 +
+                ", fileNameTask='" + fileNameTask + '\'' +
+                ", nameThread='" + nameThread + '\'' +
+                ", t=" + t +
 
+                ", id=" + id +
+                '}';
+    }
+
+    @Override
+    public synchronized void run() {
+        try {
+
+            List<Person> AI1 = new ArrayList<>(10);
+            AI1.add(0, new Person(Role.STUDENT("перший ")));
+            AI1.add(1, new Person(Role.STUDENT("другий ")));
+            AI1.add(2, new Person(Role.STUDENT("третій ")));
+            AI1.add(3, new Person(Role.STUDENT("четвертий ")));
+            AI1.add(4, new Person(Role.STUDENT("пятий ")));
+            AI1.add(5, new Person(Role.STUDENT("шостий ")));
+            AI1.add(6, new Person(Role.STUDENT("сьомий ")));
+            AI1.add(7, new Person(Role.STUDENT("восьмий ")));
+            AI1.add(8, new Person(Role.STUDENT("девятий ")));
+            AI1.add(9, new Person(Role.STUDENT("десятий ")));
+
+
+            FileOutputStream fileOutputStream = new FileOutputStream(fileNameTask);
+            PrintStream printStream = new PrintStream(fileOutputStream);
+
+            for (int i = 0; i < AI1.size();) {
+
+                Random r = new Random();
+                int min = 8000;
+                int max = 14000;
+                int randomNumber = r.nextInt(max - min + 1) + min;
+
+                sleep(randomNumber);
+                {
+                    number();
+                    System.out.println(m + " місце " + Arrays.toString(getAI1().toArray()) + " час виконання " + "cтудентом = " + randomNumber);
+
+                }
+
+                if (randomNumber > 12000)
+                    System.out.println(" не вклався в час " + Arrays.toString(getAI1().toArray()) + " час виконання завдання " + "cтудентом більше 12сек =" + " " + randomNumber);
+
+                printStream.close();
+                fileOutputStream.close();
+
+                break;
+            }
+
+        } catch (InterruptedException | IOException e) {
+            throw new RuntimeException(e);
+        }
+
+    }
+    public void start() {
+
+        t.start();
+    }
+
+}

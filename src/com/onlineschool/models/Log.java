@@ -33,6 +33,9 @@ public class Log {
         System.out.println("Warning" + s);
     }
 
+    public static void info() {
+    }
+
     public String getName() {
         return name;
     }

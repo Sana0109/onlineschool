@@ -1,4 +1,9 @@
 <root>
+    <item name='java.util.List E get(int)'>
+        <annotation name='org.jetbrains.annotations.Contract'>
+            <val name="pure" val="true"/>
+        </annotation>
+    </item>
     <item name='java.util.List void sort(java.util.Comparator&lt;? super E&gt;)'>
         <annotation name='org.jetbrains.annotations.Contract'>
             <val name="mutates" val="&quot;this&quot;"/>
