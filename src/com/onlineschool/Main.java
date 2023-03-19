@@ -4,6 +4,7 @@ import com.onlineschool.models.Log;
 import com.onlineschool.models.Person;
 import com.onlineschool.models.Role;
 import com.onlineschool.repository.ControlWork;
+import com.onlineschool.repository.LogRepository;
 
 
 import java.util.*;
@@ -12,6 +13,9 @@ import java.util.*;
 public class Main {
 
     public static void main(String[] args) throws InterruptedException {
+//журнал роботи програми класс Log
+        System.out.println("Storage Log:");
+        LogRepository.logAll();
 
         {
             List<Integer> taskWork = new ArrayList<>();
