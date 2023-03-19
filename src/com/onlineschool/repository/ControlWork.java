@@ -1,5 +1,6 @@
 package com.onlineschool.repository;
 
+import com.onlineschool.models.Log;
 import com.onlineschool.models.Person;
 import com.onlineschool.models.Role;
 import java.io.FileOutputStream;
@@ -32,11 +33,37 @@ public class ControlWork implements Runnable {
     }
     public static int m = 0;
 
-    public void number() {
+    public void number() {      //місце завершення виконання завдання від 1го до останньго
         m++;
 
     }
+public static void checkingNumbers(){
+    // перевірка рендомних чисел на повторюваність
+    int k;
+    int y;
+    int x;
+    int tW;
+    int p = -1;
+    int[] arraySecondW = new int[11];
+    Random random = new Random();
+    for (int i = 0; i < 1000000; i++) {
+        y = 0;
+        for (x = 0; x < 10; x++) {
 
+            tW = 1 + random.nextInt(10);  //рендом для завдання
+
+            for (k = 1; k < 11; k++)             //номер завдання
+                if (tW == arraySecondW[k])
+                    y = 1;
+
+            if (y == 0) {
+                p++;
+                arraySecondW[p] = tW;
+                break;
+            }
+        }
+    }
+}
     @Override
     public String toString() {
         return "ControlWork{" +
@@ -70,7 +97,7 @@ public class ControlWork implements Runnable {
             PrintStream printStream = new PrintStream(fileOutputStream);
 
             for (int i = 0; i < AI1.size();) {
-
+                //обираємо рендомний час виконання завдання
                 Random r = new Random();
                 int min = 8000;
                 int max = 14000;
@@ -79,21 +106,25 @@ public class ControlWork implements Runnable {
                 sleep(randomNumber);
                 {
                     number();
-                    System.out.println(m + " місце " + Arrays.toString(getAI1().toArray()) + " час виконання " + "cтудентом = " + randomNumber);
+                    //виводимо місце яким закінчив, прізвище, час виконання студентом контрольної роботи
+                    System.out.println(m + " місце " + Arrays.toString(getAI1().toArray()) + " час виконання " +
+                            "cтудентом = " + randomNumber);
 
                 }
-
+                // виводимо місце яким закінчив, прізвище, час виконання студентом контрольної роботи,
+                // який не вклався в час
                 if (randomNumber > 12000)
-                    System.out.println(" не вклався в час " + Arrays.toString(getAI1().toArray()) + " час виконання завдання " + "cтудентом більше 12сек =" + " " + randomNumber);
+                    System.out.println(" не вклався в час " + Arrays.toString(getAI1().toArray()) + "" +
+                            " час виконання завдання " + "cтудентом більше 12сек =" + " " + randomNumber);
 
                 printStream.close();
-                fileOutputStream.close();
+                //fileOutputStream.close();
 
                 break;
             }
 
         } catch (InterruptedException | IOException e) {
-            throw new RuntimeException(e);
+            Log.error("Один зв'язок виконання перерваний іншим");
         }
 
     }

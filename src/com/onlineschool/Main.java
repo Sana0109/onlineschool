@@ -36,25 +36,27 @@ public class Main {
             AI1.add(7, new Person(Role.STUDENT("восьмий ")));
             AI1.add(8, new Person(Role.STUDENT("девятий ")));
             AI1.add(9, new Person(Role.STUDENT("десятий ")));
+            {
 
-            int k;
-            int y;
-            int x;
-            int tW;
-            int p = -1;
+                // перевірка random чисел на повторюваність
+            int k;  //число завдання, яке записуємо у масив random чисел
+            int y;  //якщо y = 1 не записуємо у arraySecondW; якщо y = 0 записуємо у arraySecondW
+            int x;  //кількість раз вибору random чисел
+            int tW; //число завдання після random
+            int p = -1; // індекс arraySecondW
             int[] arraySecondW = new int[11];
             Random random = new Random();
-            for (int i = 0; i < 1000000; i++) {
+            for (int i = 0; i < 1000000; i++) {          // можлива кількість перевірок
                 y = 0;
                 for (x = 0; x < 10; x++) {
 
-                    tW = 1 + random.nextInt(10);  //рендом для завдання
+                    tW = 1 + random.nextInt(10);  //random для завдання
 
-                    for (k = 1; k < 11; k++)             //номер завдання
-                        if (tW == arraySecondW[k])
+                    for (k = 1; k < 11; k++)
+                        if (tW == arraySecondW[k])      //номер завдання,не записуємо в новий масив
                             y = 1;
 
-                    if (y == 0) {
+                    if (y == 0) {                       //номер завдання,записуємо в новий масив
                         p++;
                         arraySecondW[p] = tW;
                         break;
@@ -63,7 +65,7 @@ public class Main {
             }
 
             int i = 0;
-
+            // студент 1 обрав завдання
             ControlWork t1 = new ControlWork(1, Collections.singletonList(AI1.get(0)),
                     "завдання студента 1 AI1.txt ", "t1 ");
             try {
@@ -77,7 +79,7 @@ public class Main {
             }
 
             System.out.println(" обрав завдання = " + arraySecondW[i]);
-
+            // студент 2 обрав завдання
             ControlWork t2 = new ControlWork(2, Collections.singletonList(AI1.get(1)),
                     "завдання студента 2 AI2.txt ", "t2 ");
             try {
@@ -188,7 +190,7 @@ public class Main {
             System.out.println(" обрав завдання = " + arraySecondW[i]);
             System.out.println("Почали виконання завдань 12сек ");
             Thread.sleep(12000);
-
+            }
         }
     }
 }
