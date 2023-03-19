@@ -26,11 +26,15 @@ public class Log {
         this.stackTrace = stackTrace;
     }
 
-    public static void warning(String s) {
-        return;
-    }
 
     public static void error(String s) {
+        System.out.println("Error" + s);
+    }
+    public static void warning(String s) {
+        System.out.println("Warning" + s);
+    }
+
+    public static void info() {
     }
 
 
@@ -77,7 +81,9 @@ public class Log {
 
     @Override
     public String toString() {
-        return "Log{" + " localDateTime = " + localDateTime +
+        return "Log{" +
+                "name = '" + getClass().getName() + '\'' +
+
                 ", level = " + level +
                 ", name = '" + getClass().getName() + '\'' +
                 ", message = '" + message + '\'' +

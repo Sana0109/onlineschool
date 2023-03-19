@@ -60,8 +60,10 @@ public abstract class GenericRepository<E> implements FacultyInterface<E>, Compa
 
             }
             return getArrayGeneric()[index];
-        } catch (ArrayIndexOutOfBoundsException e) {
-            Log.warning("Warning index out of bounds for length ");
+
+        } catch (IndexOutOfBoundsException e) {
+            Log.error("index out of bounds for length ");
+
         } finally {
             System.out.println("Length = " + size());
         }
@@ -80,7 +82,9 @@ public abstract class GenericRepository<E> implements FacultyInterface<E>, Compa
                 }
             }
         } catch (ArrayIndexOutOfBoundsException e) {
-            Log.error("Error input wrong index = " + index);
+
+            Log.warning(" input wrong index = " + index);
+
         }
 
     }

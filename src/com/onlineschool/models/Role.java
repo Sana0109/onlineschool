@@ -28,7 +28,9 @@ public enum Role {
     public static String TEACHER(String secondName) {
         return secondName;
     }
-
+    public static String STUDENT(String secondName) {
+        return secondName;
+    }
 
     public String getPhone() {
         return phone;
@@ -54,11 +56,11 @@ public enum Role {
         this.nameFirst = nameFirst;
     }
 
-    public String getSecondName(String secondName) {
+    public String getSecondName() {
         return secondName;
     }
 
-    public void setSecondName(String secondName) {
+    public void setSecondName() {
         this.secondName = secondName;
     }
 

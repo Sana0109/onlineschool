@@ -12,8 +12,8 @@ public class LogRepository extends GenericRepository {
     public static void logAll() {
 
         ArrayList<Log> logStorage = new ArrayList<>();
-        logStorage.add(new Log(LocalDateTime.now(), LevelLog.ERROR, "Name ", "You have a mistake", "ERROR"));
-
+        logStorage.add(new Log(LocalDateTime.now(), LevelLog.ERROR, "Name ", "You have a mistake",
+                "ERROR"));
         logStorage.add(new Log(LocalDateTime.now(), LevelLog.WARNING, "Name ", "Unexpected action",
                 "WARNING"));
         logStorage.add(new Log(LocalDateTime.now(), LevelLog.DEBUG, "Name ", "Method is working"));
