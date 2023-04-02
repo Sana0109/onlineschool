@@ -1,9 +1,11 @@
 package com.onlineschool.models;
 
 public enum LevelLog {
-    ERROR,
-    WARNING,
+    DEBUG,
     INFO,
-    DEBUG;
+    WARNING,
+    ERROR,
+    OFF;
+
 
 }

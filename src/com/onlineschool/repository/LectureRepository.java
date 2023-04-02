@@ -108,9 +108,7 @@ public class LectureRepository extends GenericRepository {
         System.out.println("Choose Category: 1 - Course, 2 - Teacher, 3 - Students, 4 - Lecture");
         int i = 0;
 
-        do {
-            i = scanner.nextInt();
-        } while (1 > 4);
+        i = scanner.nextInt();
 
         switch (i) {
             case 1:

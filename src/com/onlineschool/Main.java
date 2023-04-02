@@ -7,12 +7,100 @@ import com.onlineschool.repository.ControlWork;
 import com.onlineschool.repository.LogRepository;
 
 
+import java.io.*;
+import java.nio.ByteBuffer;
+import java.nio.channels.FileChannel;
+
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.*;
 
 
 public class Main {
+//private  void printTread(Thread myThread){
+   // System.out.println("myThread = " + myThread + "thread name" + myThread.getName());
+//}
+    public static void write() throws IOException{
+        Path file = Paths.get("example.txt");
 
-    public static void main(String[] args) throws InterruptedException {
+        //String text = "level = WARNING<ERROR<OFF";
+        //Charset charset;
+
+        //Charset;
+
+
+        //Charset charset = StandardCharsets.UTF_8;
+       // Files.writeString(file, text, charset, StandardOpenOption.CREATE);
+       //String file = "level = WARNING<ERROR<OFF";
+        RandomAccessFile write = new RandomAccessFile(file.toFile(),"rw");
+            FileChannel channel = write.getChannel() ;{
+                ByteBuffer buff = ByteBuffer.wrap("level = WARNING<ERROR<OFF".getBytes(StandardCharsets.UTF_8));
+                channel.write(buff);
+                RandomAccessFile reader = new RandomAccessFile(file.toFile(),"r");
+                System.out.println(reader.readLine());
+                reader.close();
+        }
+
+    }
+    public  static void writeRider() throws Exception{
+   /* Path filePath = Paths.get("C:level = WARNING<ERROR<OFF", "example.txt");
+
+if (Files.exists(filePath)) {
+        try {
+            List<String> lines = Files.readAllLines(filePath, StandardCharsets.UTF_8);
+
+            for (String line : lines) {
+                System.out.println(line);
+            }
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+    }}*/
+    Path filePath = Paths.get("example.txt");
+
+    List<String> lines = new ArrayList<>();
+lines.add("Lorem ipsum dolor sit amet, consectetur adipiscing elit.");
+lines.add("Aliquam sit amet justo nec leo euismod porttitor.");
+lines.add("Vestibulum id sagittis nulla, eu posuere sem.");
+lines.add("Cras commodo, massa sed semper elementum, ligula orci malesuada tortor, sed iaculis ligula ligula et ipsum.");
+
+try {
+        Files.write(filePath, lines, StandardCharsets.UTF_8, StandardOpenOption.CREATE, StandardOpenOption.APPEND);
+    } catch (IOException e) {
+        throw new RuntimeException(e);
+    }}
+    public static void sizeOffFile() throws  IOException {
+        RandomAccessFile reader = new RandomAccessFile("example.txt","r");
+        FileChannel channel = reader.getChannel();
+        System.out.println(channel.size());
+        channel.close();
+        reader.close();
+    }
+public static void  readFile() throws IOException{
+
+        try (RandomAccessFile reader = new RandomAccessFile("example.txt","rw");
+             FileChannel channel = reader.getChannel();
+             ByteArrayOutputStream out = new ByteArrayOutputStream()){
+        int bufferSize = 1024;
+        if (bufferSize > channel.size()){
+            bufferSize = (int) channel.size();
+        }
+        ByteBuffer buff = ByteBuffer.allocate(bufferSize);
+        while (channel.read(buff)>0){
+            out.write(buff.array(),0,buff.position());
+            buff.clear();
+
+        }
+    }
+}
+    public static void main(String[] args) throws Exception {
+        writeRider();
+        //write();
+        readFile();
+        sizeOffFile();
 //журнал роботи програми класс Log
         System.out.println("Storage Log:");
         LogRepository.logAll();

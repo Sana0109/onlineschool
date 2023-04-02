@@ -96,7 +96,7 @@ public static void checkingNumbers(){
             FileOutputStream fileOutputStream = new FileOutputStream(fileNameTask);
             PrintStream printStream = new PrintStream(fileOutputStream);
 
-            for (int i = 0; i < AI1.size();) {
+            for (int i = 0; i < AI1.size();i++) {
                 //обираємо рендомний час виконання завдання
                 Random r = new Random();
                 int min = 8000;

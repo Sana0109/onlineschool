@@ -28,11 +28,6 @@ public class LectureService {
 
     }
 
-  /*  public static Lecture lectureCourseID(int courseID) {
-     return new Lecture(courseID, ResourceType.BOOK);
-    }
-*/
-
     @Override
     public String toString() {
         return "LectureService{" +
